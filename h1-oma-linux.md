@@ -36,5 +36,10 @@
 - 20:45 Partition method -kohdassa valitsin Guided - use entire disk. Select disk to partition -kohdassa oli vain yksi vaihtoehto, "SC13 (0,0,0) (sda) - 21.5 GB ATA VBOX HARDDISK", joten valitsin sen. Partitioning scheme -kohdassa valitsin "All files in one partition (recommended for new users)". Valitsin "Finish partitioning and write changes to disk", joka oli jo valittuna, continue. Kun kysyttiin "Write the changes to disks?", valitsin "Yes", continue.
 - 20:51 Rupesi lataamaan, "installing the system".
 - 21:00 Latau valmis. Klikkasin Continue, jolloin uudelleenkäynnisti virtuaalikoneen. Tässä kesti pienen hetken, jonka jälkeen avasi kirjautumisikkunan. Kirjoitin käyttäjänimen ja salansanan ja kirjauduin sisään. Tämän jälkeen virtuaalikone on asennettu.
+- 21.05 Suljin 
 
 Tein uuden virtuaalikoneen, jossa on Linux-käyttöjärjestelmä. Annoin tälle virtuaalikoneelle esimerkiksi kovalevyn koon ja muut parametrit sekä kielet ja vastaavat.
+
+Lähteet:
+https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md
+https://terokarvinen.com/2021/install-debian-on-virtualbox/
