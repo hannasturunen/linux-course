@@ -15,6 +15,8 @@ Tein harjoituksen sunnuntaina 24.8.2025 Helsingissä kotona. Koneena oli HP Lapt
 
 - klo 19.25 Olin ladannut VirtualBoxin aikaisemmin koneelleni, joten menin suoraan lataamaan virtuaalikoneella tarvittavan ISO-tiedoston. Menin Chrome-selaimella osoitteeseen https://cdimage.debian.org/debian-cd/13.0.0-live/amd64/iso-hybrid/, josta latasin ISO-tiedoston nimeltään "debian-live-13.0.0-amd64-xfce.iso". 
 - 19.50 ISO-tiedoston lataus oli valmis. Avasin koneellani olevan VirtualBoxin.
+
+Uuden virtuaalikoneen tekeminen
 - 19.53 Rupesin tekemään uutta virtuaalikonetta klikkaamalla VirtualBoxin etusivulla olevaa New-painiketta.
 - 19.55 Annoin uudelle virtuaalikoneelle erilaisia tietoja. Alla olevassa kuvassa anoin virtuaalikoneelle nimen, tallennuspaikan, ISO-tiedoston sijainnin ja käyttöjärjestelmän (OS). Huomasin, että jos "Proceed with Unattended Installation" -kohta oli täpätty, virtuaalikoneen OS:n versiota ei voinut muuttaa 32:sta 64:ään, joten jätin sen täppäämättä. Laitoin oman VM folderin D-asemalle, koska C-asemani on jonkin verran täynnä.
 
