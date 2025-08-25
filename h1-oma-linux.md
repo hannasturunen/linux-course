@@ -11,7 +11,8 @@
 
 ## Linuxin asentaminen virtuaalikoneeseen
 
-- Tein harjoituksen sunnuntaina 24.8.2025 Helsingissä kotona. Koneena oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä Windows 11 Home.
+Tein harjoituksen sunnuntaina 24.8.2025 Helsingissä kotona. Koneena oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä Windows 11 Home.
+
 - klo    Olin ladannut VirtualBoxin aikaisemmin. Menin https://cdimage.debian.org/debian-cd/13.0.0-live/amd64/iso-hybrid/-sivustolle ja latasin sieltä ISO-tiedoston nimellä debian-live-13.0.0-amd64-xfce.iso. 
 - klo    ISO-tiedoston lataus valmis. Avasin koneellani olevan VirtualBoxin.    +20 min
 - klo    Klikkasin VirtualBoxin etusivulla olevaa New-painiketta, jotta saan tehtyä uuden virtuaalikoneen.
