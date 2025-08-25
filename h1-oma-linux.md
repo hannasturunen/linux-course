@@ -19,16 +19,16 @@ Tein harjoituksen sunnuntaina 24.8.2025 Helsingissä kotona. Koneena oli HP Lapt
 - Klo 19.55 Annoin uudelle virtuaalikoneelle kuvassa olevat tiedot. Huomasin, että jos "Proceed with Unattended Installation"-kohta oli täpätty, OS versiota ei voinut muuttaa 32:sta 64:ään. Laitoin oman VM folderin D-asemalle, koska C-asema on jonkin verran täynnä.
 ![Uuden virtuaalikoneen tiedot](h1-kuva1.jpg)
 - klo 20.03 Määritin muistin koon ja CPU:n määrän. 
-            - tähän tulee kuva2
+![Uuden virtuaalikoneen muisti ja CPU](h1-kuva2.jpg)
 - klo 20.04 Määritin kovalevyn koon. 
-          - kuva3
+![Uuden virtuaalikoneen kovalevy](h1-kuva3.jpg)
 - klo 20.07 Klikkasin Finish-painiketta, jolloin uusi virtuaalikone ilmestyi VirtualBoxin etusivulle.
 - klo 20.09 Klikkasin hiiren oikealla painikkeella virtuaalikoneen päältä (vasemmalta puolelta), jolloin avautui valikko. Valitsin valikosta Start ja Start with GUI. Virtuaalikone rupesi käynnistymään, "Powering up" ja se käynnistyi uuteen ikkunaan.
 - 20:13 Virtuaalikoneen näytölle avautui Live Boot Menu with GRUB oli eri vaihtoehtoja, joista valitsin "Live system (amd64)" enterillä, koska se oli jo valittuna.
 - 20:16 Valitsin hiirellä ikkunan yläkulmasta Application ja sieltä Web browser. Tällöin avautui Firefoxin selain. Hain Helsingin sään kirjoittamalla hakupalkkiin "Helsinki weather". Yritin ensin hakea "Helsinki sää", mutta koska en saanut ääkkösiä toimimaan, päätin hakea weather-sanalla sää-sanan sijaan. Internet selvästi toimii, koska haki Helsingin sään. Suljin Firefoxin klikkaamalla Firefoxin yläpalkkia hiiren oikealla ja valitsemalla Close.
-- tähän kuva4.
+![Uusi kuva](h1-kuva4.jpg)
 - 20:22 Avasin terminalin alhaalta. Annoin komennot pwd ja whoami ja vielä ls -la.
-- tähän kuva5
+![Uusi kuva](h1-kuva5.jpg)
 - 20:25 Koska terminaali oli auki, kirjoitin siihen sudo reboot ja painoin enter. Tällöin virtuaalikone sulkeutui ja avautui uudestaan Live Boot Menuun.
 - 20:28 Menin nuolinäppäimiä käyttämällä Start instraller -kohtaan ja hyväksyin enterillä. Seuraavaksi valitsin virtuaalikoneelle parametrit ja jokaisen parametrin valinnan jälkeen laitoin continue. 
 - 20:30 Valitsin kieleksi englanti. Paikkakohdassa valitsin ensin other, koska Suomea ei ollut listalla (country, territory or area), seuraavaksi Europe (Continent or region) ja lopuksi Finland (Country, territory or area). Lokaaliksi (locales) valitsin en.US.UTF-8. Näppäimistöksi valitsin Finnish.
