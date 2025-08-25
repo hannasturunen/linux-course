@@ -17,7 +17,7 @@ Tein harjoituksen sunnuntaina 24.8.2025 Helsingissä kotona. Koneena oli HP Lapt
 - 19.50 ISO-tiedoston lataus oli valmis. Avasin koneellani olevan VirtualBoxin.
 
 
-Uuden virtuaalikoneen tekeminen
+### Uuden virtuaalikoneen tekeminen
 
 - 19.53 Rupesin tekemään uutta virtuaalikonetta klikkaamalla VirtualBoxin etusivulla olevaa New-painiketta.
 - 19.55 Annoin uudelle virtuaalikoneelle erilaisia tietoja. Alla olevassa kuvassa anoin virtuaalikoneelle nimen, tallennuspaikan, ISO-tiedoston sijainnin ja käyttöjärjestelmän (OS). Huomasin, että jos "Proceed with Unattended Installation" -kohta oli täpätty, virtuaalikoneen OS:n versiota ei voinut muuttaa 32:sta 64:ään, joten jätin sen täppäämättä. Laitoin oman VM folderin D-asemalle, koska C-asemani on jonkin verran täynnä.
