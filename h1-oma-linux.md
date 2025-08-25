@@ -67,3 +67,4 @@ Loin uuden virtuaalikoneen, jossa on Linux-käyttöjärjestelmä. Määritin tä
 ### Lähteet:
 - Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy, https://terokarvinen.com/linux-palvelimet
 - Pohjana Johanna Heinonen 2025: How to Install Linux to Virtualbox? https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md
+- Pohjana Tero Karvinen 2023: Dream Hug Monkey https://github.com/terokarvinen/dreamhugmonkey#adding-images-to-markdown
