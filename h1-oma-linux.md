@@ -65,6 +65,5 @@ Loin uuden virtuaalikoneen, jossa on Linux-käyttöjärjestelmä. Määritin tä
 - 21.05 Suljin virtuaalikoneen ja VirtualBoxin.
 
 ### Lähteet:
-Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy, ![https://terokarvinen.com/linux-palvelimet](ttps://terokarvinen.com/linux-palvelimet)
-https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md
-https://terokarvinen.com/2021/install-debian-on-virtualbox/
+Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy, ttps://terokarvinen.com/linux-palvelimet
+Pohjana Johanna Heinonen 2025: How to Install Linux to Virtualbox? https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md
