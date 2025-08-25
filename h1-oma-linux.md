@@ -13,16 +13,24 @@
 
 Tein harjoituksen sunnuntaina 24.8.2025 Helsingissä kotona. Koneena oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä Windows 11 Home.
 
-- klo 19.25 Olin ladannut VirtualBoxin aikaisemmin. Menin https://cdimage.debian.org/debian-cd/13.0.0-live/amd64/iso-hybrid/-sivustolle ja latasin sieltä ISO-tiedoston nimellä debian-live-13.0.0-amd64-xfce.iso. 
-- klo 19.50 ISO-tiedoston lataus valmis. Avasin koneellani olevan VirtualBoxin.
-- klo 19.53 Klikkasin VirtualBoxin etusivulla olevaa New-painiketta, jotta saan tehtyä uuden virtuaalikoneen.
-- Klo 19.55 Annoin uudelle virtuaalikoneelle kuvassa olevat tiedot. Huomasin, että jos "Proceed with Unattended Installation"-kohta oli täpätty, OS versiota ei voinut muuttaa 32:sta 64:ään. Laitoin oman VM folderin D-asemalle, koska C-asema on jonkin verran täynnä.
+- klo 19.25 Olin ladannut VirtualBoxin aikaisemmin koneelleni, joten menin suoraan lataamaan virtuaalikoneella tarvittavan ISO-tiedoston. Menin Chrome-selaimella osoitteeseen https://cdimage.debian.org/debian-cd/13.0.0-live/amd64/iso-hybrid/, josta latasin ISO-tiedoston nimeltään "debian-live-13.0.0-amd64-xfce.iso". 
+- 19.50 ISO-tiedoston lataus oli valmis. Avasin koneellani olevan VirtualBoxin.
+- 19.53 Rupesin tekemään uutta virtuaalikonetta klikkaamalla VirtualBoxin etusivulla olevaa New-painiketta.
+- 19.55 Annoin uudelle virtuaalikoneelle erilaisia tietoja. Alla olevassa kuvassa anoin virtuaalikoneelle nimen, tallennuspaikan, ISO-tiedoston sijainnin ja käyttöjärjestelmän (OS). Huomasin, että jos "Proceed with Unattended Installation" -kohta oli täpätty, virtuaalikoneen OS:n versiota ei voinut muuttaa 32:sta 64:ään, joten jätin sen täppäämättä. Laitoin oman VM folderin D-asemalle, koska C-asemani on jonkin verran täynnä.
+
 ![Uuden virtuaalikoneen tiedot](h1-kuva1.jpg)
-- klo 20.03 Määritin muistin koon ja CPU:n määrän. 
+
+- 20.03 Määritin muistin koon ja CPU:n määrän, alla kuva.
+
 ![Uuden virtuaalikoneen muisti ja CPU](h1-kuva2.jpg)
-- klo 20.04 Määritin kovalevyn koon. 
+
+- 20.04 Määritin vielä kovalevyn koon, alla kuva.
+
 ![Uuden virtuaalikoneen kovalevy](h1-kuva3.jpg)
-- klo 20.07 Klikkasin Finish-painiketta, jolloin uusi virtuaalikone ilmestyi VirtualBoxin etusivulle.
+
+- 20.07 Kun olin määrittänyt vaadittavat parametrit uudelle virtuaalikoneelle, klikkasin Finish-painiketta. Tällöin uusi virtuaalikone ilmestyi VirtualBoxin etusivulle.
+
+
 - klo 20.09 Klikkasin hiiren oikealla painikkeella virtuaalikoneen päältä (vasemmalta puolelta), jolloin avautui valikko. Valitsin valikosta Start ja Start with GUI. Virtuaalikone rupesi käynnistymään, "Powering up" ja se käynnistyi uuteen ikkunaan.
 - 20:13 Virtuaalikoneen näytölle avautui Live Boot Menu with GRUB oli eri vaihtoehtoja, joista valitsin "Live system (amd64)" enterillä, koska se oli jo valittuna.
 - 20:16 Valitsin hiirellä ikkunan yläkulmasta Application ja sieltä Web browser. Tällöin avautui Firefoxin selain. Hain Helsingin sään kirjoittamalla hakupalkkiin "Helsinki weather". Yritin ensin hakea "Helsinki sää", mutta koska en saanut ääkkösiä toimimaan, päätin hakea weather-sanalla sää-sanan sijaan. Internet selvästi toimii, koska haki Helsingin sään. Suljin Firefoxin klikkaamalla Firefoxin yläpalkkia hiiren oikealla ja valitsemalla Close.
