@@ -15,8 +15,9 @@
 - klo    Olin ladannut VirtualBoxin aikaisemmin. Menin https://cdimage.debian.org/debian-cd/13.0.0-live/amd64/iso-hybrid/-sivustolle ja latasin sieltä ISO-tiedoston nimellä debian-live-13.0.0-amd64-xfce.iso. 
 - klo    ISO-tiedoston lataus valmis. Avasin koneellani olevan VirtualBoxin.    +20 min
 - klo    Klikkasin VirtualBoxin etusivulla olevaa New-painiketta, jotta saan tehtyä uuden virtuaalikoneen.
-- Klo 19.55 Annoin uudelle virtuaalikoneelle kuvassa olevat tiedot. Huomasin, että jos "Proceed with Unattended Installation"-kohta oli täpätty, OS versiota ei voinut muuttaa 32:sta 64:ään. Laitoin oman VM folderin D-asemalle, koska C-asema on jonkin verran täynnä. 
-            - tähän tulee kuva1
+- Klo 19.55 Annoin uudelle virtuaalikoneelle kuvassa olevat tiedot. Huomasin, että jos "Proceed with Unattended Installation"-kohta oli täpätty, OS versiota ei voinut muuttaa 32:sta 64:ään. Laitoin oman VM folderin D-asemalle, koska C-asema on jonkin verran täynnä.
+-  ![Add file: Upload](upload-files.png)
+
 - klo 20.03 Määritin muistin koon ja CPU:n määrän. 
             - tähän tulee kuva2
 - klo 20.04 Määritin kovalevyn koon. 
