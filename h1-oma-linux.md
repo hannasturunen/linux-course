@@ -13,11 +13,15 @@
 
 Tein harjoituksen sunnuntaina 24.8.2025 Helsingissä kotona. Koneena oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä Windows 11 Home.
 
+### Tiivistelmä
+Loin uuden virtuaalikoneen, jossa on Linux-käyttöjärjestelmä. Määritin tälle virtuaalikoneelle erilaisia parametrejä ja testasin virtuaalikoneen toiminnan. Lopuksi asensin virtuaalikoneelle Debianin.
+
+### Debian ISO -tiedoston lataaminen
+
 - klo 19.25 Olin ladannut VirtualBoxin aikaisemmin koneelleni, joten menin suoraan lataamaan virtuaalikoneella tarvittavan ISO-tiedoston. Menin Chrome-selaimella osoitteeseen https://cdimage.debian.org/debian-cd/13.0.0-live/amd64/iso-hybrid/, josta latasin ISO-tiedoston nimeltään debian-live-13.0.0-amd64-xfce.iso. 
 - 19.50 ISO-tiedoston lataus oli valmis. Avasin koneellani olevan VirtualBoxin.
 
-
-### Uuden virtuaalikoneen tekeminen
+### Uuden virtuaalikoneen luominen
 
 - 19.53 Rupesin tekemään uutta virtuaalikonetta klikkaamalla VirtualBoxin etusivulla olevaa New-painiketta.
 - 19.55 Annoin uudelle virtuaalikoneelle erilaisia tietoja. Alla olevassa kuvassa anoin virtuaalikoneelle nimen, tallennuspaikan, ISO-tiedoston sijainnin ja käyttöjärjestelmän (OS). Huomasin, että jos "Proceed with Unattended Installation" -kohta oli täpätty, virtuaalikoneen OS:n versiota ei voinut muuttaa 32:sta 64:ään, joten jätin sen täppäämättä. Laitoin oman VM folderin D-asemalle, koska C-asemani on jonkin verran täynnä.
@@ -34,8 +38,7 @@ Tein harjoituksen sunnuntaina 24.8.2025 Helsingissä kotona. Koneena oli HP Lapt
 
 - 20.07 Kun olin määrittänyt vaadittavat parametrit uudelle virtuaalikoneelle, klikkasin Finish-painiketta. Tällöin uusi virtuaalikone ilmestyi VirtualBoxin etusivulle.
 
-
-Uuden virtuaalikoneen testaus
+### Uuden virtuaalikoneen testaaminen
 
 - 20.09 Uusi virtuaalikone näkyi VirtualBoxin vasemmassa palkissa ja siihen liittyvät tiedot oikealla. Klikkasin virtuaalikonetta hiiren oikealla painikkeella, joka avasi valikon. Valitsin valikosta Start ja Start with GUI. Virtuaalikone rupesi käynnistymään (Powering up) ja se käynnistyi uuteen ikkunaan.
 - 20:13 Virtuaalikoneen näytölle avautui "Live Boot Menu with GRUB". Tässä oli eri vaihtoehtoja, joista valmiiksi valittuna oli "Live system (amd64)". Hyväksyin sen enterillä.
@@ -50,18 +53,18 @@ Uuden virtuaalikoneen testaus
 - 20:25 Koska terminaali oli jo auki, kirjoitin siihen sudo reboot ja painoin enter. Tällöin virtuaalikone sulkeutui ja avautui uudestaan "Live Boot Menu with GRUB" -ikkunaan.
 
 
-Virtuaalikoneen käyttäjän  asetus
-- 20:28 Menin nuolinäppäimiä käyttämällä Start instraller -kohtaan ja hyväksyin enterillä. Seuraavaksi valitsin virtuaalikoneelle parametrit ja jokaisen parametrin valinnan jälkeen laitoin continue. 
-- 20:30 Valitsin kieleksi englanti. Paikkakohdassa valitsin ensin other, koska Suomea ei ollut listalla (country, territory or area), seuraavaksi Europe (Continent or region) ja lopuksi Finland (Country, territory or area). Lokaaliksi (locales) valitsin en.US.UTF-8. Näppäimistöksi valitsin Finnish.
-- 20:38 Määritin verkon ja laitoin host-name:ksi linux-test ja domainiksi example.com.
-- 20:40 Root passwordin jätin tyhjäksi, joten painoin vain continue. Käyttäjänimeksi annoin hanna turunen. Käyttäjänimeksi annoin hanna, jota ehdotti jo valmiiksi. Annoin salasanan.
-- 20:45 Partition method -kohdassa valitsin Guided - use entire disk. Select disk to partition -kohdassa oli vain yksi vaihtoehto, "SC13 (0,0,0) (sda) - 21.5 GB ATA VBOX HARDDISK", joten valitsin sen. Partitioning scheme -kohdassa valitsin "All files in one partition (recommended for new users)". Valitsin "Finish partitioning and write changes to disk", joka oli jo valittuna, continue. Kun kysyttiin "Write the changes to disks?", valitsin "Yes", continue.
-- 20:51 Rupesi lataamaan, "installing the system".
-- 21:00 Latau valmis. Klikkasin Continue, jolloin uudelleenkäynnisti virtuaalikoneen. Tässä kesti pienen hetken, jonka jälkeen avasi kirjautumisikkunan. Kirjoitin käyttäjänimen ja salansanan ja kirjauduin sisään. Tämän jälkeen virtuaalikone on asennettu.
-- 21.05 Suljin 
+### Debianin asentaminen virtuaalikoneeseen
 
-Tein uuden virtuaalikoneen, jossa on Linux-käyttöjärjestelmä. Annoin tälle virtuaalikoneelle esimerkiksi kovalevyn koon ja muut parametrit sekä kielet ja vastaavat.
+- 20:28 Menin nuolinäppäimiä käyttämällä Start instraller -kohtaan ja hyväksyin enterillä. Avautui uusi ikkuna, johon määritin eri parametrejä. 
+- 20:30 Kieleksi valitsin englanti. Paikkakohdassa valitsin ensin other (country, territory or area), koska Suomea ei ollut listalla, seuraavaksi Europe (Continent or region) ja lopuksi Finland (Country, territory or area). Lokaaliksi (locales) valitsin en.US.UTF-8. Näppäimistöksi valitsin Finnish. Jokaisen valinnan jälkeen painoin Continue.
+- 20:38 Määritin verkon ja laitoin host-name:ksi linux-test ja domainiksi example.com. Jokaisen jälkeen painoin Continue.
+- 20:40 Root passwordin jätin tyhjäksi, joten painoin vain continue. Koko nimeksi (full name) annoin hanna turunen ja käyttäjänimeksi (username) hanna, jota ehdotti jo valmiiksi. Keksin ja annoin salasanan. Jokaisen jälkeen painoin Continue.
+- 20:45 Partition method -kohdassa valitsin "Guided - use entire disk". Select disk to partition -kohdassa oli vain yksi vaihtoehto, "SC13 (0,0,0) (sda) - 21.5 GB ATA VBOX HARDDISK", joten valitsin sen. Partitioning scheme -kohdassa valitsin "All files in one partition (recommended for new users)". Valitsin "Finish partitioning and write changes to disk", joka oli jo valittuna. Kun kysyttiin "Write the changes to disks?", valitsin "Yes". Jokaisen valinnan jälkeen klikkasin continue.
+- 20:51 Näiden jälkeen rupesi lataamaan, "installing the system".
+- 21:00 Lataus oli valmis. Klikkasin Continue, jolloin virtuaalikone uudelleenkäynnistyi. Tämä kesti hetkisen, jonka jälkeen avasi kirjautumisikkunan. Annoin käyttäjänimen ja salansanan ja kirjauduin sisään. Nyt Debian on asennettu virtuaalikoneelle.
+- 21.05 Suljin virtuaalikoneen ja VirtualBoxin.
 
-Lähteet:
+### Lähteet:
+Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy, [://terokarvinen.com](https://terokarvinen.com/linux-palvelimet/)
 https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md
 https://terokarvinen.com/2021/install-debian-on-virtualbox/
