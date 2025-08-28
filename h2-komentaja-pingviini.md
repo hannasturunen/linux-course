@@ -1,12 +1,12 @@
 # H2 Komentaja Pingviini
 
-## Tiivistelmä Command line basics revisited
+## Tiivistelmä Command line basics revisited      --KESKEN
 
 --KESKEN
 
 ## Tiivistelmä
 
-Asensin ensin micro-editorin 
+Asensin ensin micro-editorin ja sen jälkeen valitsemani kolme uutta komentoriviohjelmaa. Nämä olivat htop, ncdu ja cowsay. Hain neljän eri kansion tiedot. Kansiot olivat / (root), /home, /home/hanna, /etc, /media ja /var/log.
 
 ## Micro-editorin asennus
 
@@ -37,14 +37,33 @@ Hain Googlesta muutamia mahdollisia komentoriviohjelmia, koska itselläni ei ole
 * [1]
 
 * klo 18.29 Hain kolmanneksi komennolla "apt-cache search cowsay | grep ^cowsay", joka antoi tulokseksi kaksi, joista toinen "cowsay - configurable talking cow" oli se, jonka halusin. Latasin ohjelman komennolla "sudo apt-get install cowsay" ja ohjelma latautui.
-* 18.34 Kirjoitin komennon "cowsay Hei kaikki!", josta tulostui lehmä, joka sanoi "Hei kaikki!", alla kuva.
+* 18.34 Kirjoitin komennon "cowsay Hei kaikki!", josta tulostui lehmä, joka sanoi "Hei kaikki!", alla kuva. //Lehmä, joka sanoo kirjoittamani asian. --KESKEN
 * --KUVA6
 * [2]
 
+Olisin voinut ladata nämä kaikki yhdella kertaa komennolla "sudo apt-get install htop ncdu cowsay", mutta nyt tein kaikki yksitellen, koska tässä tuli opeteltua samalla hyvin Linuxin käyttöä.
+
+## FHS, kansioiden esittely
+
+* 19.15 Avasin terminaalin ja kirjoitin komennon "ls /". ls-komennolla listasi tiedostot, jotka se kansio sisältää, ja /-komennolla kerrotaan, että halutaan juurihakemiston (root directory) tiedostot.
+* klo 19.19 Seuraavaksi kirjoitin komennon "ls /home". Tässä on käyttäjien kotihakemisto ja tässä näkyy vain yksi eli omani.
+* klo 19.22 Kirjoitin komennon "ls /home/hanna". Käyttäjän "hanna" kotihakemisto eli oma kotihakemistoni. Tämä on paikka, jonne tallennan tiedostot.
+* --KUVA7
+* klo 19.47 Kirjoitin komennon "ls /etc". Tällä tuli paljon tietoa, alla kuva. Tässä näkyy järjestelmäasetukset. Ne ovat tekstitiedostoina, joten ihmisen on helppo lukea ne.
+* KUVA8
+* klo 19.52 Kirjoitin terminaaliin "cd /etc", jolloin pääsin etc-kansioon. Kirjoitin komennon "ls -l", jolla sain näkyviin tiedostojen oikeudet, omistajan, koon ja muokkauspäivän. Alla kuva.
+* --KUVA9 
+* klo 19.57 Halusin vielä näkyviin pelkästään yhden tiedoston tiedot. Valitsin luettelosta passwd-tiedoston. Annoin komennon "ls -l /etc/passwd", josta antoi pelkästään passwd-tiedoston tiedot näkyviin. Alla kuva.
+* --KUVA10
+* klo 20.02 Menin pois etc-hakemistosta antamalla komennon "cd ..", jonka jälkeen tarkistin missä olen antamalla "pwd"-komennon. Olin root-hakemistossa. Annoin komennon "cd /home/hanna", jotta pääsin takaisin oman hakemistooni.
+* klo 20.06 Annoin komennon "ls /media", jolla tuli kaksi cdrom-tulosta. Tässä näkyy media, esimerkiksi juuri cdrom, mutta voisi olla myös USB-disk.
+* klo 20.07 Kirjoitin komennon "ls /var/log". Tuli kansioita ja tiedostoja. Näyttää eri lokeja. Päätin, että katson tiedoston lastlog-tiedot, joten kirjoitin komennon "ls -l /var/log/lastlog", josta tuli tämän tiedon tiedot yhdelle riville. Alla kuva.
+* --KUVA11
 
 
 ## Lähteet
 
 * [1] https://opensource.com/article/20/6/modern-linux-command-line-tools, 28.8.2025
 * [2] https://linuxstans.com/funniest-linux-meme-distros-software-commands/ 28.8.2025
+* https://terokarvinen.com/2020/command-line-basics-revisited/ 28.8.2025
 * Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy, https://terokarvinen.com/linux-palvelimet
