@@ -29,18 +29,22 @@ Hain Googlesta muutamia mahdollisia komentoriviohjelmia, koska itselläni ei ole
 * klo 18.02 Hain ensin komennolla "apt-cache search htop | grep ^htop" terminaalissa, josta tuli vastaus "htop - interactive processes viewer". Annoin komennon "sudo apt-get install htop". Annoin salasanan, jonka jälkeen ohjelma latautui.
 * klo 18.09 Annoin komennon "htop", jolloin htop-ohjelma avatui. //htop on prosessikatseluohjelma, joka näyttää käynnissä olevat prosessit ja mukana kivat ja havainnollistavat värit. F10-komennolla pääsin pois ohjelmasta.  --KESKEN
 * --KUVA4
+* [1]
 
 * klo 18.19 Hain toiseksi komennolla "apt-cache search ncdu | grep ^ncdu", jolloin sain tulokseksi "ncdu - ncurses disk usage viewer". Latasin tämän ohjelman komennolla "sudo apt-get install ncdu". Alussa annoin taas salasanan.
 * 18.23 Kirjoitin terminaaliin komennon "ncdu", joka avasi ohjelman. Q-komennolla pääsin pois ohjelmasta. //Selkeä ja visuaalinen tapa ymmärtää, mihin levytila kuluu.  --KESKEN
 * --KUVA5
+* [1]
 
 * klo 18.29 Hain kolmanneksi komennolla "apt-cache search cowsay | grep ^cowsay", joka antoi tulokseksi kaksi, joista toinen "cowsay - configurable talking cow" oli se, jonka halusin. Latasin ohjelman komennolla "sudo apt-get install cowsay" ja ohjelma latautui.
 * 18.34 Kirjoitin komennon "cowsay Hei kaikki!", josta tulostui lehmä, joka sanoi "Hei kaikki!", alla kuva.
 * --KUVA6
+* [2]
 
 
 
 ## Lähteet
 
-https://opensource.com/article/20/6/modern-linux-command-line-tools, 28.8.2025
-https://linuxstans.com/funniest-linux-meme-distros-software-commands/ 28.8.2025
+* [1] https://opensource.com/article/20/6/modern-linux-command-line-tools, 28.8.2025
+* [2] https://linuxstans.com/funniest-linux-meme-distros-software-commands/ 28.8.2025
+* Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy, https://terokarvinen.com/linux-palvelimet
