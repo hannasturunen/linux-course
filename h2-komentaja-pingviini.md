@@ -9,13 +9,16 @@
 - Komentoja on hyvin paljon ja varmasti kestää aikansa ennen kuin ne oppii niin, että niistä tulee automaatio. Varsinkin harvemmin käytettyjä komentoja joutuu varmasti etsimään eri hakukoneilla. 
 
 
+
 ## Tehtävät virtuaalikoneella
 
 Tein harjoitukset torstaina 28.8.2025 ja maanantaina 1.9.2025 Helsingissä kotona. Tein torstaina harjoitukset micro-editorin asennuksesta FHS kansioiden esittelyyn (kohdat a-c) ja maanantaina grep-tehtävästä koneen raudan listaukseen (kohdat d-f). Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home. 
 
+
 ### Tiivistelmä      --KESKEN
 
 Asensin ensin micro-editorin ja sen jälkeen kolme valitsemaani komentoriviohjelmaa. Nämä olivat htop, ncdu ja cowsay. Hain neljän eri kansion tiedot. Kansiot olivat / (root), /home, /home/hanna, /etc, /media ja /var/log.
+
 
 ### Micro-editorin asennus
 
@@ -26,6 +29,7 @@ Asensin ensin micro-editorin ja sen jälkeen kolme valitsemaani komentoriviohjel
 
 * 17.10 Micro-editori on nyt ladattu. Annoin komennon "micro", jolloin micro-editori avautui. Alla kuva micro-editorista. Suljin ohjelman komennolla ctrl+q.
 * --KUVA3.
+
 
 ### Apt. Kolmen uuden komentoriviohjelman asentaminen
 
@@ -45,6 +49,7 @@ Hain Googlesta muutamia mahdollisia komentoriviohjelmia, koska itselläni ei oll
 
 Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get install htop ncdu cowsay". Tein kuitenkin jokaisen asennuksen yksitellen, jotta saisin opeteltua samalla Linuxin käyttöä.
 
+
 ### FHS, kansioiden esittely
 
 * klo 19.15 Avasin terminaalin ja kirjoitin komennon "ls /". ls-komento listasi kansion sisältämät kansiot ja tiedostot ja /-komento kertoi, että haluttiin hakea juurihakemiston (root directory) kansiot ja tiedostot.
@@ -59,11 +64,12 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 * 19.52 Seuravaaksi kirjoitin komennon "cd /etc", jolla pääsin etc-kansioon. Ollessani etc-kansiossa annoin komennon "ls -l", jolloin näkyviin tuli tiedostojen oikeudet, omistajat, koot ja muokkauspäivät. Alla kuva osan tiedostojen tiedoista.
 * --KUVA9
 
-* 19.57 Halusin testata saisinko näkyviin pelkästään yhden tiedoston tiedot. Valitsin näkyvissä olevasta luettelosta tiedostoksi passwd-tiedoston. Annoin komennon "ls -l /etc/passwd", josta antoi pelkästään passwd-tiedoston tiedot näkyviin. Alla kuva.
+* 19.57 Halusin testata saisinko näkyviin pelkästään yhden tiedoston tiedot. Valitsin näkyvissä olevasta luettelosta tiedostoksi passwd-tiedoston. Annoin komennon "ls -l /etc/passwd", jolloin sain näkyviin pelkästään passwd-tiedoston tiedot. Alla kuva.
 * --KUVA10
-* 20.02 Menin pois etc-hakemistosta antamalla komennon "cd ..", jonka jälkeen tarkistin missä olen antamalla "pwd"-komennon. Olin root-hakemistossa. Annoin komennon "cd /home/hanna", jotta pääsin takaisin oman hakemistooni.
-* 20.06 Annoin komennon "ls /media", jolla tuli kaksi cdrom-tulosta. Tässä näkyy media, esimerkiksi juuri cdrom, mutta voisi olla myös USB-disk.
-* 20.07 Kirjoitin komennon "ls /var/log". Tuli kansioita ja tiedostoja. Näyttää eri lokeja. Päätin, että katson tiedoston lastlog-tiedot, joten kirjoitin komennon "ls -l /var/log/lastlog", josta tuli tämän tiedon tiedot yhdelle riville. Alla kuva.
+
+* 20.02 Menin pois etc-kansiosta antamalla komennon "cd ..". Tarkistin missä kansiossa olen antamalla "pwd"-komennon, joka kertoi, että olin  root-hakemistossa. Annoin komennon "cd /home/hanna", jotta pääsin takaisin oman hakemistooni.
+* 20.06 Annoin komennon "ls /media", jolloin pääsin media-hakemistoon. Kansiossa näkyi kaksi cdrom-tulosta. Media-kansiossa näkyy nimen mukaisesti media, esimerkiksi juuri tämä näkyvä cdrom, mutta sen lisäksi voisi olla myös USB-disk.
+* 20.07 Kirjoitin komennon "ls /var/log"., josta tuli esille erilaisia kansioita ja tiedostoja. Täällä kansiossa näkyy eri lokeja. Halusin katsoa lastlog-tiedoston tiedot, joten annoin komennon "ls -l /var/log/lastlog", josta tuli tämän tiedoston tiedot yhdelle riville. Alla kuva.
 * --KUVA11
 
 
