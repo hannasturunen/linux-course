@@ -6,6 +6,7 @@
 - Se on kätevä, nopea ja helppo automatisoida.
 - Jos komennon jälkeen on #-merkki, loppurivi jätetään huomiotta.
 - Käytössä on monia komentoja, joita kannattaa opetella ulkoa, jotta toiminta Linuxissa olisi vaivatonta.
+- Komentoja on hyvin paljon ja varmasti kestää aikansa ennen kuin ne oppii niin, että niistä tulee automaatio. Varsinkin harvemmin käytettyjä komentoja joutuu varmasti etsimään eri hakukoneilla. 
 
 
 ## Tehtävät virtuaalikoneella
@@ -46,8 +47,8 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 
 ### FHS, kansioiden esittely
 
-* 19.15 Avasin terminaalin ja kirjoitin komennon "ls /". ls-komennolla listasi tiedostot, jotka se kansio sisältää, ja /-komennolla kerrotaan, että halutaan juurihakemiston (root directory) tiedostot.
-* 19.19 Seuraavaksi kirjoitin komennon "ls /home". Tässä on käyttäjien kotihakemisto ja tässä näkyy vain yksi eli omani.
+* klo 19.15 Avasin terminaalin ja kirjoitin komennon "ls /". ls-komento listasi kansion sisältämät kansiot ja tiedostot ja /-komento kertoi, että haluttiin hakea juurihakemiston (root directory) kansiot ja tiedostot.
+* 19.19 Seuraavaksi kirjoitin komennon "ls /home". Tämä on käyttäjän kotihakemisto ja tässä näkyi vin yksi kansio eli oma kansioni.
 * 19.22 Kirjoitin komennon "ls /home/hanna". Käyttäjän "hanna" kotihakemisto eli oma kotihakemistoni. Tämä on paikka, jonne tallennan tiedostot.
 * --KUVA7
 * 19.47 Kirjoitin komennon "ls /etc". Tällä tuli paljon tietoa, alla kuva. Tässä näkyy järjestelmäasetukset. Ne ovat tekstitiedostoina, joten ihmisen on helppo lukea ne.
