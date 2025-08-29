@@ -49,13 +49,17 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 
 * klo 19.15 Avasin terminaalin ja kirjoitin komennon "ls /". ls-komento listasi kansion sisältämät kansiot ja tiedostot ja /-komento kertoi, että haluttiin hakea juurihakemiston (root directory) kansiot ja tiedostot.
 * 19.19 Seuraavaksi kirjoitin komennon "ls /home". Tämä on käyttäjän kotihakemisto ja tässä näkyi vin yksi kansio eli oma kansioni.
-* 19.22 Kirjoitin komennon "ls /home/hanna". Käyttäjän "hanna" kotihakemisto eli oma kotihakemistoni. Tämä on paikka, jonne tallennan tiedostot.
+* 19.22 Kirjoitin komennon "ls /home/hanna", jolloin sain käyttäjän "hanna" kotihakemiston eli oma kotihakemistoni. Tänne ovoin tallentaa tiedostoja tai tehdä uusia kansioita.
+* Alla kuva "ls /", "ls /home" ja "ls /home/hanna" hakujen tuloksista.
 * --KUVA7
-* 19.47 Kirjoitin komennon "ls /etc". Tällä tuli paljon tietoa, alla kuva. Tässä näkyy järjestelmäasetukset. Ne ovat tekstitiedostoina, joten ihmisen on helppo lukea ne.
-* KUVA8
-* 19.52 Kirjoitin terminaaliin "cd /etc", jolloin pääsin etc-kansioon. Kirjoitin komennon "ls -l", jolla sain näkyviin tiedostojen oikeudet, omistajan, koon ja muokkauspäivän. Alla kuva.
-* --KUVA9 
-* 19.57 Halusin vielä näkyviin pelkästään yhden tiedoston tiedot. Valitsin luettelosta passwd-tiedoston. Annoin komennon "ls -l /etc/passwd", josta antoi pelkästään passwd-tiedoston tiedot näkyviin. Alla kuva.
+
+* 19.47 Kirjoitin komennon "ls /etc", joka antoi paljon tietoa. Nämä ovat järjestelmäasetukset, jotka ovat tekstitiedostoina, jolloin ihmisen on helpompaa lukea niitä. Alla kuva, jossa näkyy osa tiedostoista ja kansiosta.
+* --KUVA8
+  
+* 19.52 Seuravaaksi kirjoitin komennon "cd /etc", jolla pääsin etc-kansioon. Ollessani etc-kansiossa annoin komennon "ls -l", jolloin näkyviin tuli tiedostojen oikeudet, omistajat, koot ja muokkauspäivät. Alla kuva osan tiedostojen tiedoista.
+* --KUVA9
+
+* 19.57 Halusin testata saisinko näkyviin pelkästään yhden tiedoston tiedot. Valitsin näkyvissä olevasta luettelosta tiedostoksi passwd-tiedoston. Annoin komennon "ls -l /etc/passwd", josta antoi pelkästään passwd-tiedoston tiedot näkyviin. Alla kuva.
 * --KUVA10
 * 20.02 Menin pois etc-hakemistosta antamalla komennon "cd ..", jonka jälkeen tarkistin missä olen antamalla "pwd"-komennon. Olin root-hakemistossa. Annoin komennon "cd /home/hanna", jotta pääsin takaisin oman hakemistooni.
 * 20.06 Annoin komennon "ls /media", jolla tuli kaksi cdrom-tulosta. Tässä näkyy media, esimerkiksi juuri cdrom, mutta voisi olla myös USB-disk.
