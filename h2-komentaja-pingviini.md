@@ -12,9 +12,9 @@
 
 Tein harjoitukset torstaina 28.8.2025 ja maanantaina 1.9.2025 Helsingissä kotona. Torstaina tein harjoitukset micro-editorin asennuksesta FHS kansioiden esittelyyn (kohdat a-c) ja maanantaina grep-tehtävästä koneen raudan listaukseen (kohdat d-f). Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home. 
 
-### Tiivistelmä
+### Tiivistelmä      --KESKEN
 
-Asensin ensin micro-editorin ja sen jälkeen valitsemani kolme uutta komentoriviohjelmaa. Nämä olivat htop, ncdu ja cowsay. Hain neljän eri kansion tiedot. Kansiot olivat / (root), /home, /home/hanna, /etc, /media ja /var/log.
+Asensin ensin micro-editorin ja sen jälkeen valitsemani kolme uutta komentoriviohjelmaa, jotka olivat htop, ncdu ja cowsay. Hain neljän eri kansion tiedot, jotka olivat / (root), /home, /home/hanna, /etc, /media ja /var/log.
 
 ### Micro-editorin asennus
 
