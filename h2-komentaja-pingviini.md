@@ -81,7 +81,9 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 
 ## Lähteet
 
+* https://terokarvinen.com/2020/command-line-basics-revisited/ 28.8.2025
 * [1] https://opensource.com/article/20/6/modern-linux-command-line-tools, 28.8.2025
 * [2] https://linuxstans.com/funniest-linux-meme-distros-software-commands/ 28.8.2025
-* https://terokarvinen.com/2020/command-line-basics-revisited/ 28.8.2025
 * Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy, https://terokarvinen.com/linux-palvelimet
+* Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy, https://terokarvinen.com/linux-palvelimet
+Pohjana Johanna Heinonen 2025: How to Install Linux to Virtualbox? https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md
