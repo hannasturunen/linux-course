@@ -5,8 +5,9 @@
 - Komentorivi (command line) on ollut käytössä jo pitkään.
 - Se on kätevä, nopea ja helppo automatisoida.
 - Jos komennon jälkeen on #-merkki, loppurivi jätetään huomiotta.
-- Käytössä on monia komentoja, joita kannattaa opetella ulkoa, jotta toiminta Linuxissa olisi vaivatonta.
-- Komentoja on hyvin paljon ja varmasti kestää aikansa ennen kuin ne oppii niin, että niistä tulee automaatio. Varsinkin harvemmin käytettyjä komentoja joutuu varmasti etsimään eri hakukoneilla. 
+- Käytössä on monia komentoja, joita kannattaa opetella ulkoa, jotta toiminta Linuxissa olisi vaivatonta. (Karvinen, 3.2.2020)
+
+Komentoja on hyvin paljon ja varmasti kestää aikansa ennen kuin ne oppii niin, että niistä tulee automaatio. Varsinkin harvemmin käytettyjä komentoja joutuu varmasti etsimään eri hakukoneilla. 
 
 
 
@@ -81,7 +82,8 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 
 ## Lähteet
 
-* https://terokarvinen.com/2020/command-line-basics-revisited/ 28.8.2025
+* Karvinen, T. 3.2.2020. Command Line Basics Revisited. Luettavissa: https://terokarvinen.com/2020/command-line-basics-revisited/. Luettu: 28.8.2025.
+* 
 * [1] https://opensource.com/article/20/6/modern-linux-command-line-tools, 28.8.2025
 * [2] https://linuxstans.com/funniest-linux-meme-distros-software-commands/ 28.8.2025
 * Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy, https://terokarvinen.com/linux-palvelimet
