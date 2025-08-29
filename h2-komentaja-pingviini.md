@@ -14,40 +14,35 @@ Tein harjoitukset torstaina 28.8.2025 ja maanantaina 1.9.2025 Helsingissä koton
 
 ### Tiivistelmä      --KESKEN
 
-Asensin ensin micro-editorin ja sen jälkeen valitsemani kolme uutta komentoriviohjelmaa, jotka olivat htop, ncdu ja cowsay. Hain neljän eri kansion tiedot, jotka olivat / (root), /home, /home/hanna, /etc, /media ja /var/log.
+Asensin ensin micro-editorin ja sen jälkeen kolme valitsemaani komentoriviohjelmaa. Nämä olivat htop, ncdu ja cowsay. Hain neljän eri kansion tiedot. Kansiot olivat / (root), /home, /home/hanna, /etc, /media ja /var/log.
 
 ### Micro-editorin asennus
 
 * klo 16.40 Avasin VirtualBoxin ja sieltä Linux-virtuaalikoneeni.
-* 16.45 Avasin virtuaalikoneen terminaaalin. Kirjoitin siihen komentona "apt-cache search micro", koska haluan ladata virtuaalikoneeseen micro-editorin. Tällä haulla tuli todella paljon tuloksia, joten rajasin hakua ja kirjoitin komentona nyt "apt-cache search micro | grep ^micro", jolloin tuli vain hieman yli 10 tulosta. Grepillä sain etsittyä tiettyä kuviota (pattern) tekstistä (tässä tapauksessa microa) ja ^-merkki kertoo, että haluan mirco-sanan olevan rivin alussa. |-merkkiä (putki, pipe) ennen oleva komento ottaa tulosteen ja syöttää sen |-merkin jälkeiselle komennolle ja lopuksi tulostuu vain ne, jotka ovat oikein molempien syötteiden kanssa. Tämä helpotti listan lukemista huomattavasti ja nyt näin heti, että micro-editori, jota etsin, on listalla toisena, alla kuva.
-* --KUVA1.
-
-* 17.04 Ajoin terminaalissa komennon "sudo apt-get install micro", jonka jälkeen syötin salasanani. Micro-editori teki alkulataukset, jonka jälkeen kysyi haluanko käyttää 15.0 Mb:tä levyltä, tähän vastasin Y eli Yes. Tämän jälkeen latasi micro-editorin, alla kuva.
+* 16.45 Avasin virtuaalikoneen terminaaalin. Kirjoitin komennon "apt-cache search micro", koska halusin ladata virtuaalikoneeseen micro-editorin. Tällä haulla tuli todella paljon tuloksia, joten päätin rajata hakua ja kirjoitin komentona "apt-cache search micro | grep ^micro", jolloin sain vain hieman yli 10 tulosta. Nyt löysin paljon helpommin etsimäni micro-editorin.
+* 17.04 Ajoin terminaalissa komennon "sudo apt-get install micro", jonka jälkeen syötin salasanani. Hetken päästä terminaaliin tuli kysymys, että haluanko käyttää 15.0 Mb:tä levyltä, johon vastasin Y eli kyllä. Tämän jälkeen micro-editori latautui, alla kuva.
 * --KUVA2.
 
-* 17.10 Micro-editori on nyt ladattu. Avasin micro-editorin komennolla "micro", joka avasi ohjelman. Suljin ohjelman ctrl+q.
+* 17.10 Micro-editori on nyt ladattu. Annoin komennon "micro", jolloin micro-editori avautui. Alla kuva micro-editorista. Suljin ohjelman komennolla ctrl+q.
 * --KUVA3.
 
-### Apt. Asenna kolme itsellesi uutta komentoriviohjelmaa
+### Apt. Kolmen uuden komentoriviohjelman asentaminen
 
-Hain Googlesta muutamia mahdollisia komentoriviohjelmia, koska itselläni ei ole oikein tietoa millaisia niitä edes on.
+Hain Googlesta muutamia mahdollisia komentoriviohjelmia, koska itselläni ei ollut oikein tietoa millaisia niitä edes on olemassa. Valitsin tuloksista kaksi hyödyllisempää ohjelmaa (htop ja ncdu) ja yhden hauskan (cowsay).
 
-* 18.02 Hain ensin komennolla "apt-cache search htop | grep ^htop" terminaalissa, josta tuli vastaus "htop - interactive processes viewer". Annoin komennon "sudo apt-get install htop". Annoin salasanan, jonka jälkeen ohjelma latautui.
-* 18.09 Annoin komennon "htop", jolloin htop-ohjelma avatui. //htop on prosessikatseluohjelma, joka näyttää käynnissä olevat prosessit ja mukana kivat ja havainnollistavat värit. F10-komennolla pääsin pois ohjelmasta.  --KESKEN
+* klo 18.02 Hain terminaalissa ohjelman komennolla "apt-cache search htop | grep ^htop", josta tuli tulos "htop - interactive processes viewer". Kirjoitin komennon "sudo apt-get install htop" ja annoin salasanan, kun sitä pyydettiin. Tämän jälkeen ohjelma latautui.
+* 18.09 Annoin komennon "htop", jolloin htop-ohjelma avatui, kuva alla. htop-ohjelmalla voi tarkastella koneen käynnissä olevia prosesseja sekä nähdä esimerkiksi muistin tilan ja prosessorin käytön. Ohjelma on uudempi versio topista ja siinä on mukana värejä, joka tekee hahmottamisesta helpompaa [1]. Painamalla F10 pääsin pois ohjelmasta.
 * --KUVA4
-* [1]
 
-* 18.19 Hain toiseksi komennolla "apt-cache search ncdu | grep ^ncdu", jolloin sain tulokseksi "ncdu - ncurses disk usage viewer". Latasin tämän ohjelman komennolla "sudo apt-get install ncdu". Alussa annoin taas salasanan.
-* 18.23 Kirjoitin terminaaliin komennon "ncdu", joka avasi ohjelman. Q-komennolla pääsin pois ohjelmasta. //Selkeä ja visuaalinen tapa ymmärtää, mihin levytila kuluu.  --KESKEN
+* 18.19 Kirjoitin komennon "apt-cache search ncdu | grep ^ncdu", jolloin sain tulokseksi "ncdu - ncurses disk usage viewer". Latasin tämän ohjelman komennolla "sudo apt-get install ncdu" ja latauksen alussa annoin taas salasanan.
+* 18.23 Kirjoitin terminaaliin komennon "ncdu", joka avasi ohjelman. Alla kuva ohjelmasta. ncdu kertoo selkeästi ja visuaalisesti mihin levytilaa käytetään ja antaa tulokset käytetyimpien hakemistojen tai tiedostojen mukaan [1]. Poistuin ohjelmasta painamalla Q-näppäintä.
 * --KUVA5
-* [1]
 
-* 18.29 Hain kolmanneksi komennolla "apt-cache search cowsay | grep ^cowsay", joka antoi tulokseksi kaksi, joista toinen "cowsay - configurable talking cow" oli se, jonka halusin. Latasin ohjelman komennolla "sudo apt-get install cowsay" ja ohjelma latautui.
-* 18.34 Kirjoitin komennon "cowsay Hei kaikki!", josta tulostui lehmä, joka sanoi "Hei kaikki!", alla kuva. //Lehmä, joka sanoo kirjoittamani asian. --KESKEN
+* 18.29 Hain kolmannen ohjelman komennolla "apt-cache search cowsay | grep ^cowsay". Tuloksia tuli kaksi, joista toinen "cowsay - configurable talking cow" oli se, jonka halusin asentaa. Annoin komennon "sudo apt-get install cowsay" ja ohjelma latatui.
+* 18.34 Kirjoitin terminaaliin komennon "cowsay Hei kaikki!", josta tulostui lehmä, joka sanoi "Hei kaikki!". Alla kuva. Ohjelma tulostaa lehmän, joka sanoo kirjoittamani asian [2].
 * --KUVA6
-* [2]
 
-Olisin voinut ladata nämä kaikki yhdella kertaa komennolla "sudo apt-get install htop ncdu cowsay", mutta nyt tein kaikki yksitellen, koska tässä tuli opeteltua samalla hyvin Linuxin käyttöä.
+Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get install htop ncdu cowsay". Tein kuitenkin jokaisen asennuksen yksitellen, jotta saisin opeteltua samalla Linuxin käyttöä.
 
 ### FHS, kansioiden esittely
 
@@ -65,6 +60,12 @@ Olisin voinut ladata nämä kaikki yhdella kertaa komennolla "sudo apt-get insta
 * 20.06 Annoin komennon "ls /media", jolla tuli kaksi cdrom-tulosta. Tässä näkyy media, esimerkiksi juuri cdrom, mutta voisi olla myös USB-disk.
 * 20.07 Kirjoitin komennon "ls /var/log". Tuli kansioita ja tiedostoja. Näyttää eri lokeja. Päätin, että katson tiedoston lastlog-tiedot, joten kirjoitin komennon "ls -l /var/log/lastlog", josta tuli tämän tiedon tiedot yhdelle riville. Alla kuva.
 * --KUVA11
+
+
+### Grep
+
+* Grepillä sain etsittyä tiettyä kuviota (pattern) tekstistä (tässä tapauksessa microa) ja ^-merkki kertoo, että haluan mirco-sanan olevan rivin alussa. |-merkkiä (putki, pipe) ennen oleva komento ottaa tulosteen ja syöttää sen |-merkin jälkeiselle komennolle ja lopuksi tulostuu vain ne, jotka ovat oikein molempien syötteiden kanssa. Tämä helpotti listan lukemista huomattavasti ja löysin haluamani ohjelman helposti.
+* --KUVA1.
 
 
 ## Lähteet
