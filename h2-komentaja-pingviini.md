@@ -1,8 +1,12 @@
 # H2 Komentaja Pingviini
 
-## Tiivistelmä Command line basics revisited      --KESKEN
+## Tiivistelmä Command line basics revisited
 
---KESKEN
+- Komentorivi (command line) on ollut käytössä jo pitkään.
+- Se on kätevä, nopea ja helppo automatisoida.
+- Jos komennon jälkeen on #-merkki, loppurivi jätetään huomiotta.
+- Käytössä on monia komentoja, joita kannattaa opetella ulkoa, jotta toiminta Linuxissa olisi vaivatonta.
+
 
 ## Tiivistelmä
 
