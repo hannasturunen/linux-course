@@ -67,7 +67,7 @@ Olisin voinut ladata nämä kaikki yhdella kertaa komennolla "sudo apt-get insta
 * --KUVA11
 
 
-### Lähteet
+## Lähteet
 
 * [1] https://opensource.com/article/20/6/modern-linux-command-line-tools, 28.8.2025
 * [2] https://linuxstans.com/funniest-linux-meme-distros-software-commands/ 28.8.2025
