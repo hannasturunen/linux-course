@@ -84,20 +84,30 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 
 
 
+
 ### The Friendly M, grep-komento     --KESKEN
 
-* Grepillä sain etsittyä tiettyä kuviota (pattern) tekstistä (tässä tapauksessa microa) ja ^-merkki kertoo, että haluan mirco-sanan olevan rivin alussa. 
+* Man-komento tarkoittaa manuaalia (manual) ja sillä näytetään halutun kohteen käyttöohje (Karvinen 3.2.2020).
+* Grep-komento on yksi hyödyllisimmistä komennoista Linuxissa. Sillä voidaan etsiä tiettyä sanaa, lausetta tai kuviota tekstitiedostojen sisältä ja se näyttää löydetyt tulokset ruudulla. (Geeks for Geeks 2025.)
+* Komento "man grep" tarkoittaa siis, että haetaan komennolle grep käyttöohjeet.
 
 
 ### Pipe-esimerkki     --KESKEN
 
-![haussa käytetty grep-komentoa](images/h2-kuva11.jpg)
+* |-merkkiä (putki, pipe) ennen oleva komento ottaa tulosteen ja syöttää sen |-merkin jälkeiselle komennolle ja lopuksi tulostuu vain ne, jotka ovat oikein molempien syötteiden kanssa.
+* "apt-cache search htop | grep ^htop"
+*
+* Suora lainaus: Any command output can be read one screenfull at a time by piping the output to less (Karvinen 3.2.2020).
+* Suora lainaus: | takes output from one command and feeds it as input into another (| is called pipe) (Johanna)
+* Tämä helpotti listan lukemista huomattavasti ja löysin haluamani ohjelman helposti.
+* https://www.howtogeek.com/438882/how-to-use-pipes-on-linux/
 
-* |-merkkiä (putki, pipe) ennen oleva komento ottaa tulosteen ja syöttää sen |-merkin jälkeiselle komennolle ja lopuksi tulostuu vain ne, jotka ovat oikein molempien syötteiden kanssa. Tämä helpotti listan lukemista huomattavasti ja löysin haluamani ohjelman helposti.
+![haussa käytetty grep-komentoa](images/h2-kuva11.jpg)
 
 
 ## Lähteet
 
+* Geeks for Geeks 2025. grep command in Unix/Linux. Luettavissa: https://www.geeksforgeeks.org/linux-unix/grep-command-in-unixlinux/. Luettu: 30.8.2025.
 * Gerardi, R. 25.6.2020. 5 modern alternatives to essential Linux command-line tools. Opensource.com. Luettavissa: https://opensource.com/article/20/6/modern-linux-command-line-tools. Luettu: 28.8.2025.
 * Karvinen, T. 3.2.2020. Command Line Basics Revisited. Luettavissa: https://terokarvinen.com/2020/command-line-basics-revisited/. Luettu: 28.8.2025.
 * Watkins, D. 17.11.2021. 3 interesting ways to use the Linux cowsay command. Opensource.com. Luettavissa: https://opensource.com/article/21/11/linux-cowsay-command. Luettu: 28.8.2025.
