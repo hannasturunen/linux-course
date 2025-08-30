@@ -88,7 +88,7 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 ### The Friendly M, grep-komento     --KESKEN
 
 * Man-komento tarkoittaa manuaalia (manual) ja sillä näytetään halutun kohteen käyttöohje (Karvinen 3.2.2020).
-* Grep-komento on yksi hyödyllisimmistä komennoista Linuxissa. Sillä voidaan etsiä tiettyä sanaa, lausetta tai kuviota tekstitiedostojen sisältä ja se näyttää löydetyt tulokset ruudulla. (Geeks for Geeks 2025.)
+* Grep-komento on yksi hyödyllisimmistä komennoista Linuxissa. Sillä voidaan etsiä tiettyä sanaa, lausetta tai kuviota tekstitiedostojen sisältä ja se näyttää löydetyt tulokset ruudulla. (GeeksforGeeks 2025.)
 * Komento "man grep" tarkoittaa siis, että haetaan komennolle grep käyttöohjeet.
 
 
@@ -105,7 +105,7 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 
 ## Lähteet
 
-* Geeks for Geeks 2025. grep command in Unix/Linux. Luettavissa: https://www.geeksforgeeks.org/linux-unix/grep-command-in-unixlinux/. Luettu: 30.8.2025.
+* GeeksforGeeks 2025. grep command in Unix/Linux. Luettavissa: https://www.geeksforgeeks.org/linux-unix/grep-command-in-unixlinux/. Luettu: 30.8.2025.
 * How-To Geek 2019. How to Use Pipes on Linux. Luettavissa: https://www.howtogeek.com/438882/how-to-use-pipes-on-linux/. Luettu: 30.8.2025. 
 * Opensource.com 2020. 5 modern alternatives to essential Linux command-line tools. Luettavissa: https://opensource.com/article/20/6/modern-linux-command-line-tools. Luettu: 28.8.2025.
 * Opensource.comn 2021. 3 interesting ways to use the Linux cowsay command. Luettavissa: https://opensource.com/article/21/11/linux-cowsay-command. Luettu: 28.8.2025.
