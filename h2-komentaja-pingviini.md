@@ -60,21 +60,27 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 * 19.19 Seuraavaksi kirjoitin komennon "ls /home". Tämä on käyttäjän kotihakemisto ja tässä näkyi vin yksi kansio eli oma kansioni.
 * 19.22 Kirjoitin komennon "ls /home/hanna", jolloin sain käyttäjän "hanna" kotihakemiston eli oma kotihakemistoni. Tänne ovoin tallentaa tiedostoja tai tehdä uusia kansioita.
 * Alla kuva "ls /", "ls /home" ja "ls /home/hanna" hakujen tuloksista.
-* --KUVA6
+
+![tulokset ls /, las /home ja ls /home/hanna tiedoista](images/h2-kuva6.jpg)
 
 * 19.47 Kirjoitin komennon "ls /etc", joka antoi paljon tietoa. Nämä ovat järjestelmäasetukset, jotka ovat tekstitiedostoina, jolloin ihmisen on helpompaa lukea niitä. Alla kuva, jossa näkyy osa tiedostoista ja kansiosta.
-* --KUVA7
+
+![tulos ls /etc tiedoista](images/h2-kuva7.jpg)
   
 * 19.52 Seuravaaksi kirjoitin komennon "cd /etc", jolla pääsin etc-kansioon. Ollessani etc-kansiossa annoin komennon "ls -l", jolloin näkyviin tuli tiedostojen oikeudet, omistajat, koot ja muokkauspäivät. Alla kuva osan tiedostojen tiedoista.
-* --KUVA8
+
+![tulos etc-kansion tiedostojen tiedoista](images/h2-kuva8.jpg)
 
 * 19.57 Halusin testata saisinko näkyviin pelkästään yhden tiedoston tiedot. Valitsin näkyvissä olevasta luettelosta tiedostoksi passwd-tiedoston. Annoin komennon "ls -l /etc/passwd", jolloin sain näkyviin pelkästään passwd-tiedoston tiedot. Alla kuva.
-* --KUVA9
+
+![tulos ls -l /etc/password tiedoista, vain yksi tulos](images/h2-kuva9.jpg)
 
 * 20.02 Menin pois etc-kansiosta antamalla komennon "cd ..". Tarkistin missä kansiossa olen antamalla "pwd"-komennon, joka kertoi, että olin  root-hakemistossa. Annoin komennon "cd /home/hanna", jotta pääsin takaisin oman hakemistooni.
 * 20.06 Annoin komennon "ls /media", jolloin pääsin media-hakemistoon. Kansiossa näkyi kaksi cdrom-tulosta. Media-kansiossa näkyy nimen mukaisesti media, esimerkiksi juuri tämä näkyvä cdrom, mutta sen lisäksi voisi olla myös USB-disk.
 * 20.07 Kirjoitin komennon "ls /var/log"., josta tuli esille erilaisia kansioita ja tiedostoja. Täällä kansiossa näkyy eri lokeja. Halusin katsoa lastlog-tiedoston tiedot, joten annoin komennon "ls -l /var/log/lastlog", josta tuli tämän tiedoston tiedot yhdelle riville. Alla kuva.
-* --KUVA10
+
+![tulos ls -l /var/log/lastlog tiedosta, vain yksi tulos](images/h2-kuva10.jpg)
+
 
 
 ### The Friendly M, grep-komento     --KESKEN
