@@ -98,21 +98,19 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 
 
 * !!!! Tein komennon "apt-cache search htop", josta tuli todella paljon rivejä. Tästä olisi ollut hyvin hankala etsiä oikeaa htop-ohjelmaa, joten käytin putkea. Annoin komennon "apt-cache search htop | grep ^htop", jolloin tulostui paljon vähemmän rivejä. Näistä on jo paljon helpompi löytää oikea ohjelma.
-* !!!! Jatkoin komentoani ja halusin tietää kuinka monta riviä tulosteita tulee, jossa ensimmäisenä sanana on htop. Kirjoitin komennon "apt-cache search htop | grep ^htop | wc -l", joka näytti !!!!. wc-komento laskee rivien määrän.
+* !!!! Jatkoin komentoani ja halusin tietää kuinka monta riviä tulosteita tulee, jossa ensimmäisenä sanana on htop. Kirjoitin komennon "apt-cache search htop | grep ^htop | wc -l", joka näytti !!!!. wc-komento laskee rivien määrän ja -l kertoo, että halutaan laskea rivit (line).
 
 * Esimerkissäni ensimmäinen komento "apt-cache search htop" etsii kaikki ne, joiden nimessä tai kuvauksessa on sana htop. Tässä tapauksessa niitä oli paljon. Ensimmäinen putki vie tämän saadun listan seuraavalle komennolle. Seuraava komento "grep ^htop" suodattaa listalta vain ne rivit, jotka alkavat sanalla htop. Toinen putki vie tämän listan seuraavalle komennolle, joka laskee rivien määrän. Koska tämä on viimeinen komento, tämä tieto tulostetaan terminaaliin. Mitään tietoa ei näytetä väleissä.
-
-!!!!
-
-![haussa käytetty grep-komentoa](images/h2-kuva11.jpg)
 
 
 ## Lähteet
 
 * Geeks for Geeks 2025. grep command in Unix/Linux. Luettavissa: https://www.geeksforgeeks.org/linux-unix/grep-command-in-unixlinux/. Luettu: 30.8.2025.
-* Gerardi, R. 25.6.2020. 5 modern alternatives to essential Linux command-line tools. Opensource.com. Luettavissa: https://opensource.com/article/20/6/modern-linux-command-line-tools. Luettu: 28.8.2025.
-* Karvinen, T. 3.2.2020. Command Line Basics Revisited. Luettavissa: https://terokarvinen.com/2020/command-line-basics-revisited/. Luettu: 28.8.2025.
+* Opensource.com 2020. 5 modern alternatives to essential Linux command-line tools. Luettavissa: https://opensource.com/article/20/6/modern-linux-command-line-tools. Luettu: 28.8.2025.
 * How-To Geek 2019. How to Use Pipes on Linux. Luettavissa: https://www.howtogeek.com/438882/how-to-use-pipes-on-linux/. Luettu: 30.8.2025.
-* Watkins, D. 17.11.2021. 3 interesting ways to use the Linux cowsay command. Opensource.com. Luettavissa: https://opensource.com/article/21/11/linux-cowsay-command. Luettu: 28.8.2025.
+* Opensource.comn 2021. 3 interesting ways to use the Linux cowsay command. Luettavissa: https://opensource.com/article/21/11/linux-cowsay-command. Luettu: 28.8.2025.
+
+* Karvinen, T. 3.2.2020. Command Line Basics Revisited. Luettavissa: https://terokarvinen.com/2020/command-line-basics-revisited/. Luettu: 28.8.2025.
+
 * Pohjana Johanna Heinonen 2025: Linux Commands. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-27082925.md. Luettu: 28.8.2025.
 * Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet. Luettu: 28.9.2025.
