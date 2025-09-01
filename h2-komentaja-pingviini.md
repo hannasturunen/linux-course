@@ -106,13 +106,27 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 * klo 15.28 Tein komennon "apt-cache search micro", josta tuli todella paljon rivejä. Tästä olisi ollut hyvin hankala etsiä oikeaa micro-editoria, joten käytin putkea. Annoin komennon "apt-cache search micro | grep ^micro", jolloin tulostui paljon vähemmän rivejä. Näistä on jo paljon helpompi löytää oikea editori.
 * 15.32 Jatkoin komentoani ja halusin tietää kuinka monta riviä tulosteita tulee, jossa ensimmäisenä sanana on micro. Kirjoitin komennon "apt-cache search micro | grep ^micro | wc -l", joka näytti 12. wc-komento laskee rivien määrän ja -l kertoo, että halutaan laskea rivit (line).
 * Esimerkissäni ensimmäinen komento "apt-cache search micro" etsii kaikki ne, joiden nimessä tai kuvauksessa on sana micro. Tässä tapauksessa niitä oli paljon. Ensimmäinen putki vie tämän saadun listan seuraavalle komennolle. Seuraava komento "grep ^micro" suodattaa listalta vain ne rivit, jotka alkavat sanalla micro. Toinen putki vie tämän listan seuraavalle komennolle, joka laskee rivien määrän. Mitään komentoja ei tulosteta terminaaliin välissä, vaan pelkästään viimeisen komennon tulos eli tässä tapauksessa 12.
+* Alla kuva "apt-cache search micro | grep ^micro" ja "apt-cache search micro | grep ^micro | wc -l" -komennoista. 
 
 ![putken linuxissa](images/h2-kuva13.jpg)
 
 
 ## Rauta       --KESKEN
 
+* Klo 19.32 Tein komennon "sudo lshw -short -sanitize" ja annoin salasanani. Ilmoitti "command not found", joten lshw piti asentaa.
+* 19.34 Kirjoitin terminaaliin komennon "apt-cache search lshw", jolla tuli vain muutama tulos. Yksi tuloksista oli oikea, koska siinä luki "information about hardware configuration".
+* 19.36 Asensin lshw:n ajamalla komennon "sudo apt-get install lshw".
+* 19.39 Kun lshw on asennettu, kirjoitin komennon "sudo lshw -short -sanitize" ja tämä antoi listauksen koneen raudasta, alla kuva.
 
+KUVA !!!
+
+* Kone toimii VirtualBox-virtuaalikoneessa. Täten kaikki laitteet, kuten esimerkiksi prosessori, ovat virtuaalisia, eivät siis fyysisiä. Ne on kytketty toisiinsa VirtualBoxin virtuaaliseen väylään (bus). 
+* Koneessa on muistia (memory) 2 GiB, joka riittää hyvin tälle kurssille, mutta isommille ohjelmille sitä olisi niukasti.
+* Prosessorina virtuaalikone käyttää isäntäkoneen Intel-prosessoria. Virtuaalikone voi käyttää useampaa prosessoria, joka nopeuttaa sen toimintaa.
+* Laitteet-kohdassa näkyy CD-rom ja näyttö.
+* Verkkona koneessa on Gigabit Ethernet. Verkko on nopea, mutta riippuu varmastikin myös isäntäkoneen verkon nopeudesta.
+* Scsi kertoo muistista, esimerkiksi scsi2 kertoo, että siinä on SATA-kontrolleri.
+* Sen lisäksi koneessa on VirtualBoxin hiiri-integrointi, audio-kontrolleri ja erilaisia inputteja eri näppäimille.
 
 
 ## Lähteet
