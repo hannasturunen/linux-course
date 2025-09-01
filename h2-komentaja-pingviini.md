@@ -10,17 +10,16 @@
 Komentoja on hyvin paljon ja varmasti kestää aikansa ennen kuin ne oppii niin, että niistä tulee automaatio. Varsinkin harvemmin käytettyjä komentoja joutuu varmasti etsimään eri hakukoneilla. 
 
 
-## Tehtävät virtuaalikoneella
+## Yleistä virtuaalikoneella tehtävistä tehtävistä
 
 Tein harjoitukset torstaina 28.8.2025 ja maanantaina 1.9.2025 Helsingissä kotona. Tein torstaina harjoitukset micro-editorin asennuksesta FHS kansioiden esittelyyn (kohdat a-c) ja maanantaina grep-tehtävästä koneen raudan listaukseen (kohdat d-f). Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home. 
-
 
 ### Tiivistelmä      --KESKEN
 
 Asensin ensin micro-editorin ja sen jälkeen kolme valitsemaani komentoriviohjelmaa. Nämä olivat htop, ncdu ja cowsay. Hain neljän eri kansion tiedot. Kansiot olivat / (root), /home, /home/hanna, /etc, /media ja /var/log.
 
 
-### Micro-editorin asennus
+## Micro-editorin asennus
 
 * klo 16.40 Avasin VirtualBoxin ja sieltä Linux-virtuaalikoneeni.
 * 16.45 Avasin virtuaalikoneen terminaaalin. Kirjoitin komennon "apt-cache search micro", koska halusin ladata virtuaalikoneeseen micro-editorin. Tällä haulla tuli todella paljon tuloksia, joten päätin rajata hakua ja kirjoitin komentona "apt-cache search micro | grep ^micro", jolloin sain vain hieman yli 10 tulosta. Nyt löysin paljon helpommin etsimäni micro-editorin.
@@ -32,7 +31,8 @@ Asensin ensin micro-editorin ja sen jälkeen kolme valitsemaani komentoriviohjel
 
 ![Micro-editori avattuna](images/h2-kuva2.jpg)
 
-### Apt, kolmen uuden komentoriviohjelman asentaminen
+
+## Apt, kolmen uuden komentoriviohjelman asentaminen
 
 Hain Googlesta muutamia mahdollisia komentoriviohjelmia, koska itselläni ei ollut oikein tietoa millaisia niitä edes on olemassa. Valitsin tuloksista kaksi hyödyllisempää ohjelmaa (htop ja ncdu) ja yhden hauskan (cowsay).
 
@@ -54,7 +54,7 @@ Hain Googlesta muutamia mahdollisia komentoriviohjelmia, koska itselläni ei oll
 Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get install htop ncdu cowsay". Tein kuitenkin jokaisen asennuksen yksitellen, jotta saisin opeteltua samalla Linuxin käyttöä.
 
 
-### FHS, kansioiden esittely
+## FHS, kansioiden esittely
 
 * klo 19.15 Avasin terminaalin ja kirjoitin komennon "ls /". ls-komento listasi kansion sisältämät kansiot ja tiedostot ja /-komento kertoi, että haluttiin hakea juurihakemiston (root directory) kansiot ja tiedostot.
 * 19.19 Seuraavaksi kirjoitin komennon "ls /home". Tämä on käyttäjän kotihakemisto ja tässä näkyi vin yksi kansio eli oma kansioni.
@@ -85,14 +85,17 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 
 
 
-### The Friendly M, grep-komento     --KESKEN
+## The Friendly M, grep-komento     --KESKEN
 
 * Man-komento tarkoittaa manuaalia (manual) ja sillä näytetään halutun kohteen käyttöohje (Karvinen 3.2.2020).
 * Grep-komento on yksi hyödyllisimmistä komennoista Linuxissa. Sillä voidaan etsiä tiettyä sanaa, lausetta tai kuviota tekstitiedostojen sisältä ja se näyttää löydetyt tulokset ruudulla. (GeeksforGeeks 2025.)
 * Komento "man grep" tarkoittaa siis, että haetaan komennolle grep käyttöohjeet.
+* klo 15.44 
 
 
-### Pipe-esimerkki
+
+
+## Pipe-esimerkki
 
 * Linuxissa |-merkkiä kutsutaan putkeksi (pipe). Sen tehtävänä on ottaa syöte edellä olevasta komennosta ja syöttää se seuraavalle. Putket ovat yksi hyödyllisimpiä ominaisuuksia Linuxissa ja niitä käytetäänkin monin eri tavoin esimerkiksi yhdistämällä useita putkia samaan komentoon (How-To Geek 2019).
 * klo 15.28 Tein komennon "apt-cache search micro", josta tuli todella paljon rivejä. Tästä olisi ollut hyvin hankala etsiä oikeaa micro-editoria, joten käytin putkea. Annoin komennon "apt-cache search micro | grep ^micro", jolloin tulostui paljon vähemmän rivejä. Näistä on jo paljon helpompi löytää oikea editori.
