@@ -90,8 +90,14 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 * Man-komento tarkoittaa manuaalia (manual) ja sillä näytetään halutun kohteen käyttöohje (Karvinen 3.2.2020).
 * Grep-komento on yksi hyödyllisimmistä komennoista Linuxissa. Sillä voidaan etsiä tiettyä sanaa, lausetta tai kuviota tekstitiedostojen sisältä ja se näyttää löydetyt tulokset ruudulla. (GeeksforGeeks 2025.)
 * Komento "man grep" tarkoittaa siis, että haetaan komennolle grep käyttöohjeet.
-* klo 15.44 
+* klo 18.17 Hain komennolle "man grep" grep-komennon manuaalin. Etsin muutaman komennon, joita halusin testata ja sen jälkeen suljin manuaalin painamalla q. Sen lisäksi etsin netistä esimerkkejä ja mahdollisia komentoja.
+KUVA !!!
 
+* 18.45 Kirjoitin komennon "grep "bin" /etc/passwd", kuva alla. Grep-komento etsii tiedostoista rivejä ja antaa näkyviin vain ne rivit, joissa haluttu teksti, esimerkissä bin, näkyy (Linux Audit 2025).
+KUVA !!!
+
+* 19.21 Halusin suodattaa hakemistossani olevia tiedostoja. Tein tunnilla kansion "testihak" ja sinne muutaman txt-tiedoston. Menin ensin testihak-hakemistoon komennolla "cd testihak", jonka jälkeen kirjoitin komennon "ls -l | grep ".txt"", joka näytti kansiossa olevat txt-loppuiset tiedostot. Kuva alla. "ls -l" -komento listaa hakemistossa olevat tiedostot ja grep-komento näyttää vain ne tiedostot, jotka loppuvat txt. 
+KUVA !!!
 
 
 
@@ -105,12 +111,17 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 ![putken linuxissa](images/h2-kuva11.jpg)
 
 
+## Rauta       --KESKEN
+
+
+
 
 ## Lähteet
 
 * GeeksforGeeks 2025. grep command in Unix/Linux. Luettavissa: https://www.geeksforgeeks.org/linux-unix/grep-command-in-unixlinux/. Luettu: 30.8.2025.
 * How-To Geek 2019. How to Use Pipes on Linux. Luettavissa: https://www.howtogeek.com/438882/how-to-use-pipes-on-linux/. Luettu: 30.8.2025. 
 * Karvinen, T. 3.2.2020. Command Line Basics Revisited. Luettavissa: https://terokarvinen.com/2020/command-line-basics-revisited/. Luettu: 28.8.2025.
+* Linux Audit 2025. How to use grep (with examples). Luettavissa: https://linux-audit.com/grep-commands-and-common-examples-for-daily-use/. Luettu: 1.9.2025.
 * Opensource.com 2020. 5 modern alternatives to essential Linux command-line tools. Luettavissa: https://opensource.com/article/20/6/modern-linux-command-line-tools. Luettu: 28.8.2025.
 * Opensource.comn 2021. 3 interesting ways to use the Linux cowsay command. Luettavissa: https://opensource.com/article/21/11/linux-cowsay-command. Luettu: 28.8.2025.
 * Pohjana Johanna Heinonen 2025: Linux Commands. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-27082925.md. Luettu: 28.8.2025.
