@@ -14,9 +14,7 @@ Komentoja on hyvin paljon ja varmasti kestää aikansa ennen kuin ne oppii niin,
 
 Tein harjoitukset torstaina 28.8.2025 ja maanantaina 1.9.2025 Helsingissä kotona. Tein torstaina harjoitukset micro-editorin asennuksesta FHS kansioiden esittelyyn (kohdat a-c) ja maanantaina grep-tehtävästä koneen raudan listaukseen (kohdat d-f). Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home. 
 
-### Tiivistelmä      --KESKEN
-
-Asensin ensin micro-editorin ja sen jälkeen kolme valitsemaani komentoriviohjelmaa. Nämä olivat htop, ncdu ja cowsay. Hain neljän eri kansion tiedot. Kansiot olivat / (root), /home, /home/hanna, /etc, /media ja /var/log.
+Asensin ensin micro-editorin ja sen jälkeen kolme valitsemaani komentoriviohjelmaa. Nämä olivat htop, ncdu ja cowsay. Hain neljän eri kansion tiedot. Kansiot olivat / (root), /home, /home/hanna, /etc, /media ja /var/log. Tutustuin grep-komentoon ja pipeen, ja tein näillä muutamia esimerkkejä. Lopuksi selvitin virtuaalikoneen rautaa.
 
 
 ## Micro-editorin asennus
@@ -83,8 +81,6 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 ![tulos ls -l /var/log/lastlog tiedosta, vain yksi tulos](images/h2-kuva10.jpg)
 
 
-
-
 ## The Friendly M, grep-komento
 
 * Man-komento tarkoittaa manuaalia (manual) ja sillä näytetään halutun kohteen käyttöohje (Karvinen 3.2.2020).
@@ -108,17 +104,17 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 * Esimerkissäni ensimmäinen komento "apt-cache search micro" etsii kaikki ne, joiden nimessä tai kuvauksessa on sana micro. Tässä tapauksessa niitä oli paljon. Ensimmäinen putki vie tämän saadun listan seuraavalle komennolle. Seuraava komento "grep ^micro" suodattaa listalta vain ne rivit, jotka alkavat sanalla micro. Toinen putki vie tämän listan seuraavalle komennolle, joka laskee rivien määrän. Mitään komentoja ei tulosteta terminaaliin välissä, vaan pelkästään viimeisen komennon tulos eli tässä tapauksessa 12.
 * Alla kuva "apt-cache search micro | grep ^micro" ja "apt-cache search micro | grep ^micro | wc -l" -komennoista. 
 
-![putken linuxissa](images/h2-kuva13.jpg)
+![putki linuxissa](images/h2-kuva13.jpg)
 
 
-## Rauta       --KESKEN
+## Koneen rauta
 
 * Klo 19.32 Tein komennon "sudo lshw -short -sanitize" ja annoin salasanani. Ilmoitti "command not found", joten lshw piti asentaa.
 * 19.34 Kirjoitin terminaaliin komennon "apt-cache search lshw", jolla tuli vain muutama tulos. Yksi tuloksista oli oikea, koska siinä luki "information about hardware configuration".
 * 19.36 Asensin lshw:n ajamalla komennon "sudo apt-get install lshw".
 * 19.39 Kun lshw on asennettu, kirjoitin komennon "sudo lshw -short -sanitize" ja tämä antoi listauksen koneen raudasta, alla kuva.
 
-KUVA !!!
+![koneen rauta listana](images/h2-kuva14.jpg)
 
 * Kone toimii VirtualBox-virtuaalikoneessa. Täten kaikki laitteet, kuten esimerkiksi prosessori, ovat virtuaalisia, eivät siis fyysisiä. Ne on kytketty toisiinsa VirtualBoxin virtuaaliseen väylään (bus). 
 * Koneessa on muistia (memory) 2 GiB, joka riittää hyvin tälle kurssille, mutta isommille ohjelmille sitä olisi niukasti.
