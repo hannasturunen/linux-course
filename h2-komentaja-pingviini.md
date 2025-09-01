@@ -85,20 +85,19 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 
 
 
-## The Friendly M, grep-komento     --KESKEN
+## The Friendly M, grep-komento
 
 * Man-komento tarkoittaa manuaalia (manual) ja sillä näytetään halutun kohteen käyttöohje (Karvinen 3.2.2020).
 * Grep-komento on yksi hyödyllisimmistä komennoista Linuxissa. Sillä voidaan etsiä tiettyä sanaa, lausetta tai kuviota tekstitiedostojen sisältä ja se näyttää löydetyt tulokset ruudulla. (GeeksforGeeks 2025.)
 * Komento "man grep" tarkoittaa siis, että haetaan komennolle grep käyttöohjeet.
 * klo 18.17 Hain komennolle "man grep" grep-komennon manuaalin. Etsin muutaman komennon, joita halusin testata ja sen jälkeen suljin manuaalin painamalla q. Sen lisäksi etsin netistä esimerkkejä ja mahdollisia komentoja.
-KUVA !!!
-
 * 18.45 Kirjoitin komennon "grep "bin" /etc/passwd", kuva alla. Grep-komento etsii tiedostoista rivejä ja antaa näkyviin vain ne rivit, joissa haluttu teksti, esimerkissä bin, näkyy (Linux Audit 2025).
-KUVA !!!
+
+![grep sanan hakeminen](images/h2-kuva11.jpg)
 
 * 19.21 Halusin suodattaa hakemistossani olevia tiedostoja. Tein tunnilla kansion "testihak" ja sinne muutaman txt-tiedoston. Menin ensin testihak-hakemistoon komennolla "cd testihak", jonka jälkeen kirjoitin komennon "ls -l | grep ".txt"", joka näytti kansiossa olevat txt-loppuiset tiedostot. Kuva alla. "ls -l" -komento listaa hakemistossa olevat tiedostot ja grep-komento näyttää vain ne tiedostot, jotka loppuvat txt. 
-KUVA !!!
 
+![grep tiedoston hakeminen](images/h2-kuva12.jpg)
 
 
 ## Pipe-esimerkki
@@ -108,7 +107,7 @@ KUVA !!!
 * 15.32 Jatkoin komentoani ja halusin tietää kuinka monta riviä tulosteita tulee, jossa ensimmäisenä sanana on micro. Kirjoitin komennon "apt-cache search micro | grep ^micro | wc -l", joka näytti 12. wc-komento laskee rivien määrän ja -l kertoo, että halutaan laskea rivit (line).
 * Esimerkissäni ensimmäinen komento "apt-cache search micro" etsii kaikki ne, joiden nimessä tai kuvauksessa on sana micro. Tässä tapauksessa niitä oli paljon. Ensimmäinen putki vie tämän saadun listan seuraavalle komennolle. Seuraava komento "grep ^micro" suodattaa listalta vain ne rivit, jotka alkavat sanalla micro. Toinen putki vie tämän listan seuraavalle komennolle, joka laskee rivien määrän. Mitään komentoja ei tulosteta terminaaliin välissä, vaan pelkästään viimeisen komennon tulos eli tässä tapauksessa 12.
 
-![putken linuxissa](images/h2-kuva11.jpg)
+![putken linuxissa](images/h2-kuva13.jpg)
 
 
 ## Rauta       --KESKEN
