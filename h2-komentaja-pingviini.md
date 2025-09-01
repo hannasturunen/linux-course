@@ -92,12 +92,15 @@ Olisin voinut ladata nämä kaikki samalla kertaa komennolla "sudo apt-get insta
 * Komento "man grep" tarkoittaa siis, että haetaan komennolle grep käyttöohjeet.
 
 
-### Pipe-esimerkki     --KESKEN
+### Pipe-esimerkki
 
 * Linuxissa |-merkkiä kutsutaan putkeksi (pipe). Sen tehtävänä on ottaa syöte edellä olevasta komennosta ja syöttää se seuraavalle. Putket ovat yksi hyödyllisimpiä ominaisuuksia Linuxissa ja niitä käytetäänkin monin eri tavoin esimerkiksi yhdistämällä useita putkia samaan komentoon (How-To Geek 2019).
 * klo 15.28 Tein komennon "apt-cache search micro", josta tuli todella paljon rivejä. Tästä olisi ollut hyvin hankala etsiä oikeaa micro-editoria, joten käytin putkea. Annoin komennon "apt-cache search micro | grep ^micro", jolloin tulostui paljon vähemmän rivejä. Näistä on jo paljon helpompi löytää oikea editori.
 * 15.32 Jatkoin komentoani ja halusin tietää kuinka monta riviä tulosteita tulee, jossa ensimmäisenä sanana on micro. Kirjoitin komennon "apt-cache search micro | grep ^micro | wc -l", joka näytti 12. wc-komento laskee rivien määrän ja -l kertoo, että halutaan laskea rivit (line).
 * Esimerkissäni ensimmäinen komento "apt-cache search micro" etsii kaikki ne, joiden nimessä tai kuvauksessa on sana micro. Tässä tapauksessa niitä oli paljon. Ensimmäinen putki vie tämän saadun listan seuraavalle komennolle. Seuraava komento "grep ^micro" suodattaa listalta vain ne rivit, jotka alkavat sanalla micro. Toinen putki vie tämän listan seuraavalle komennolle, joka laskee rivien määrän. Mitään komentoja ei tulosteta terminaaliin välissä, vaan pelkästään viimeisen komennon tulos eli tässä tapauksessa 12.
+
+![putken linuxissa](images/h2-kuva11.jpg)
+
 
 
 ## Lähteet
