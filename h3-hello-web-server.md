@@ -1,4 +1,4 @@
-<img width="1216" height="620" alt="image" src="https://github.com/user-attachments/assets/fdc6192f-23b3-403c-9707-d30955749b05" /><img width="1216" height="620" alt="image" src="https://github.com/user-attachments/assets/2259ac3b-7ddd-4bc7-bcab-6ce7ebf1d0a5" /># H3 Hello Web Server
+# H3 Hello Web Server
 
 ## Tiivistelmä KESKEN
 
