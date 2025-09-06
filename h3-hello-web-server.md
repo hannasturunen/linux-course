@@ -1,6 +1,6 @@
 # H3 Hello Web Server
 
-## Tiivistelmä KESKEN
+## Tiivistelmä ...KESKEN
 
 https://httpd.apache.org/docs/2.4/vhosts/name-based.html
 https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
@@ -8,7 +8,7 @@ https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-
 The Apache Software Foundation 2023: Apache HTTP Server Version 2.4 Documentation: Name-based Virtual Host Support
 Karvinen 2018: Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address
 
-## Virtuaalikonetehtävät
+## Virtuaalikonetehtävät ...KESKEN
 
 Tein harjoitukset lauantaina 6.9.2025 ... ... Helsingissä kotona. Tein lauantaina harjoitukset Apache-webpalvelin ja lokista etsiminen, ... ... 
 Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
@@ -38,6 +38,8 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
     - http://localhost/ = näyttää lähteen URL-osoitteen eli tämä oli sivu, jolle menin
 
 ![Lokista etsiminen](images/h3-kuva2.jpg)
+
+# Etusivu uusiksi ...KESKEN
 
 # Lähteet
 
