@@ -39,9 +39,9 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 
 ![Lokista etsiminen](images/h3-kuva2.jpg)
 
-# Etusivu uusiksi ...KESKEN
+## Etusivu uusiksi ...KESKEN
 
-# Lähteet
+## Lähteet
 
 - Sumo logic 2025. Understanding the Apache access log: how to view, locate, and analyze. Luettavissa: https://www.sumologic.com/blog/apache-access-log. Luettu: 6.9.2024.
 - Pohjana Johanna Heinonen 2025: Apache2. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md. Luettu: 6.9.2025.
