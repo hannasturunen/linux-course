@@ -10,10 +10,10 @@ Karvinen 2018: Name Based Virtual Hosts on Apache – Multiple Websites to Singl
 
 ## Virtuaalikonetehtävät
 
-Tein harjoitukset lauantaina 6.9.2025 Helsingissä kotona. Tein lauantaina harjoitukset ... ... 
+Tein harjoitukset lauantaina 6.9.2025 ... ... Helsingissä kotona. Tein lauantaina harjoitukset Apache-webpalvelin ja lokista etsiminen, ... ... 
 Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
 
-... Tiivistelmää tähän ...
+... Tiivistelmää tähän ... Apache-webpalvelin oli minulla jo asennettu. Tutustuin lokitietoihin.  
 
 ## Apache-webpalvelin
 
@@ -42,4 +42,3 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 # Lähteet
 
 - Sumo logic 2025. Understanding the Apache access log: how to view, locate, and analyze. Luettavissa: https://www.sumologic.com/blog/apache-access-log. Luettu: 6.9.2024.
-GeeksforGeeks 2025. grep command in Unix/Linux. Luettavissa: https://www.geeksforgeeks.org/linux-unix/grep-command-in-unixlinux/. Luettu: 30.8.2025.
