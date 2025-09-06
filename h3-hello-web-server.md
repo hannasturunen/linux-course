@@ -19,7 +19,7 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 
 - klo 18.51 Avasin VirtualBoxissa selaimen ja menin Firefox-selaimella osoitteeseen http://localhost. Apache-sivusto avatui, alla kuva. Apache-webpalvelin on jo asennettuna.
 
-- ... KUVA1 ...
+![Localhost-sivu](images/h3-kuva1.jpg)
 
 ## Lokista etsiminen
 
@@ -37,8 +37,10 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
     - 6041 = asiakkaalle palautetun objektin koko
     - http://localhost/ = näyttää lähteen URL-osoitteen eli tämä oli sivu, jolle menin
 
-- ... KUVA 2 ...
+![Lokista etsiminen](images/h3-kuva2.jpg)
 
 # Lähteet
 
 - Sumo logic 2025. Understanding the Apache access log: how to view, locate, and analyze. Luettavissa: https://www.sumologic.com/blog/apache-access-log. Luettu: 6.9.2024.
+- Pohjana Johanna Heinonen 2025: Apache2. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md. Luettu: 6.9.2025.
+- Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet. Luettu: 6.9.2025.
