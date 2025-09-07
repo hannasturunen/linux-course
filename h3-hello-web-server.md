@@ -53,7 +53,7 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 - ... KUVA 3 ...
 
 - 8.49 Kotihakemistossani on jo public-sites -hakemisto, jonka loin jo tunnilla. Sen lisäksi loin tunnilla myös index.html-tiedostosta original-tiedoston varmuuden vuoksi.
-- 8.55 Menin muokkaamaan index.html -sivua komennolla _nano /home/testuser/public-sites/index.html_. Kirjoitin tekstin, tallensin sen ja suljin editorin.
+- 8.55 Menin muokkaamaan index.html -sivua komennolla _nano /home/hanna/public-sites/index.html_. Kirjoitin tekstin, tallensin sen ja suljin editorin.
 - 9.09 Tarkistin vielä sivuston oikeudet. Alla olevassa kuvassa on komennot ja niiden tulokset. Kaikki näyttää olevan kunnossa oikeuksien osalta.
 
 - ... KUVA 4 ...
@@ -68,7 +68,12 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 - ... KUVA 6 ...
 
 - 9.44 Koska Apache ohjaa localhost-sivuston vielä default-sivustolle, poistan käytöstä default-sivun. Tein tämän komennolla _sudo a2dissite 000-default.conf_. Tämän jälkeen ajoin komennon _sudo systemctl reload apache2_. Ei toiminut vieläkään.
-- 9.57 Menin muokkaamaan 
+- 9.57 Menin muokkaamaan sivuston tietoja komennolla _sudoedit /etc/apache2/sites-available/hattu.example.com.conf_. Nyt laitoin ServerAlias-kohtaan www.hattu.example.com tilalle. Tallensin ja suljin editorin. Ajoin komennon _sudo systemctl reload apache2_. Ei vieläkään näytä selaimessa oikeaa sivustoa, mutta _curl localhost _-komennolla ja hattu.example.com näkyy oikeat.
+- 10.08 Menin varmistamaan, että onhan IP-osoitteet varmasti oikein (komento _sudoedit /etc/hosts_). Osoite oli siellä, mutta poistin varmuuden vuoksi www.hattu.example.com-osoitteen. Tallensin ja suljin editorin.
+- 10.13 Kävin tarkistamassa myös sivuston tiedot komennolla _sudoedit /etc/apache2/sites-available/hattu.example.com.conf_. Kaikki näytti olevan kunnossa.
+- 10.15 Kävin tässä välissä katsomassa selaimella toimisiko sivusto nyt. Päivitin vielä varmuuden vuoksi sivuston ctrl-shift+r ja nyt localhost-sivustolla näkyi tekstini. Jes! Ehkä tässä kestikin vain hetken ennen kuin muutokset tulivat voimaan. Alla kuva.
+
+- ... KUVA 7 ...
 
 
 
