@@ -41,6 +41,20 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 
 ## Etusivu uusiksi ...KESKEN
 
+- klo 7.53 Kirjoitin komennon _sudoedit /etc/apache2/sites-available/hattu.example.com.conf_, jolla pääsin muokkaamaan tiedostoa. Kopioin tiedot Johannan sivuilta ja muokkasin muutaman kohdan:
+    - ServerName = hattu.example.com
+    - ServerAlias = www.hattu.example.com
+    - testuser = hanna
+- 8.07 Tallensin muokatun tiedoston ja suljin sen.
+- 8.10 Huomasin, etten ollut muuttanut errorlogia, customlogia ja päätin myös tehdä oman hakemiston hattu-sivustolle. Kävin muokkaamassa nekin, jonka jälkeen tallensin ja suljin tiedoston. Muokkasin:
+    - Errorlog = site1:n tilalle hattu-sana
+    - Customlog = site1:n tilalle hattu-sana
+
+- ... KUVA3 ...
+
+- 8.13 Loin kotihakemistoon 
+
+
 ## Lähteet
 
 - Sumo logic 2025. Understanding the Apache access log: how to view, locate, and analyze. Luettavissa: https://www.sumologic.com/blog/apache-access-log. Luettu: 6.9.2024.
