@@ -41,18 +41,27 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 
 ## Etusivu uusiksi ...KESKEN
 
-- klo 7.53 Kirjoitin komennon _sudoedit /etc/apache2/sites-available/hattu.example.com.conf_, jolla pääsin muokkaamaan tiedostoa. Kopioin tiedot Johannan sivuilta ja muokkasin muutaman kohdan:
+- klo 8.37 Kirjoitin komennon _sudoedit /etc/apache2/sites-available/hattu.example.com.conf_, jolla pääsin muokkaamaan tiedostoa. Kopioin tiedot Johannan sivuilta ja muokkasin muutaman kohdan:
     - ServerName = hattu.example.com
     - ServerAlias = www.hattu.example.com
     - testuser = hanna
-- 8.07 Tallensin muokatun tiedoston ja suljin sen.
-- 8.10 Huomasin, etten ollut muuttanut errorlogia, customlogia ja päätin myös tehdä oman hakemiston hattu-sivustolle. Kävin muokkaamassa nekin, jonka jälkeen tallensin ja suljin tiedoston. Muokkasin:
-    - Errorlog = site1:n tilalle hattu-sana
-    - Customlog = site1:n tilalle hattu-sana
+- 8.45 Tallensin muokatun tiedoston ja suljin sen.
+- 8.47 Huomasin, etten muuttanut errorlogia ja customlogia. Kävin muokkaamassa ne, jonka jälkeen tallensin ja suljin tiedoston. Muokkasin:
+    - Errorlog = site1:n tilalle hattu
+    - Customlog = site1:n tilalle hattu
 
 - ... KUVA3 ...
 
-- 8.13 Loin kotihakemistoon 
+- 8.49 Kotihakemistossani on jo public-sites -hakemisto, jonka loin jo tunnilla. Sen lisäksi loin tunnilla myös index.html-tiedostosta original-tiedoston varmuuden vuoksi.
+- 8.55 Menin muokkaamaan index.html -sivua komennolla _nano /home/testuser/public-sites/index.html_. Kirjoitin tekstin, tallensin sen ja suljin editorin.
+- 9.09 Tarkistin vielä sivuston oikeudet. Alla olevassa kuvassa on komennot ja niiden tulokset. Kaikki näyttää olevan kunnossa oikeuksien osalta.
+
+- ... KUVA4 ...
+
+- 9.14 Otin sivuston käyttöön komennolla _sudo a2ensite site1.com.conf_.
+
+
+ 
 
 
 ## Lähteet
