@@ -50,18 +50,28 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
     - Errorlog = site1:n tilalle hattu
     - Customlog = site1:n tilalle hattu
 
-- ... KUVA3 ...
+- ... KUVA 3 ...
 
 - 8.49 Kotihakemistossani on jo public-sites -hakemisto, jonka loin jo tunnilla. Sen lisäksi loin tunnilla myös index.html-tiedostosta original-tiedoston varmuuden vuoksi.
 - 8.55 Menin muokkaamaan index.html -sivua komennolla _nano /home/testuser/public-sites/index.html_. Kirjoitin tekstin, tallensin sen ja suljin editorin.
 - 9.09 Tarkistin vielä sivuston oikeudet. Alla olevassa kuvassa on komennot ja niiden tulokset. Kaikki näyttää olevan kunnossa oikeuksien osalta.
 
-- ... KUVA4 ...
+- ... KUVA 4 ...
 
-- 9.14 Otin sivuston käyttöön komennolla _sudo a2ensite site1.com.conf_.
+- 9.14 Otin sivuston käyttöön komennolla _sudo a2ensite hattu.example.com.conf_, jonka jälkeen uudelleenlatasin Apachen komennolla _sudo systemctl reload apache2_.
+- 9.18 Testasin sivuni menemällä selaimella osoitteeseen. Huomasin, ettei sivusto toiminut enkä saanut curl-komennollakaan tekstiä näkyviin, jonka olin sivulle lisännyt. Tajusin, että enhän ollut vielä lisännyt sivustolle IP-osoitetta. Lisäsin tälle uudelle sivulle IP-osoitteen. Kirjoitin komennon _sudoedit /etc/hosts_. Lisäsin hattu.example.com ja www.hattu.example.com -sivuille IP-osoitteet 127.0.0.1, alla kuva. Tallensin muutokset ja suljin editorin.
+
+- ... KUVA 5 ...
+
+- 9.38 Tein komennot _sudo a2ensite hattu.example.com.conf_ ja _sudo systemctl reload apache2_ uudestaan. Menin selaimella hattu.example.com-sivustolle ja nyt sivusto toimi. Alla kuva. Kuitenkaan localhost-sivusto ei vielä ohjaa tähän.
+
+- ... KUVA 6 ...
+
+- 9.44 Koska Apache ohjaa localhost-sivuston vielä default-sivustolle, poistan käytöstä default-sivun. Tein tämän komennolla _sudo a2dissite 000-default.conf_. Tämän jälkeen ajoin komennon _sudo systemctl reload apache2_. Ei toiminut vieläkään.
+- 9.57 Menin muokkaamaan 
 
 
- 
+
 
 
 ## Lähteet
