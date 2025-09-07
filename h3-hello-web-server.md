@@ -75,12 +75,20 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 
 ![Hattu.example.com localhostilla](images/h3-kuva7.jpg)
 
-## ... KESKEN ... HTML5-sivun tekeminen
+## HTML5-sivun tekeminen
 
+- klo 12.02 Menin muokkaamaan hattu.example.com-sivustoa paremmaksi komennolla _nano /home/hanna/public-sites/index.html_. Kopioin lyhyen HTML-koodin Teron sivuilta (2012) ja liitin sen editoriin. Muokkasin HTML-koodia itselleni sopivaksi. Tallensin tiedot ja suljin editorin. Kävin katsomassa miltä sivustot näyttivät nyt selaimessa ja sinne oli päivittynyt uudet tiedot. Alla kuva, jossa ylempänä on miltä teksti näyttää localhost-osoitteessa ja alempana hattu.example.com-osoitteessa. On siis täysin sama, joka pitikin olla.
 
+- ... KUVA 8 ...
+
+## 'curl -I' ja 'curl' -komennot
+
+- 12.27 Ajoi komennot _curl localhost_ ja _curl -I localhost_ (isolla i:llä). Ensimmäisellä komennolla tuli sivuston HTML-koodi ja toisella tiedot sivustosta. Alempana kuva. Otsakkeessa (response header) oli erilaisia tietoja:
+    - HTTP/1.1 200 OK 
 
 ## Lähteet
 
+- Karvinen, T. 12.2.2012. Short HTML5 page. Luettavissa: https://terokarvinen.com/2012/short-html5-page/. Luettu: 7.9.2025.
 - Sumo logic 2025. Understanding the Apache access log: how to view, locate, and analyze. Luettavissa: https://www.sumologic.com/blog/apache-access-log. Luettu: 6.9.2024.
 - Pohjana Johanna Heinonen 2025: Apache2. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md. Luettu: 6.9.2025.
 - Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet. Luettu: 6.9.2025.
