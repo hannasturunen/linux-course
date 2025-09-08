@@ -52,26 +52,26 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 
 ![Sivuston tiedot](images/h3-kuva3.jpg)
 
-- 8.49 Kotihakemistossani on jo public-sites -hakemisto sekä kopio index.html-tiedostosta varmuuden vuoksi. Tein molemmat tunnilla.
+- 8.49 Kotihakemistossani on jo public-sites -hakemisto sekä varmuuden vuoksi kopio index.html-tiedostosta. Tein molemmat tunnilla.
 - 8.55 Menin muokkaamaan index.html -sivua komennolla _nano /home/hanna/public-sites/index.html_. Kirjoitin tekstin, tallensin sen ja suljin editorin.
 - 9.09 Tarkistin vielä sivuston oikeudet. Alla olevassa kuvassa on komennot ja niiden tulokset. Kaikki näyttää olevan kunnossa oikeuksien osalta.
 
 ![Oikeukdisen tarkastaminen](images/h3-kuva4.jpg)
 
 - 9.14 Otin sivuston käyttöön komennolla _sudo a2ensite hattu.example.com.conf_, jonka jälkeen uudelleenlatasin Apachen komennolla _sudo systemctl reload apache2_.
-- 9.18 Testasin sivuni menemällä selaimella osoitteeseen. Huomasin, ettei sivusto toiminut enkä saanut curl-komennollakaan tekstiä näkyviin, jonka olin sivulle lisännyt. Tajusin, että enhän ollut vielä lisännyt sivustolle IP-osoitetta. Lisäsin tälle uudelle sivulle IP-osoitteen. Kirjoitin komennon _sudoedit /etc/hosts_. Lisäsin hattu.example.com ja www.hattu.example.com -sivuille IP-osoitteet 127.0.0.1, alla kuva. Tallensin muutokset ja suljin editorin.
+- 9.18 Testasin sivuani menemällä selaimella osoitteeseen hattu.example.com. Sivusto ei toiminut enkä saanut curl-komennollakaan sivulle kirjoittamaani tekstiä näkyviin. Huomasin, että enhän ollut vielä lisännyt sivustolle IP-osoitetta. Lisäsin tälle uudelle sivulle IP-osoitteen. Kirjoitin komennon _sudoedit /etc/hosts_. Lisäsin hattu.example.com ja www.hattu.example.com -sivuille IP-osoitteet 127.0.0.1, alla kuva. Tallensin muutokset ja suljin editorin.
 
 ![IP-osoitteiden laittaminen](images/h3-kuva5.jpg)
 
-- 9.38 Tein komennot _sudo a2ensite hattu.example.com.conf_ ja _sudo systemctl reload apache2_ uudestaan. Menin selaimella hattu.example.com-sivustolle ja nyt sivusto toimi. Alla kuva. Kuitenkaan localhost-sivusto ei vielä ohjaa tähän.
+- 9.38 Tein komennot _sudo a2ensite hattu.example.com.conf_ ja _sudo systemctl reload apache2_ uudestaan. Menin selaimella hattu.example.com-sivustolle ja nyt sivusto toimi. Alla kuva. Kuitenkaan localhost-sivusto ei vielä ohjannut tänne.
 
 ![Hattu.example.com sivustolla](images/h3-kuva6.jpg)
 
-- 9.44 Koska Apache ohjaa localhost-sivuston vielä default-sivustolle, poistan käytöstä default-sivun. Tein tämän komennolla _sudo a2dissite 000-default.conf_. Tämän jälkeen ajoin komennon _sudo systemctl reload apache2_. Ei toiminut vieläkään.
-- 9.57 Menin muokkaamaan sivuston tietoja komennolla _sudoedit /etc/apache2/sites-available/hattu.example.com.conf_. Nyt laitoin ServerAlias-kohtaan www.hattu.example.com tilalle. Tallensin ja suljin editorin. Ajoin komennon _sudo systemctl reload apache2_. Ei vieläkään näytä selaimessa oikeaa sivustoa, mutta _curl localhost _-komennolla ja hattu.example.com näkyy oikeat.
-- 10.08 Menin varmistamaan, että onhan IP-osoitteet varmasti oikein (komento _sudoedit /etc/hosts_). Osoite oli siellä, mutta poistin varmuuden vuoksi www.hattu.example.com-osoitteen. Tallensin ja suljin editorin.
+- 9.44 Epäilin, että Apache ohjaa localhost-sivuston vielä default-sivustolle, poistin default-sivun käytöstä komennolla _sudo a2dissite 000-default.conf_. Tämän jälkeen ajoin komennon _sudo systemctl reload apache2_. Ei toiminut vieläkään.
+- 9.57 Menin muokkaamaan sivuston tietoja komennolla _sudoedit /etc/apache2/sites-available/hattu.example.com.conf_. Muutin ServerAlias-kohdan localhost:ksi. Tallensin ja suljin editorin. Ajoin komennon _sudo systemctl reload apache2_. Ei vieläkään näyttänyt selaimessa oikeaa sivustoa, mutta _curl localhost_-komennolla ja hattu.example.com-sivustolla näkyvät oikeat tekstit.
+- 10.08 Menin varmistamaan, että onhan IP-osoitteet varmasti oikein (komento _sudoedit /etc/hosts_). Osoite oli siellä, mutta poistin varmuuden vuoksi www.hattu.example.com -osoitteen. Tallensin ja suljin editorin.
 - 10.13 Kävin tarkistamassa myös sivuston tiedot komennolla _sudoedit /etc/apache2/sites-available/hattu.example.com.conf_. Kaikki näytti olevan kunnossa.
-- 10.15 Kävin tässä välissä katsomassa selaimella toimisiko sivusto nyt. Päivitin vielä varmuuden vuoksi sivuston ctrl-shift+r ja nyt localhost-sivustolla näkyi tekstini. Jes! Ehkä tässä kestikin vain hetken ennen kuin muutokset tulivat voimaan. Alla kuva.
+- 10.15 Kävin tässä välissä katsomassa selaimella toimisiko sivusto nyt. Päivitin vielä varmuuden vuoksi sivuston ctrl-shift+r ja nyt localhost-sivustolla näkyi tekstini, alla kuva. Jes! Ehkä tässä kestikin vain hetken ennen kuin muutokset tulivat voimaan.
 
 ![Hattu.example.com localhostilla](images/h3-kuva7.jpg)
 
