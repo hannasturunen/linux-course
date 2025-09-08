@@ -52,7 +52,7 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 
 ![Sivuston tiedot](images/h3-kuva3.jpg)
 
-- 8.49 Kotihakemistossani on jo public-sites -hakemisto, jonka loin jo tunnilla. Sen lisäksi loin tunnilla myös index.html-tiedostosta original-tiedoston varmuuden vuoksi.
+- 8.49 Kotihakemistossani on jo public-sites -hakemisto sekä kopio index.html-tiedostosta varmuuden vuoksi. Tein molemmat tunnilla.
 - 8.55 Menin muokkaamaan index.html -sivua komennolla _nano /home/hanna/public-sites/index.html_. Kirjoitin tekstin, tallensin sen ja suljin editorin.
 - 9.09 Tarkistin vielä sivuston oikeudet. Alla olevassa kuvassa on komennot ja niiden tulokset. Kaikki näyttää olevan kunnossa oikeuksien osalta.
 
