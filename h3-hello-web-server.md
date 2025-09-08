@@ -1,23 +1,18 @@
 # H3 Hello Web Server
 
-## Tiivistelmä Apachesta ja  ...KESKEN
+## Tiivistelmät Apachesta
 
-Nimipohjaiset ja IP-pohjaiset virtuaalipalvelimet
-- Nimipohjaisissa virtuaalipalvelimissa useampi verkkosivu voi jakaa saman IP-osoitteen. Tämä tapa on yksinkertaisempi ja sen lisäksi se helpottaa vähäisten IP-osoitteiden kysyntää.
-- IP-pohjaisissa virtuaalipalvelimissa jokaisella verkkosivulla täytyy olla oma IP-osoite. Tämä kuluttaa vähäisiä IP-osoitteita.
+### Name-based Virtual Host Support
+- Nimipohjaisissa virtuaalipalvelimissa useampi verkkosivu voi jakaa saman IP-osoitteen. Tämä tapa on yksinkertaisempi ja sen lisäksi se helpottaa vähäisten IP-osoitteiden kysyntää. IP-pohjaisissa virtuaalipalvelimissa jokaisella verkkosivulla täytyy olla oma IP-osoite. 
 - Kuinka Apache valitsee oikean nimipohjaisen virtuaalikoneen
     - Apache yrittää löytää mahdollisimman sopivan virtuaalikoneen tekemällä ensin IP-pohjaisen selvityksen. Siinä se katsoo IP-osoitteen ja portin ja jos tämän seulan läpi tuli useampi kuin yksi vaihtoehto, Apache vertaa ServerName- ja ServerAlias -kohtia. Tämän takia on tärkeää lisätä ServerName, jotta Apache valitsee oikean virtuaalikoneen.
 - Nimipohjaisten virtuaalipalvelimien käyttö
     - Virtuaalipalvelimelle on tärkeää lisätä ServerName, joka määrittää isännän, ja DocumentRoot, joka näyttä sisältö sijaitsee.
     - Monet palvelimet voivat olla käytettävissä useammalla kuin yhdellä nimellä. Tämä voidaan lisätä ServerAlias-kohtaan. (The Apache Software Foundation 2025.)
 
-
-
-
-https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
-
-The Apache Software Foundation 2023: Apache HTTP Server Version 2.4 Documentation: Name-based Virtual Host Support
-Karvinen 2018: Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address
+### Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address
+- Apachen avulla voit isännöidä useita verkkosivustoja yhdellä IP-osoitteella.
+- Verkkosivu vuokrataan palveluntarjoajalta, mutta sitä voi myös simuloida paikallisesti example.com-osoitteella. (Karvinen, 10.4.2018.)
 
 ## Virtuaalikonetehtävät
 
@@ -113,6 +108,7 @@ Ensin etsin lokitietoja ja tutustuin niihin. Tämän jälkeen tein hattu.example
 
 - The Apache Software Foundation 2025. Name-based Virtual Host Support. Luettavissa: https://httpd.apache.org/docs/2.4/vhosts/name-based.html. Luettu: 6.9.2025.
 - Karvinen, T. 12.2.2012. Short HTML5 page. Luettavissa: https://terokarvinen.com/2012/short-html5-page/. Luettu: 7.9.2025.
+- Karvinen, T. 10.4.2018. Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address. Luettavissa: https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/. Luettu: 6.9.2025.
 - MDN 2025. HTTP: Hypertext Transfer Protocol. Luettavissa: https://developer.mozilla.org/en-US/docs/Web/HTTP. Luettu: 7.9.2025.
 - Sumo logic 2025. Understanding the Apache access log: how to view, locate, and analyze. Luettavissa: https://www.sumologic.com/blog/apache-access-log. Luettu: 6.9.2024.
 - Pohjana Johanna Heinonen 2025: Apache2. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md. Luettu: 6.9.2025.
