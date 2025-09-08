@@ -79,7 +79,7 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 
 - klo 12.02 Menin muokkaamaan hattu.example.com-sivustoa paremmaksi komennolla _nano /home/hanna/public-sites/index.html_. Kopioin lyhyen HTML-koodin Teron sivuilta (2012) ja liitin sen editoriin. Muokkasin HTML-koodia itselleni sopivaksi. Tallensin tiedot ja suljin editorin. Kävin katsomassa miltä sivustot näyttivät nyt selaimessa ja sinne oli päivittynyt uudet tiedot. Alla kuva, jossa ylempänä on miltä teksti näyttää localhost-osoitteessa ja alempana hattu.example.com-osoitteessa. On siis täysin sama, joka pitikin olla.
 
-- ... KUVA 8 ...
+![HTML5 muokkaus sivustolle](images/h3-kuva8.jpg)
 
 ## 'curl -I' ja 'curl' -komennot
 
@@ -93,7 +93,7 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
     - Vary = vaikuttaa vastauksen sisältöön
     - Content-Type = lähetetyn viestin tyyppi
 
-- ... KUVA 9 ...
+![Curl -I komento](images/h3-kuva9.jpg)
 
 ## Lähteet
 
