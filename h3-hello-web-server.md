@@ -41,7 +41,7 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 
 ## Etusivu uusiksi
 
-- klo 8.37 Kirjoitin komennon _sudoedit /etc/apache2/sites-available/hattu.example.com.conf_, jolla pääsin muokkaamaan tiedostoa. Kopioin tiedot Johannan sivuilta ja muokkasin muutaman kohdan:
+- klo 8.37 Kirjoitin komennon _sudoedit /etc/apache2/sites-available/hattu.example.com.conf_, jolla pääsin muokkaamaan tiedostoa. Kopioin tiedot Johannan sivuilta (2025) ja muokkasin muutaman kohdan:
     - ServerName = hattu.example.com
     - ServerAlias = www.hattu.example.com
     - testuser = hanna
