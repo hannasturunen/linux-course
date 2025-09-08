@@ -77,13 +77,13 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 
 ## HTML5-sivun tekeminen
 
-- klo 12.02 Menin muokkaamaan hattu.example.com -sivustoa paremmaksi komennolla _nano /home/hanna/public-sites/index.html_. Kopioin lyhyen HTML-koodin Teron sivuilta (2012) ja liitin sen editoriin. Muokkasin HTML-koodia itselleni sopivaksi. Tallensin tiedot ja suljin editorin. Kävin katsomassa miltä sivustot näyttivät nyt selaimessa ja sinne oli päivittynyt uudet tiedot. Alla kuva, jossa ylempänä on miltä teksti näyttää localhost-osoitteessa ja alempana hattu.example.com-osoitteessa. On siis täysin sama, joka pitikin olla.
+- klo 12.02 Menin muokkaamaan hattu.example.com -sivustoa paremmaksi komennolla _nano /home/hanna/public-sites/index.html_. Kopioin lyhyen HTML-koodin Teron sivuilta (2012) ja liitin sen editoriin. Muokkasin HTML-koodia itselleni sopivaksi. Tallensin tiedot ja suljin editorin. Kävin katsomassa miltä sivustot näyttivät nyt selaimessa ja sinne oli päivittynyt uudet tiedot. Alla kuva, jossa ylempänä on miltä teksti näyttää localhost-osoitteessa ja alempana hattu.example.com-osoitteessa. Nämä ovat täysin samat ja näin pitikin olla.
 
 ![HTML5 muokkaus sivustolle](images/h3-kuva8.jpg)
 
 ## 'curl -I' ja 'curl' -komennot
 
-- 12.27 Ajoi komennot _curl localhost_ ja _curl -I localhost_ (isolla i:llä). Ensimmäisellä komennolla tuli sivuston HTML-koodi ja toisella tiedot sivustosta. Alempana kuva. Otsakkeessa (response header) oli erilaisia tietoja, joita tarvitaan esimerkiksi selaimen käsittelyyn. Minulle tuli seuraavat tiedot:
+- 12.27 Ajoin komennot _curl localhost_ ja _curl -I localhost_ (isolla i:llä). Ensimmäisellä komennolla tuli sivuston HTML-koodi ja toisella tiedot sivustosta. Alempana kuva. Otsakkeessa (response header) oli erilaisia tietoja, joita tarvitaan esimerkiksi selaimen käsittelyyn. Minulle tuli esimerkiksi seuraavia tietoja:
     - HTTP/1.1 200 OK = kertoo HTTP-version ja statuskoodin, tässä pyyntö on onnistunut
     - Date = kertoo viikonpäivän, päivämäärän ja ajan
     - Server: Apache/2.4.65 (Debian) = kertoo palvelimen tiedot, tässä tapauksessa on palvelimena on Apache2 ja käyttöjärjestelmänä Debian
