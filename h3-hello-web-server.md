@@ -83,8 +83,18 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
 
 ## 'curl -I' ja 'curl' -komennot
 
-- 12.27 Ajoi komennot _curl localhost_ ja _curl -I localhost_ (isolla i:llä). Ensimmäisellä komennolla tuli sivuston HTML-koodi ja toisella tiedot sivustosta. Alempana kuva. Otsakkeessa (response header) oli erilaisia tietoja:
-    - HTTP/1.1 200 OK 
+- 12.27 Ajoi komennot _curl localhost_ ja _curl -I localhost_ (isolla i:llä). Ensimmäisellä komennolla tuli sivuston HTML-koodi ja toisella tiedot sivustosta. Alempana kuva. Otsakkeessa (response header) oli erilaisia tietoja, joita tarvitaan esimerkiksi selaimen käsittelyyn. Minulle tuli seuraavat tiedot:
+    - HTTP/1.1 200 OK = kertoo HTTP-version ja statuskoodin, tässä pyyntö on onnistunut
+    - Date = kertoo viikonpäivän, päivämäärän ja ajan
+    - Server: Apache/2.4.65 (Debian) = kertoo palvelimen tiedot, tässä tapauksessa on palvelimena on Apache2 ja käyttöjärjestelmänä Debian
+    - Last-Modified = milloin resurssia on muokattu
+    - ETag = resurssin tunniste, tämän avulla välimuistit ovat tehokkaampia
+    - Content-Lenght = lähetetyn viestin koko tavuina
+    - Vary = vaikuttaa vastauksen sisältöön
+    - Content-Type = lähetetyn viestin tyyppi
+
+- ... KUVA 
+https://developer.mozilla.org/en-US/docs/Web/HTTP
 
 ## Lähteet
 
