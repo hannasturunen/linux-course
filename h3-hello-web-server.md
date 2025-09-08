@@ -94,6 +94,10 @@ Ensin etsin lokitietoja ja tutustuin niihin. Tämän jälkeen tein hattu.example
 
 ![Curl -I komento](images/h3-kuva9.jpg)
 
+## GitHub Education -paketin hankinta
+
+- 18.02 Menin GitHub Education -sivustolle, jossa klikkasin _Join GitHub Education_ -linkkiä. Tämä avasi GitHubin Education-sivun ja painoin _Start an application_. Täällä annoin tarvittavat tiedot ja opiskelijakortista kuvan, jonka jälkeen sain lähetettyä pyynnön. 
+
 ## Lähteet
 
 - Karvinen, T. 12.2.2012. Short HTML5 page. Luettavissa: https://terokarvinen.com/2012/short-html5-page/. Luettu: 7.9.2025.
