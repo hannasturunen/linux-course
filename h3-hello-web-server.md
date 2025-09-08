@@ -93,12 +93,12 @@ Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjeste
     - Vary = vaikuttaa vastauksen sisältöön
     - Content-Type = lähetetyn viestin tyyppi
 
-- ... KUVA 
-https://developer.mozilla.org/en-US/docs/Web/HTTP
+- ... KUVA 9 ...
 
 ## Lähteet
 
 - Karvinen, T. 12.2.2012. Short HTML5 page. Luettavissa: https://terokarvinen.com/2012/short-html5-page/. Luettu: 7.9.2025.
+- MDN 2025. HTTP: Hypertext Transfer Protocol. Luettavissa: https://developer.mozilla.org/en-US/docs/Web/HTTP. Luettu: 7.9.2025.
 - Sumo logic 2025. Understanding the Apache access log: how to view, locate, and analyze. Luettavissa: https://www.sumologic.com/blog/apache-access-log. Luettu: 6.9.2024.
 - Pohjana Johanna Heinonen 2025: Apache2. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md. Luettu: 6.9.2025.
 - Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet. Luettu: 6.9.2025.
