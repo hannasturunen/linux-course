@@ -96,7 +96,7 @@ Ensin etsin lokitietoja ja tutustuin niihin. Tämän jälkeen tein hattu.example
 
 ## GitHub Education -paketin hankinta
 
-- 18.02 Menin GitHub Education -sivustolle, jossa klikkasin _Join GitHub Education_ -linkkiä. Tämä avasi GitHubin Education-sivun ja painoin _Start an application_. Täällä annoin tarvittavat tiedot ja opiskelijakortista kuvan, jonka jälkeen sain lähetettyä pyynnön. 
+- 18.02 Menin GitHub Education -sivustolle, jossa klikkasin _Join GitHub Education_ -linkkiä. Tämä avasi GitHubin Education-sivun ja painoin _Start an application_. Täällä annoin tarvittavat tiedot ja opiskelijakortista kuvan, jonka jälkeen sain lähetettyä pyynnön. Ensimmäinen ei mennyt läpi, joten lisäisin vaadittuja tietoja, jonka jälkeen kirjauduin ulos GutHubista. Kun olin kirjautunut takaisin sisään, tein uuden hakemuksen, joka meni läpi. 
 
 ## Lähteet
 
