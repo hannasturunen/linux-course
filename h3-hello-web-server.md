@@ -20,13 +20,13 @@ Tein harjoitukset lauantaina 6.9.2025, sunnuntaina 7.9.2025 ja maanantaina 8.9.2
 
 Ensin etsin lokitietoja ja tutustuin niihin. Tämän jälkeen tein hattu.example.com-sivun, jonka laitoin myös default-sivustoksi ja lisäsin sinne HTML5-koodia. Tutustuin curl-komentoihin ja lopuksi hankin GitHub Educationin.
 
-## Apache-webpalvelin
+## a) Apache-webpalvelin
 
 - klo 18.51 Avasin VirtualBoxissa selaimen ja menin Firefox-selaimella osoitteeseen http://localhost. Apache-sivusto avatui, alla kuva. Apache-webpalvelin on jo asennettuna.
 
 ![Localhost-sivu](images/h3-kuva1.jpg)
 
-## Lokista etsiminen
+## b) Lokista etsiminen
 
 - klo 18.57 Kirjoitin terminaaliin _sudo tail -f /var/log/apache2/access.log_. Annoin salasanani ja sain listan Apache-webpalvelimen lokitiedostoista, johon on tallennettu kaikki tehdyt pyynnöt. Avasin Firefox-selaimen ja menin osoitteeseen http://localhost. Lokitiedoista analysoin kaksi alinta riviä, jotka ilmestyivät, kun avasin Firefox-selaimen ja menin localhost-sivulle. Alemmassa rivissä oli muuten samat tiedot, mutta kolme niistä oli erilaista. Kuva alempana. Tulkinnassa käytetty apuna Sumo logicin artikkelia (2025).
 - Ylempi rivi, merkattu kuvaan punaisella:
@@ -44,7 +44,7 @@ Ensin etsin lokitietoja ja tutustuin niihin. Tämän jälkeen tein hattu.example
 
 ![Lokista etsiminen](images/h3-kuva2.jpg)
 
-## Etusivu uusiksi
+## c) Etusivu uusiksi
 
 - klo 8.37 Kirjoitin komennon _sudoedit /etc/apache2/sites-available/hattu.example.com.conf_, jolla pääsin muokkaamaan tiedostoa. Kopioin tiedot Johannan sivuilta (2025) ja muokkasin muutaman kohdan:
     - ServerName = hattu.example.com
@@ -80,13 +80,13 @@ Ensin etsin lokitietoja ja tutustuin niihin. Tämän jälkeen tein hattu.example
 
 ![Hattu.example.com localhostilla](images/h3-kuva7.jpg)
 
-## HTML5-sivun tekeminen
+## e) HTML5-sivun tekeminen
 
 - klo 12.02 Menin muokkaamaan hattu.example.com -sivustoa paremmaksi komennolla _nano /home/hanna/public-sites/index.html_. Kopioin lyhyen HTML-koodin Teron sivuilta (2012) ja liitin sen editoriin. Muokkasin HTML-koodia itselleni sopivaksi. Tallensin tiedot ja suljin editorin. Kävin katsomassa miltä sivustot näyttivät nyt selaimessa ja sinne oli päivittynyt uudet tiedot. Alla kuva, jossa ylempänä on miltä teksti näyttää localhost-osoitteessa ja alempana hattu.example.com-osoitteessa. Nämä ovat täysin samat ja näin pitikin olla.
 
 ![HTML5 muokkaus sivustolle](images/h3-kuva8.jpg)
 
-## 'curl -I' ja 'curl' -komennot
+## f) 'curl -I' ja 'curl' -komennot
 
 - 12.27 Ajoin komennot _curl localhost_ ja _curl -I localhost_ (isolla i:llä). Ensimmäisellä komennolla tuli sivuston HTML-koodi ja toisella tiedot sivustosta. Alempana kuva. Otsakkeessa (response header) oli erilaisia tietoja, joita tarvitaan esimerkiksi selaimen käsittelyyn. Minulle tuli esimerkiksi seuraavia tietoja:
     - HTTP/1.1 200 OK = kertoo HTTP-version ja statuskoodin, tässä pyyntö on onnistunut
@@ -100,7 +100,7 @@ Ensin etsin lokitietoja ja tutustuin niihin. Tämän jälkeen tein hattu.example
 
 ![Curl -I komento](images/h3-kuva9.jpg)
 
-## GitHub Education -paketin hankinta
+## m) GitHub Education -paketin hankinta
 
 - 18.02 Menin GitHub Education -sivustolle, jossa klikkasin _Join GitHub Education_ -linkkiä. Tämä avasi GitHubin Education-sivun ja painoin _Start an application_. Täällä annoin tarvittavat tiedot ja opiskelijakortista kuvan, jonka jälkeen sain lähetettyä pyynnön. Ensimmäinen ei mennyt läpi, joten lisäisin vaadittuja tietoja, jonka jälkeen kirjauduin ulos GutHubista. Kun olin kirjautunut takaisin sisään, tein uuden hakemuksen, joka meni läpi. 
 
