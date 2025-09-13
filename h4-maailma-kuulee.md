@@ -1,6 +1,8 @@
 # H4 Maailman kuulee
 
-## ...KESKEN... x) Tiivistäminen
+## ...KESKEN... x) Tiivistelmät
+
+### Susanna Lehto: Teoriasta käytäntöön pilvipalvelimen avulla (h4)
 
 **a) Pilvipalvelimen vuokraus ja asennus**
 - Lehto loi käyttäjätilin, jonka jälkeen teki virtuaalikoneen:
@@ -27,6 +29,16 @@
 **f) Palvelimen ohjelmien päivitys**
 - Lehto avasi terminaalin ja otti SSH-yhteyden virtuaalipalvelimelle.
 - Haki tiedot päivityksistä, asensi ne ja haki myös tietoturvapäivitykset komennoilla _sudo apt-get update_, _sudo apt-get upgrade_ ja _sudo apt-get dist-upgrade_.
+
+(Lehto, 14.2.2022)
+
+### Tero Karvinen: First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS
+
+- Käytä aina hyviä salasanoja!
+- Virtuaalisia palvelimia voi vuokrata esimerkiksi DigitalOceanilta, Linodelta ja Gandilta.
+- GitHubilta saa ilmaisen Education student -paketin, jossa on virtuaalinen palvelin ja .me-domainnimen rajoitetuksi ajaksi.
+- Artikkelissa ohjeistetaan miten luodaan uusi palvelin DigitalOceanille, miten palomuuriin tehdään reikä ja miten sen saa päälle, miten tehdään sudo-käyttäjä, miten root-käyttäjä suljetaan ja miten ohjelmat päivitetään. Lopuksi aletaan käyttämään luotua palvelinta. Mukana on myös komennot näihin.
+- DNS-nimen voi vuokrata esimerkiksi NameCheapistä.   
 
 
 # Lähteet
