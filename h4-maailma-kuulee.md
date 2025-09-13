@@ -2,7 +2,7 @@
 
 ## ...KESKEN... x) Tiivistäminen
 
-- a) Pilvipalvelimen vuokraus ja asennus
+Pilvipalvelimen vuokraus ja asennus
   - Käyttäjätilin luomisen jälkeen tehtiin virtuaalikone:
     - Käyttöjärjestelmä: uusin Debian
     - Virtuaalikoneen paketti: edullisin peruspaketti, koska tätä on mahdollista myöhemmin kasvattaa
