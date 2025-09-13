@@ -13,8 +13,10 @@ Käyttäjätilin luomisen jälkeen tehtiin virtuaalikone:
 
 Kun virtuaalikone oli vuokrattu, vuokrattiin domainnimi Namecheapin kautta ja lopuksi domainnimi ohjattiin osoittamaan aiemmin hankitulle virtuaalipalvelimelle.
 
+
 **Palvelin suojaan palomuurilla**
 
+- Lehdolla oli käytössään Linux-kone Debian-käyttöjärjestelmällä. Hän ajoi komennon _ssh root@188.166.4.6_, jolla hän sai yhteyden virtuaalikoneeseensa.
 
 
 e) Kotisivut palvelimelle
