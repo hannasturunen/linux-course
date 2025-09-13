@@ -11,8 +11,7 @@ Pilvipalvelimen vuokraus ja asennus
   - Lisävaihtoehdot: ei kannata ottaa, näitä ovat esimerkiksi backupit.
 - Kun virtuaalikone oli vuokrattu, vuokrattiin domainnimi Namecheapin kautta ja lopuksi domainnimi ohjattiin osoittamaan aiemmin hankitulle virtuaalipalvelimelle.
 
-Palvelin suojaan palomuurilla
-- 
+**Palvelin suojaan palomuurilla**
 
 e) Kotisivut palvelimelle
 
