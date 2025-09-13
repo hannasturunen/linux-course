@@ -1,10 +1,8 @@
 # H4 Maailman kuulee
 
-## ...KESKEN... x) Tiivistäminen 
+## ...KESKEN... x) Tiivistäminen
 
-- a) Pilvipalvelimen vuokraus ja asennus
-  - 
-
+a) Pilvipalvelimen vuokraus ja asennus
 
 
 d) Palvelin suojaan palomuurilla
