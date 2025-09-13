@@ -42,7 +42,15 @@
 
 (Karvinen, 19.9.2017)
 
-# Lähteet
+## Virtuaalikonetehtävät
+
+... KESKEN ... Tein harjoitukset lauantaina 13.9.2025, ... ... Helsingissä kotona. Tein lauantaina harjoitukset ... ... (kohdat ...). Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
+
+... KESKEN ... Tiivistelmä.
+
+## 
+
+## Lähteet
 
 - Karvinen, T. 19.9.2017. First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS. Luettavissa: https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/. Luettu: 13.9.2025.
 - Lehto, S. 14.2.2022. Teoriasta käytäntöön pilvipalvelimen avulla (h4). Luettavissa: https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/. Luettu: 13.9.2025.
