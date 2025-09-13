@@ -1,6 +1,6 @@
 # H4 Maailman kuulee
 
-## ...KESKEN... x) Tiivistelmät
+## x) Tiivistelmät
 
 ### Susanna Lehto: Teoriasta käytäntöön pilvipalvelimen avulla (h4)
 
@@ -40,7 +40,9 @@
 - Artikkelissa ohjeistetaan miten luodaan uusi palvelin DigitalOceanille, miten palomuuriin tehdään reikä ja miten sen saa päälle, miten tehdään sudo-käyttäjä, miten root-käyttäjä suljetaan ja miten ohjelmat päivitetään. Lopuksi aletaan käyttämään luotua palvelinta. Mukana on myös komennot näihin.
 - DNS-nimen voi vuokrata esimerkiksi NameCheapistä.   
 
+(Karvinen, 19.9.2017)
 
 # Lähteet
 
+- Karvinen, T. 19.9.2017. First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS. Luettavissa: https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/. Luettu: 13.9.2025.
 - Lehto, S. 14.2.2022. Teoriasta käytäntöön pilvipalvelimen avulla (h4). Luettavissa: https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/. Luettu: 13.9.2025.
