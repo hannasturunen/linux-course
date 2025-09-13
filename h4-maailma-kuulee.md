@@ -44,13 +44,32 @@
 
 ## Virtuaalikonetehtävät
 
-... KESKEN ... Tein harjoitukset lauantaina 13.9.2025, ... ... Helsingissä kotona. Tein lauantaina harjoitukset ... ... (kohdat ...). Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
+... KESKEN ... Tein harjoitukset lauantaina 13.9.2025, ... ... Helsingissä kotona. Tein lauantaina virtuaalipalvelimen vuokrauksen ja aloitin alkutoimet virtuaalipalvelimella (kohdat a-b). Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
 
 ... KESKEN ... Tiivistelmä.
 
-## 
+## a) Oman virtuaalipalvelimen vuokraus UpCloudilta
+
+- klo 19.25 Päätin ottaa virtuaalipalvelimen UpCloudista. Kirjauduin sisään. Otin käyttöön Two-factor authenticationin, koska UpCloud sitä suositteli.
+- 19.30 Aloitin virtuaalipalvelimen tekemisen etusivulla olevasta "Deploy your trial services"-kohdasta klikkaamalla "Deploy now" -valikkoa ja sieltä valitsin "Server". Valitsin paikaksi Suomen, koska on ottaa paikaksi mahdollisuuksien mukaan mahdollisimman lähellä asiakkaita. Plan-kohdassa valitsin halvimman (3€/kk), jossa oli yksi CPU-ydin, 1 GB RAM-muistia ja 10 GB muistia, jotka ovat riittävät tähän harjoitukseen. Storage- ja Automated backups -kohtiin en laittanut mitään. Käyttöjärjestelmäksi valitsin _Debian GNU/Linux 13 (Trixie)_. Network-kohdassa jätin päälle kohdat: Public IPv4, Utility network ja Public IPv6. Alla kuvat valinnoista.
+
+- ... KUVA1 - KUVA03 ...
+
+- 19.50 Salasana-kohdassa oli pakko käyttää SSH-keysiä, koska ei antanut vaihtoehdoksi "One time password" -kohtaa. Tein siis SSH-salasanat. Avasin terminaalin (tällä kertaa Windowsissa, koska pääsen siihen helpommin käsiksi). Annoin komennon _ssh-keygen_, jonka jälkeen painoin kolme kertaa enteriä (hyväksyin komennon, hyväksyin kansion, jonne salasana tallennetaan ja hyväksyin passphrasen). Nyt minulla oli SSH-avaimet tehtynä, joten pääsin jatkamaan.
+- 19.54 Etsin SHH-avaimet tiedostoista ja kopioin julkisen avaimen UpCloudiin.
+- 20.03 En laittanut mitään Initialization script -kohtaan ja jätin Server configuration -kohdassa olevat tiedot hostname:sta kuten ne olivatkin. Lopuksi painoin Deploy-nappia ja pian virtuaalipalvelimeni olikin valmis! Sain tässä myös virtuaalipalvelimeni IP-osoitteen.
+
+## b) Alkutoimet virtuaalipalvelimella: tulimuuri päälle, root-tunnus kiinni ja ohjelmien päivitys
+
+- klo 20.16 Avasin VirtualBoxin ja terminaalin. Annoin komennon _ssh root@94.237.118.241_, jolla yritin ottaa yhteyden virtuaalipalvelimeeni. Ei saanut yhteyttä, koska olin tehnyt SSH-avaimet Windowsilla ja nyt Linux ei löydä niitä.
+- 20.24 Tein siis uudet SSH-avaimet Linuxilla. Tein päivitykset komennoilla _sudo apt-get update_ ja _sudo apt-get -y install openssh-client_ ja painoin kolme kertaa enteriä. Sain tehtyä SSH-avaimet. Menin kopioimaan SSH:n julkista avainta komennolla _micro ~/.ssh/id_ed25519.pub_. Näin julkisen avaimeni, mutta en saanut sitä millään kopioitua, vaikka minulla on bidirectional Shared Clipboard -kohdasta käytössä. Yritin kopioida sitä manuaalisesti itse, mutta en tiedä onnistuiko, koska en päässyt yhä kirjautumaan sisään root-käyttäjänä.
+- 20.53 Suljin virtuaalipalvelimen UpCloud-sivulta ja käynnistin sen uudestaan. Annoin komennon _ssh root@94.237.118.241_, mutta yhä antaa vain "Permission denied (publickey). Päätin poistaa nykyisen virtuaalipalvelimen ja tehdä uuden ja samalla tehdä uudet SSH-avaimet Linuxilla.
+- 20.56 Suljin taas virtuaalipalvelimen UpCloudista ja poistin sen.
+
+
 
 ## Lähteet
 
 - Karvinen, T. 19.9.2017. First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS. Luettavissa: https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/. Luettu: 13.9.2025.
 - Lehto, S. 14.2.2022. Teoriasta käytäntöön pilvipalvelimen avulla (h4). Luettavissa: https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/. Luettu: 13.9.2025.
+- Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet. Luettu: 13.9.2025.
