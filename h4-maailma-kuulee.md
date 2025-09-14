@@ -51,7 +51,7 @@
 ## a) Oman virtuaalipalvelimen vuokraus UpCloudilta
 
 - klo 19.25 Päätin ottaa virtuaalipalvelimen UpCloudista. Kirjauduin sisään. Otin käyttöön Two-factor authenticationin, koska UpCloud sitä suositteli.
-- 19.30 Aloitin virtuaalipalvelimen tekemisen etusivulla olevasta "Deploy your trial services"-kohdasta klikkaamalla "Deploy now" -valikkoa ja sieltä valitsin "Server". Valitsin paikaksi Suomen, koska on ottaa paikaksi mahdollisuuksien mukaan mahdollisimman lähellä asiakkaita. Plan-kohdassa valitsin halvimman (3€/kk), jossa oli yksi CPU-ydin, 1 GB RAM-muistia ja 10 GB muistia, jotka ovat riittävät tähän harjoitukseen. Storage- ja Automated backups -kohtiin en laittanut mitään. Käyttöjärjestelmäksi valitsin _Debian GNU/Linux 13 (Trixie)_. Network-kohdassa jätin päälle kohdat: Public IPv4, Utility network ja Public IPv6. Alla kuvat valinnoista.
+- 19.30 Aloitin virtuaalipalvelimen tekemisen etusivulla olevasta "Deploy your trial services"-kohdasta klikkaamalla "Deploy now" -valikkoa ja sieltä valitsin "Server". Valitsin paikaksi Suomen, koska on hyvä ottaa paikaksi mahdollisuuksien mukaan mahdollisimman lähellä asiakkaita. Plan-kohdassa valitsin halvimman (3€/kk), jossa oli yksi CPU-ydin, 1 GB RAM-muistia ja 10 GB muistia, jotka ovat riittävät tähän harjoitukseen. Pienemmästä isompaan on aina helpompi siirtyä kuin isommasta pienempään. Storage- ja Automated backups -kohtiin en laittanut mitään. Käyttöjärjestelmäksi valitsin _Debian GNU/Linux 13 (Trixie)_. Network-kohdassa jätin päälle kohdat: Public IPv4, Utility network ja Public IPv6. Alla kuvat valinnoista.
 
 - ... KUVA1 - KUVA03 ...
 
@@ -62,9 +62,26 @@
 ## b) Alkutoimet virtuaalipalvelimella: tulimuuri päälle, root-tunnus kiinni ja ohjelmien päivitys
 
 - klo 20.16 Avasin VirtualBoxin ja terminaalin. Annoin komennon _ssh root@94.237.118.241_, jolla yritin ottaa yhteyden virtuaalipalvelimeeni. Ei saanut yhteyttä, koska olin tehnyt SSH-avaimet Windowsilla ja nyt Linux ei löydä niitä.
-- 20.24 Tein siis uudet SSH-avaimet Linuxilla. Tein päivitykset komennoilla _sudo apt-get update_ ja _sudo apt-get -y install openssh-client_ ja painoin kolme kertaa enteriä. Sain tehtyä SSH-avaimet. Menin kopioimaan SSH:n julkista avainta komennolla _micro ~/.ssh/id_ed25519.pub_. Näin julkisen avaimeni, mutta en saanut sitä millään kopioitua, vaikka minulla on bidirectional Shared Clipboard -kohdasta käytössä. Yritin kopioida sitä manuaalisesti itse, mutta en tiedä onnistuiko, koska en päässyt yhä kirjautumaan sisään root-käyttäjänä.
+- 20.24 Tein siis uudet SSH-avaimet Linuxilla. Tein päivitykset komennoilla _sudo apt-get update_ ja _sudo apt-get -y install openssh-client_. Sen jälkeen tein SSH-avaimet komennolla _ssh-keygen_ painoin kolme kertaa enteriä. Sain tehtyä SSH-avaimet. Menin kopioimaan SSH:n julkista avainta komennolla _micro ~/.ssh/id_ed25519.pub_. Näin julkisen avaimeni, mutta en saanut sitä millään kopioitua, vaikka minulla on bidirectional Shared Clipboard -kohdasta käytössä. Yritin kopioida sitä manuaalisesti itse, mutta en tiedä onnistuiko, koska en päässyt yhä kirjautumaan sisään root-käyttäjänä.
 - 20.53 Suljin virtuaalipalvelimen UpCloud-sivulta ja käynnistin sen uudestaan. Annoin komennon _ssh root@94.237.118.241_, mutta yhä antaa vain "Permission denied (publickey). Päätin poistaa nykyisen virtuaalipalvelimen ja tehdä uuden ja samalla tehdä uudet SSH-avaimet Linuxilla.
 - 20.56 Suljin taas virtuaalipalvelimen UpCloudista ja poistin sen.
+
+- klo 6.14 Tein uuden virtuaalipalvelimen UpCloudissa kohdan _a) Oman virtuaalipalvelimen vuokraus UpCloudilta_ mukaan ja valinnat olivat samat.
+- 6.18 Avasin VirtualBoxin ja tein ensin päivitykset ja sitten SSH-avaimet aikaisemman kohdan mukaisesti (kohta b) Alkutoimet virtuaalipalvelimella: tulimuuri päälle, root-tunnus kiinni ja ohjelmien päivitys, kello 20.24). Ilmoitti, että kansio on jo olemassa ja haluanko korvata sen, johon vastasin kyllä. Avasin julkisen avaimen komennolla _micro ~/.ssh/id_ed25519.pub_. Kopioin avaimen, mutta en saanut yhä liitettyä sitä Linux-koneen ulkopuolelle. Kirjauduin sisään UpCloudiin Linuxilla ja tallensin avaimen profiiliini. Jouduin tekemään palvelimenvalinnat uudestaan, mutta menin samoilla kuin aikaisemminkin. Nyt Login Method -kohdassa oli vaihtoehtona äsken lisäämäni SSH-avain. Lopuksi painoin Deploy-nappia.
+- 6.33 Otin yhteyden Linuxista virtuaalipalvelimeeni komennolla _ssh root@185.26.51.195_. Kysyttiin haluanko ottaa yhteyden palvelimeen, johon vastasin yes. Jes, pääsin sisään! Tein päivitykset komennolla _sudo apt-get update_.
+- 6.40 Asensin palomuurin komennolla _sudo apt-get install ufw_. Kun palomuuri on asennettu, tein siihen reiän SSH:lle porttiin 22, jota SSH käyttää. Tein tämän komennolla _sudo ufw allow 22/tcp_ ja laitoin vielä palomuurin päälle komennolla _sudo ufw enable_, alla kuva. Nyt palomuuri on päällä.
+
+- ... KUVA04 ...
+
+- 7.01 Tein virtuaalipalvelimen terminaalissa uuden käyttäjän (hannatu) komennolla _sudo adduser hannatu_ ja annoin vahvan salasanan. Annoin nimeni, mutta muut kohdat jätin tyhjäksi, alla kuva. Sen jälkeen korotin käyttäjän pääkäyttäjäksi komennolla _sudo adduser hannatu sudo_.
+- 7.08 Avasin toisen terminaalin ja testasin toimivatko juuri luomani, uudet tunnukset, komennolla _ssh hannatu@185.26.51.195_. En päässyt sisään, yhä valittaa "Permission denied (publickey)". Tässä nyt taitaa olla ongelmana se, että nuo SSH-avaimet on tehty hanna-käyttäjällä eikä hannatu-käyttäjällä, joten hannatu-käyttäjä ei pääse käsiksi niihin ja siksi tulee tämä ilmoitus.
+- 7.26 Tein siis virtuaalipalvelimen terminaalissa uuden käyttäjän hanna komennolla _sudo adduser hanna_, jolle annoin vahvan salasanan ja oman nimeni (muut kohdat jätin tyhjäksi). Tein käyttäjästä pääkäyttäjän komennolla _sudo adduser hanna sudo_. Alla kuva. 
+
+- ... KUVA05 ...
+- ... KUVA 06 ...
+
+- 7.30 Testasin uudestaan mennä paikallisessa terminaalissa SSH-yhteydellä virtuaalipalvelimelleni, komennolla _ssh hanna@185.26.51.195_. Yhä antaa vaan "Permission denied (publickey)". Taitaa olla niin, ettei uudet käyttäjät näe SSH-avaimia, joten niille pitää antaa oikeudet niihin.
+- 7.45 Olen ihan sekaisin näistä, en tiedä missä on mikäkin enkä saa siirrettyä publickeytä hannatu-käyttäjälle, joten poistan taas tämän virtuaalipalvelimen ja aloitan alusta. 
 
 
 
