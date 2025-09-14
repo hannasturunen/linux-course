@@ -44,9 +44,9 @@
 
 ## Virtuaalikonetehtävät
 
-... KESKEN ... Tein harjoitukset lauantaina 13.9.2025, ... ... Helsingissä kotona. Tein lauantaina virtuaalipalvelimen vuokrauksen ja aloitin alkutoimet virtuaalipalvelimella (kohdat a-b). Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
+Tein harjoitukset lauantaina 13.9.2025 ja jatkoin sunnuntaina 14.9.2025 Helsingissä kotona. Tein lauantaina virtuaalipalvelimen vuokrauksen ja aloitin alkutoimet virtuaalipalvelimella (kohdat a-b). Sunnuntaina jatkoin alkutoimia (kohta b), koska se oli jäänyt kesken, mutta en saanut sitä loppuun. Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
 
-... KESKEN ... Tiivistelmä.
+Vuokrasin virtuaalipilvipalvelimen UpCloudilta. Asensin palvelimelle palomuurin ja tein uuden käyttäjän. En kuitenkaan päässyt jatkmaan, koska en pääse toiselta terminaalilta virtuaalipalvelimelle (ilmoittaa _Permission denied (publickey)_).
 
 ## a) Oman virtuaalipalvelimen vuokraus UpCloudilta
 
@@ -80,11 +80,11 @@
 - 6.33 Otin yhteyden Linuxista virtuaalipalvelimeeni komennolla ```ssh root@185.26.51.195```. Kysyttiin haluanko ottaa yhteyden palvelimeen, johon vastasin yes. Jes, pääsin sisään! Tein päivitykset komennolla ```sudo apt-get update```.
 - 6.40 Asensin palomuurin komennolla ```sudo apt-get install ufw```. Kun palomuuri on asennettu, tein siihen reiän SSH:lle porttiin 22, jota SSH käyttää. Tein tämän komennolla ```sudo ufw allow 22/tcp``` ja laitoin vielä palomuurin päälle komennolla ```sudo ufw enable```, alla kuva. Nyt palomuuri on päällä.
 
-... KUVA04 ...
+![palomuuri enable](images/h4-kuva04.jpg)
 
 - 7.01 Tein virtuaalipalvelimen terminaalissa uuden käyttäjän (hannatu) komennolla ```sudo adduser hannatu``` ja annoin vahvan salasanan. Annoin nimeni, mutta muut kohdat jätin tyhjäksi, alla kuva. Sen jälkeen korotin käyttäjän pääkäyttäjäksi komennolla ```sudo adduser hannatu sudo```.
 
- ... KUVA05 ...
+![sudo adduser hannatu](images/h4-kuva05.jpg)
 
 - 7.08 Avasin toisen terminaalin ja testasin toimivatko juuri luomani, uudet tunnukset, komennolla ```ssh hannatu@185.26.51.195```. En päässyt sisään, yhä valittaa "Permission denied (publickey)". Tässä nyt taitaa olla ongelmana se, että nuo SSH-avaimet on tehty hanna-käyttäjällä eikä hannatu-käyttäjällä, joten hannatu-käyttäjä ei pääse käsiksi niihin ja siksi tulee tämä ilmoitus.
 - 7.26 Tein siis virtuaalipalvelimen terminaalissa uuden käyttäjän hanna komennolla ```sudo adduser hanna```, jolle annoin vahvan salasanan ja oman nimeni (muut kohdat jätin tyhjäksi). Tein käyttäjästä pääkäyttäjän komennolla ```sudo adduser hanna sudo```.
@@ -93,15 +93,16 @@
 - 8.15 Ensiksi loin SSH-keyt hanna-käyttäjälle terminaalissa komennolla ```ssh-keygen```. Tein uuden virtuaalipalvelimen UpCloudissa, käytin samoja tietoja kuin aikaisemmin, ja lisäsin SSH-avaimen.
 - 8.53 Avasin terminaalin, jonne kirjoitin komennon ```ssh root@94.237.34.130``` ja pääsin sisään. Päivitin ohjelmat komennolla ```sudo apt-get update```, asensin palomuurin (```sudo apt-get install ufw```). Tein palomuurin reiän ja laitoin sen päälle (```sudo ufw allow 22/tcp``` ja ```sudo ufw enable```). Tarkistin, että onhan portti 22 päällä (```sudo ufw status verbose```) ja näin, että on, alla kuva.
 
-- ... KUVA 07 ... 
+![ufw tila](images/h4-kuva06.jpg)
 
 - 9.08 Tein virtuaalipalvelimen terminaalissa uuden käyttäjän hannatu (```sudo adduser hannatu```), annoin taas nimeksi _Hanna Turunen_ ja muut jätin tyhjäksi. Tein uudesta käyttäjästä pääkäyttäjän (```sudo adduser hannatu sudo```).
 - 9.15 Avasin toisen terminaalin ja yritin päästä sisään virtuaalipalvelimelle (```ssh hannatu@94.237.34.130```), ei päästänyt vieläkään. Asensin SSH:n (```sudo apt install openssh-server```) ja tarkistin, että on päällä (```sudo systemctl status ssh```), josta näin, että oli, koska siellä luki "active (running)". Yritin uudestaan ottaa yhteyttä virtuaalipalvelimelle ```ssh hannatu@94.237.34.130```. Yhä ilmoittaa saman permission denied, alla kuva.
 
-KUVA 08
+![ssh tilanne](images/h4-kuva07.jpg)
 
+- 11.50 En kyllä enää tiedä miten tätä koko sotkua lähtisi selvittämään, kun on ollut monta virtuaalipalvelinta ja välillä joku on toiminut ja välillä taas ei. Alla kuva vielä _Permission denied (publickey)_:stä.
 
-
+![permission denied](images/h4-kuva08.jpg)
 
 
 ## Lähteet
