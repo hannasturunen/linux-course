@@ -89,6 +89,7 @@
 
 - 9.08 Tein virtuaalipalvelimen terminaalissa uuden käyttäjän hannatu (```sudo adduser hannatu```), annoin taas nimeksi Hanna Turunen ja muut jätin tyhjäksi. Tein uudesta käyttäjästä pääkäyttäjän (```sudo adduser hannatu sudo```).
 - 9.15 Avasin toisen terminaalin ja yritin päästä sisään virtuaalipalvelimelle (```ssh hannatu@94.237.34.130```), ei päästänyt vieläkään. Asensin SSH:n (```sudo apt install openssh-server```) ja tarkistin, että on päällä (```sudo systemctl status ssh```), josta näin, että oli, koska siellä luki "active (running)". Yritin uudestaan ottaa yhteyttä virtuaalipalvelimelle ```ssh hannatu@94.237.34.130```. Yhä ilmoittaa saman permission denied.
+- 10.30 Olen kyllä nyt niin sekaisin, etten tiedä enää mitä olen tehnyt ja mitä en, kun tässä on ollut monta virtuaalipalvelinta menossa otettuna ja olen testaillut eri asioita.  
 
 
 
