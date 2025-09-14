@@ -100,10 +100,9 @@ Vuokrasin virtuaalipilvipalvelimen UpCloudilta. Asensin palvelimelle palomuurin 
 
 ![ssh tilanne](images/h4-kuva07.jpg)
 
-- 11.50 En kyllä enää tiedä miten tätä koko sotkua lähtisi selvittämään, kun on ollut monta virtuaalipalvelinta ja välillä joku on toiminut ja välillä taas ei. Alla kuva vielä _Permission denied (publickey)_:stä.
+- 11.50 En kyllä enää tiedä miten tätä koko sotkua lähtisi selvittämään, kun on ollut monta virtuaalipalvelinta ja välillä joku on toiminut ja välillä taas ei. Jää aina kiinni siihen, että yritän ottaa toisesta terminaalista yhteyttä virtuaalipalvelimeen ja ei anna, vaan antaa _Permission denied (publickey)_, alla kuva.
 
 ![permission denied](images/h4-kuva08.jpg)
-
 
 ## Lähteet
 
