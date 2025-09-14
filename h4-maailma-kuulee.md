@@ -51,10 +51,19 @@
 ## a) Oman virtuaalipalvelimen vuokraus UpCloudilta
 
 - klo 19.25 Päätin ottaa virtuaalipalvelimen UpCloudista. Kirjauduin sisään. Otin käyttöön Two-factor authenticationin, koska UpCloud sitä suositteli.
-- 19.30 Aloitin virtuaalipalvelimen tekemisen etusivulla olevasta "Deploy your trial services"-kohdasta klikkaamalla "Deploy now" -valikkoa ja sieltä valitsin "Server". Valitsin paikaksi Suomen, koska on hyvä ottaa paikaksi mahdollisuuksien mukaan mahdollisimman lähellä asiakkaita. Plan-kohdassa valitsin halvimman (3€/kk), jossa oli yksi CPU-ydin, 1 GB RAM-muistia ja 10 GB muistia, jotka ovat riittävät tähän harjoitukseen. Pienemmästä isompaan on aina helpompi siirtyä kuin isommasta pienempään. Storage- ja Automated backups -kohtiin en laittanut mitään. Käyttöjärjestelmäksi valitsin _Debian GNU/Linux 13 (Trixie)_. Network-kohdassa jätin päälle kohdat: Public IPv4, Utility network ja Public IPv6. Alla kuvat valinnoista.
+- 19.30 Aloitin virtuaalipalvelimen tekemisen etusivulla olevasta "Deploy your trial services"-kohdasta klikkaamalla "Deploy now" -valikkoa ja sieltä valitsin "Server". Valitsin paikaksi Suomen, koska on hyvä ottaa paikaksi mahdollisuuksien mukaan mahdollisimman lähellä asiakkaita.
 
-- ... KUVA1 - KUVA03 ...
+![paikaksi valittu Suomi](images/h4-kuva01.jpg)
 
+- Plan-kohdassa valitsin halvimman (3€/kk), jossa oli yksi CPU-ydin, 1 GB RAM-muistia ja 10 GB muistia, jotka ovat riittävät tähän harjoitukseen. Pienemmästä isompaan on aina helpompi siirtyä kuin isommasta pienempään.
+
+![valittu parametrit palvelimelle](images/h4-kuva02.jpg)
+
+- Storage- ja Automated backups -kohtiin en laittanut mitään. Käyttöjärjestelmäksi valitsin _Debian GNU/Linux 13 (Trixie)_.
+
+![operating system debian](images/h4-kuva03.jpg)
+
+- Network-kohdassa jätin päälle kohdat: Public IPv4, Utility network ja Public IPv6. Alla kuvat valinnoista.
 - 19.50 Salasana-kohdassa oli pakko käyttää SSH-keysiä, koska ei antanut vaihtoehdoksi "One time password" -kohtaa. Tein siis SSH-salasanat. Avasin terminaalin (tällä kertaa Windowsissa, koska pääsen siihen helpommin käsiksi). Annoin komennon ```ssh-keygen```, jonka jälkeen painoin kolme kertaa enteriä (hyväksyin komennon, hyväksyin kansion, jonne salasana tallennetaan ja hyväksyin passphrasen). Nyt minulla oli SSH-avaimet tehtynä, joten pääsin jatkamaan.
 - 19.54 Etsin SHH-avaimet tiedostoista ja kopioin julkisen avaimen UpCloudiin.
 - 20.03 En laittanut mitään Initialization script -kohtaan ja jätin Server configuration -kohdassa olevat tiedot hostname:sta kuten ne olivatkin. Lopuksi painoin Deploy-nappia ja pian virtuaalipalvelimeni olikin valmis! Sain tässä myös virtuaalipalvelimeni IP-osoitteen.
