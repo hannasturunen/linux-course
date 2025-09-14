@@ -83,8 +83,13 @@
 - 7.30 Testasin uudestaan mennä paikallisessa terminaalissa SSH-yhteydellä virtuaalipalvelimelleni, komennolla _ssh hanna@185.26.51.195_. Yhä antaa vaan "Permission denied (publickey)". Taitaa olla niin, ettei uudet käyttäjät näe SSH-avaimia, joten niille pitää antaa oikeudet niihin.
 - 7.45 Olen ihan sekaisin näistä, en tiedä missä on mikäkin enkä saa siirrettyä publickeytä hannatu-käyttäjälle, joten poistin taas tämän virtuaalipalvelimen ja aloitin alusta.
 - 8.15 Ensiksi loin SSH-keyt hanna-käyttäjälle terminaalissa komennolla _ssh-keygen_. Tein uuden virtuaalipalvelimen UpCloudissa, samat tiedot. Laitoin SSH-avaimen.
-- 8.53 Avasin uuden terminaalin, jonne kirjoitin komennon _ssh root@94.237.34.130_ ja pääsin sisään. Päivitin ohjelmat komennolla _sudo apt-get update_, asensin palomuurin (sudo apt-get install ufw). Tein palomuurin reiän ja laitoin sen päälle (sudo ufw allow 22/tcp ja sudo ufw enable). 
+- 8.53 Avasin uuden terminaalin, jonne kirjoitin komennon _ssh root@94.237.34.130_ ja pääsin sisään. Päivitin ohjelmat komennolla _sudo apt-get update_, asensin palomuurin (sudo apt-get install ufw). Tein palomuurin reiän ja laitoin sen päälle (sudo ufw allow 22/tcp ja sudo ufw enable). Tarkistin, että onhan portti 22 päällä (_sudo ufw status verbose_) ja näin, että on, alla kuva.
 
+- ... KUVA 07 ... 
+
+- 9.08 Tein virtuaalipalvelimen terminaalissa uuden käyttäjän hannatu (sudo adduser hannatu), annoin taas nimeksi Hanna Turunen ja muut jätin tyhjäksi. Tein uudesta käyttäjästä pääkäyttäjän (sudo adduser hannatu sudo).
+- 9.15 Avasin toisen terminaalin ja yritin päästä sisään virtuaalipalvelimelle (_ssh hannatu@94.237.34.130_), ei päästänyt vieläkään. Asensin SSH:n (_sudo apt install openssh-server_) ja tarkistin, että on päällä (_sudo systemctl status ssh_), josta näin, että oli, koska siellä luki "active (running)". Yritin uudestaan ottaa yhteyttä virtuaalipalvelimelle _ssh hannatu@94.237.34.130_. Yhä ilmoittaa saman permission denied.
+- 
 
 
 ## Lähteet
