@@ -128,7 +128,7 @@ Tein harjoitukset maanantaina 15.9.2025 Helsingissä kotona. Koneena kaikissa te
 
 ![apachen status](images/h4-kuva19.jpg)
 
-- 18.37 Huomasin, että kello näyttää väärää, joten muokkasin ajan. Tein tämän komennolla ```sudo dpkg-reconfigure tzdata```, joka avasi ikkunan. Valitsin _Europe_ ja _Helsinki_. Kävin vielä tarkistamassa, että aika on muuttunut komennolla ```sudo systemctl status apache2``` ja se oli muuttunut. (LinuxCapable, 8.7.2024.)
+- 18.37 Huomasin, että kello näyttää väärää, joten muokkasin ajan. Tein tämän komennolla ```sudo dpkg-reconfigure tzdata```, joka avasi ikkunan. Valitsin _Europe_ (kuva vasemmalla) ja _Helsinki_ (kuva oikealla). Kävin vielä tarkistamassa, että aika on muuttunut komennolla ```sudo systemctl status apache2``` ja se oli muuttunut. (LinuxCapable, 8.7.2024.)
 
 ![ajan muuttaminen](images/h4-kuva20.jpg)
 
