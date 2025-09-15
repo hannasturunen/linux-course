@@ -51,7 +51,9 @@ Tein harjoitukset maanantaina 15.9.2025 Helsingissä kotona. Koneena kaikissa te
 
 - klo 16.05 Päätin ottaa virtuaalipalvelimen DigitalOceanilta ja hyödyntää GitHub Education -pakettia. Olin tehnyt tunnukset sinne jo tunnilla, mutta en löytänyt tätä kautta mahdollisuutta saada virtuaalipalvelinta ilmaiseksi. Hain netistä hakusanoilla "digital ocean github education", jolla pääsin sivustolle, jossa otettiin huomioon GitHubin Education -paketti. Annoin luottokorttitietoni, jolla varmistin itseni. Sain käyttöön opiskelijanpaketin, jossa on $200 vuodeksi käyttöön.
 
-![maksukorttitiedot](images/h4-kuva01.jpg) ![github student pack applied](images/h4-kuva02.jpg)
+![maksukorttitiedot](images/h4-kuva01.jpg)
+
+![github student pack applied](images/h4-kuva02.jpg)
 
 - 16.20 Huomasin Lehdon artikkelista, että hän oli laittanut maksuhälytykset päälle. Tämä oli mielestäni hyvä idea, joten tein itse saman. Menin _Billing_-sivustolle (valikossa vasemmalla) ja sieltä _Settings_-kohtaan. Kun selasin sivua alemmaksi, löysin kohdan _Billing Alert_. Katsoin, että halvimman virtuaalipalvelimen saa $4 kuukaudessa, joten laitoin maksurajaksi $3. Tällöin maksuraja ylittyy jokaisena kuukautena, joten muistan tarvittaessa perua tilauksen myöhemmin. Tätä voi myös tarvittaessa muuttaa, jos koenkin, että sähköposteja tulee liian paljon. Klikkasin _Confirm_.
 
@@ -95,54 +97,58 @@ Tein harjoitukset maanantaina 15.9.2025 Helsingissä kotona. Koneena kaikissa te
 
 - 17.15 Avasin VirtualBoxin ja sieltä terminaalin. Hausin ottaa yhteyden virtuaalipalvelimeeni, jonka tein komennolla ```ssh root@64.226.102.160```, jossa IP-osoite on virtuaalipalvelimeni IP-osoite. Kysyttiin haluanko ottaa yhteyden palvelimeen, johon vastasin yes. Kirjoitin vahingossa yes-sanan ensin kahdesti. Sen jälkeen annoin salasanan, jonka loin virtuaalipalvelinta tehdessä.
 
-- ... KUVA 12 ...
+![kirjaudutaan palvelimelle rootina](images/h4-kuva12.jpg)
 
 - 17.22 Asensin palomuurin komennolla ```sudo apt-get install ufw``` (ylempi kuva). Tein palomuuriin reiän SSH:lle porttiin 22 komennolla ```sudo ufw allow 22/tcp``` ja laitoin lopuksi palomuurin päälle komennolla ```sudo ufw enable``` (alempi kuva). Nyt palomuuri on päällä ja virtuaalipalvelin suojattuna.
 
-- ... KUVA 13 - 14...
+![palomuurin asentaminen](images/h4-kuva13.jpg)
+
+![palomuuriin 22](images/h4-kuva14.jpg)
 
 - 17.29 Tein uuden käyttäjän (hannatu) komennolla ```sudo adduser hannatu```, jolle loin vahvan salasanan. Annoin nimeni ja muut kohdat jätin tyhjäksi. Sen jälkeen korotin käyttäjän pääkäyttäjäksi komennolla ```sudo adduser hannatu sudo```.
 
-- ... KUVA 15 ...
+![uusi user](images/h4-kuva15.jpg)
 
 - 17.36 Avasin toisen terminaalin ja testasin pääsenkö sisälle virtuaalipalvelimeen komennolla ```ssh hannatu@64.226.102.160```, jossa on juuri luomani käyttäjä ja virtuaalipalvelimen IP-osoite. Kysyi salasanan, jonka annoin, ja pääsin sisälle. Päivitin ohjelmat komennolla ```sudo apt-get update```. Sain ohjelmat päivitettyä, joten sain avattua SSH-yhteyden virtuaalipalvelimelleni. 
 
-- ... KUVA 16 ...
+![ssh-yhteys virtuaalipalvelimelle](images/h4-kuva16.jpg)
 
 - 17.47 Koska kaikki on kunnossa, aloitin juuren lukitsemisen. Menin takaisin toiseen terminaaliin, jossa olin root-käyttäjänä ja annoin komennon ```sudo usermod -–lock root```, jolla lukitsin root-salasanan. Tämän lisäksi estin root-käyttäjän kirjautumisen palvelimelle SSH:n kautta. Menin komennolla ```sudoedit /etc/ssh/sshd_config``` muokkaamaan tietoja. Etsin kohdan ```PermitRootLogin yes``` ja vaihdoin tämän ```PermitRootLogin no```. Tallensin muutokset tiedostoon ctrl+s ja poistuin editorista ctrl+x. Nyt root on lukittuna. Suljin yhteyden virtuaalipalvelimeen ```exit```-komennolla. Toisen terminaalin (jossa otetu SSH-yhteys hannatu-käyttäjään) on vielä auki.
 
-- ... KUVA 17 ...
+![permit root login no](images/h4-kuva17.jpg)
 
 - 18.03 Ajoin vielä komennon ```sudo service ssh restart```, jotta tekemäni muutokset astuvat voimaan.
 - 18.11 Menin takaisin termiinaaliin, jossa minulla oli SSH-yhteys virtuaalipalvelimeeni. Päivitin ohjelmat komennoilla ```sudo apt-get update```, ```sudo apt-get upgrade``` ja ```sudo apt-get dist-upgrade```. Päivityksen aikana tuli kysymys konfigurointitiedoista ja valitsin _Keep the local version currently installed_, koska tämä oli automaattisesti valittuna. Päivityksiin meni noin 15 minuuttia, mutta osa tästä ajasta meni konfigurointitietojen selvittämiseen.
 
-- ... KUVA 18 ...
+![konfigurointikysymys](images/h4-kuva18.jpg)
 
 ## c) Weppipalvelimen asentaminen virtuaalipalvelimelle. Testisivun korvaus. Kokeile, että se näkyy julkisesti, myös eri koneelta, esimerkiksi kännykältä
 
 - 18.28 Asensin Apache2-webbipalvelimen komennolla ```sudo apt-get install apache2```, joka meni nopeasti. Testasin Apache2:n tilan komennolla ```sudo systemctl status apache2```. 
 
-- ... KUVA 19 ...
+![apachen status](images/h4-kuva19.jpg)
 
 - 18.37 Huomasin, että kello näyttää väärää, joten muokkasin ajan. Tein tämän komennolla ```sudo dpkg-reconfigure tzdata```, joka avasi ikkunan. Valitsin _Europe_ ja _Helsinki_. Kävin vielä tarkistamassa, että aika on muuttunut komennolla ```sudo systemctl status apache2``` ja se oli muuttunut. (LinuxCapable, 8.7.2024.)
 
-- ... KUVA 20a ja b ...
+![ajan muuttaminen](images/h4-kuva20.jpg)
 
 - 18.53 Tein HTTP-portille reiän palomuuriin ```sudo ufw allow 80/tcp```
 
-- ... KUVA 21 ...
+![palomuuriin 80](images/h4-kuva21.jpg)
 
 - 18.58 Testasin mennä Firefox-selaimessa virtuaalipalvelimelleni ja sain Apachen-testisivun näkyviin.
 
-- ... KUVA 22 ...
+![apache2 sivu](images/h4-kuva22.jpg)
 
 - 19.04 Korvasin testisivun komennolla ```echo It's me, hi! | sudo tee /var/www/html/index.html```, mutta jäi jumiin. Poistuin komennosta ctrl+c ja yritin uudestaan, mutta muokatulla komennolla ```echo "It's me, hi!" | sudo tee /var/www/html/index.html``` ja tällä onnistui. Potkaisin vielä demonin käyntiin komennolla ```sudo systemctl reload apache2```.
 
-- ... KUVA 23 ...
+![sivuston korvaus](images/h4-kuva23.jpg)
 
 - 19.15 Menin Firefoxilla osoitteeseen ```64.226.102.160```, jossa näkyi lisäämäni teksti, kuten myös kännykällä mentäessä. Vasemmalla kuvassa sivusto selaimessa ja oikealla kännykässä.
 
-- ... KUVA 24a - b ...
+![tulokset](images/h4-kuva24.jpg)
+
+![tulokset](images/h4-kuva25.jpg)
 
 - 19.39 Suljin yhteyden virtuaalipalvelimeen komennolla ```exit```, jonka jälkeen suljin terminaalin ja virtuaalikoneen.
 
