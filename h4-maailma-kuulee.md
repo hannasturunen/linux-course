@@ -44,29 +44,53 @@
 
 ## Virtuaalikonetehtävät
 
-Tein harjoitukset lauantaina 13.9.2025 ja jatkoin sunnuntaina 14.9.2025 Helsingissä kotona. Tein lauantaina virtuaalipalvelimen vuokrauksen ja aloitin alkutoimet virtuaalipalvelimella (kohdat a-b). Sunnuntaina jatkoin alkutoimia (kohta b), koska se oli jäänyt kesken, mutta en saanut sitä loppuun. Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
+Tein harjoitukset ... ... Helsingissä kotona. Tein ... (kohdat ...). Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
 
-Vuokrasin virtuaalipilvipalvelimen UpCloudilta. Asensin palvelimelle palomuurin ja tein uuden käyttäjän. En kuitenkaan päässyt jatkmaan, koska en pääse toiselta terminaalilta virtuaalipalvelimelle (ilmoittaa _Permission denied (publickey)_).
 
-## a) Oman virtuaalipalvelimen vuokraus UpCloudilta
+## a) Oman virtuaalipalvelimen vuokraus DigitalOceanilta
 
-- klo 19.25 Päätin ottaa virtuaalipalvelimen UpCloudista. Kirjauduin sisään. Otin käyttöön Two-factor authenticationin, koska UpCloud sitä suositteli.
-- 19.30 Aloitin virtuaalipalvelimen tekemisen etusivulla olevasta "Deploy your trial services"-kohdasta klikkaamalla "Deploy now" -valikkoa ja sieltä valitsin "Server". Valitsin paikaksi Suomen, koska on hyvä ottaa paikaksi mahdollisuuksien mukaan mahdollisimman lähellä asiakkaita.
+- klo 16.05 Päätin ottaa virtuaalipalvelimen DigitalOceanilta ja hyödyntää GitHub Education -pakettia. Olin tehnyt tunnukset sinne jo tunnilla, mutta en löytänyt tätä kautta mahdollisuutta saada virtuaalipalvelinta ilmaiseksi. Hain netistä hakusanoilla "digital ocean github education", jolla pääsin sivustolle, jossa otettiin huomioon GitHubin Education -paketti. Annoin luottokorttitietoni, jolla varmistin itseni. Sain käyttöön opiskelijanpaketin, jossa on $200 vuodeksi käyttöön.
 
-![paikaksi valittu Suomi](images/h4-kuva01.jpg)
+... KUVA 01 ja 02 ...
 
-- Plan-kohdassa valitsin halvimman (3€/kk), jossa oli yksi CPU-ydin, 1 GB RAM-muistia ja 10 GB muistia, jotka ovat riittävät tähän harjoitukseen. Pienemmästä isompaan on aina helpompi siirtyä kuin isommasta pienempään.
+- 16.20 Huomasin Lehdon artikkelista, että hän oli laittanut maksuhälytykset päälle. Tämä oli mielestäni hyvä idea, joten tein itse saman. Menin _Billing_-sivustolle (valikossa vasemmalla) ja sieltä _Settings_-kohtaan. Kun selasin sivua alemmaksi, löysin kohdan _Billing Alert_. Katsoin, että halvimman virtuaalipalvelimen saa $4 kuukaudessa, joten laitoin maksurajaksi $3. Tällöin maksuraja ylittyy jokaisena kuukautena, joten muistan tarvittaessa perua tilauksen myöhemmin. Tätä voi myös tarvittaessa muuttaa, jos koenkin, että sähköposteja tulee liian paljon. Klikkasin _Confirm_.
 
-![valittu parametrit palvelimelle](images/h4-kuva02.jpg)
+... KUVA 03 ...
 
-- Storage- ja Automated backups -kohtiin en laittanut mitään. Käyttöjärjestelmäksi valitsin _Debian GNU/Linux 13 (Trixie)_.
+- 16.33 Aloitin virtuaalipalvelimen luomisen. Vasemmalla olevassa valikossa näkyi _Droplet_-nappi, jota klikkasin. Näin heti paikan, josta voi alkaa luomaan virtuaalipalvelinta, joten klikkasin _Create Droplet_.
 
-![operating system debian](images/h4-kuva03.jpg)
+... KUVA 04 ...
 
-- Network-kohdassa jätin päälle kohdat: Public IPv4, Utility network ja Public IPv6. Alla kuvat valinnoista.
-- 19.50 Salasana-kohdassa oli pakko käyttää SSH-keysiä, koska ei antanut vaihtoehdoksi "One time password" -kohtaa. Tein siis SSH-salasanat. Avasin terminaalin (tällä kertaa Windowsissa, koska pääsen siihen helpommin käsiksi). Annoin komennon ```ssh-keygen```, jonka jälkeen painoin kolme kertaa enteriä (hyväksyin komennon, hyväksyin kansion, jonne salasana tallennetaan ja hyväksyin passphrasen). Nyt minulla oli SSH-avaimet tehtynä, joten pääsin jatkamaan.
-- 19.54 Etsin SHH-avaimet tiedostoista ja kopioin julkisen avaimen UpCloudiin.
-- 20.03 En laittanut mitään Initialization script -kohtaan ja jätin Server configuration -kohdassa olevat tiedot hostname:sta kuten ne olivatkin. Lopuksi painoin Deploy-nappia ja pian virtuaalipalvelimeni olikin valmis! Sain tässä myös virtuaalipalvelimeni IP-osoitteen.
+- 16.37 Valitsin virtuaalipalvelimen sijainniksi Frankfurtin, toinen vaihtoehto olisi ollut Amsterdam, jotka molemmat sijaitsevat Euroopassa. Sen lisäksi kannattaa ottaa palvelin mahdollisimman läheltä, jotta latenssi on mahdollisimman pieni.
+
+... KUVA 05 ... 
+
+- 16.41 Valitsin käyttöjärjestelmäksi _Debian version 12 x64_. Debianille ei ollut muita vaihtoehtoja. 
+
+... KUVA 06 ... 
+
+- 16.45 Valitsin prosessoriksi _Shared CPU Basic_ ja _CPU options_ -kohdasta _Regular, 512 MB / 1 CPU, 10 GB SSD Disk, 500 GB transfer_. Paketin hinta oli tällöin $4/kk ja $0.006/tunti. Tämän pitäisi riittää tälle kurssille hyvin. Aina on mahdollista pienemmästi isompaan, kun taas isommasta pienempään siirtyminen voi olla haastavampaa.  
+
+... KUVA 07 ...
+
+- 16.51 _Additional Storage_- ja _Backups_-kohdat jätin tyhjäksi.
+
+... KUVA 08 ... 
+
+- 16.53 Valitsin autentikointitavaksi (_Authentication Method_) salasanan, koska en ole koskaan ennen käyttänyt SSH-salasanoja, vaikka näitä kannattaakin yleensä käyttää. Tein vahvan salasanan, koska aina käytetään vahvoja salasanoja. 
+
+... KUVA 09 ...
+
+- 16.59 En ottanut mitään ylimääräisiä palveluja kohdasta _We recommend these options_.
+
+- 17.05 Määränä on yksi _Droplet_ ja tagit jätin tyhjäksi. Muokkasin _Hostanme_-kohdassa palvelimen nimeksi _debian_, jolloin se on itselleni helppo löytää. _Project_-kohdassa oli _first-project_, jota ei pystynyt muuttamaan, mutta se ei haittaa, koska minulla on vain yksi projekti. Lopuksi painoin sinistä _Create droplet_ -nappia.
+
+- ... KUVA 10 ...
+
+- 17.11 Hetken odottelun jälkeen virtuaalipalvelimeni oli valmis ja sain sille IP-osoitteen.
+
+- ... KUVA 11 ...
+
 
 ## b) Alkutoimet virtuaalipalvelimella: tulimuuri päälle, root-tunnus kiinni ja ohjelmien päivitys
 
