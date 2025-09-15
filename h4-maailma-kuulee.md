@@ -44,52 +44,51 @@
 
 ## Virtuaalikonetehtävät
 
-Tein harjoitukset ... ... Helsingissä kotona. Tein ... (kohdat ...). Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
+Tein harjoitukset maanantaina 15.9.2025 Helsingissä kotona. Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
 
 
 ## a) Oman virtuaalipalvelimen vuokraus DigitalOceanilta
 
 - klo 16.05 Päätin ottaa virtuaalipalvelimen DigitalOceanilta ja hyödyntää GitHub Education -pakettia. Olin tehnyt tunnukset sinne jo tunnilla, mutta en löytänyt tätä kautta mahdollisuutta saada virtuaalipalvelinta ilmaiseksi. Hain netistä hakusanoilla "digital ocean github education", jolla pääsin sivustolle, jossa otettiin huomioon GitHubin Education -paketti. Annoin luottokorttitietoni, jolla varmistin itseni. Sain käyttöön opiskelijanpaketin, jossa on $200 vuodeksi käyttöön.
 
-... KUVA 01 ja 02 ...
+![maksukorttitiedot](images/h4-kuva01.jpg) ![github student pack applied](images/h4-kuva02.jpg)
 
 - 16.20 Huomasin Lehdon artikkelista, että hän oli laittanut maksuhälytykset päälle. Tämä oli mielestäni hyvä idea, joten tein itse saman. Menin _Billing_-sivustolle (valikossa vasemmalla) ja sieltä _Settings_-kohtaan. Kun selasin sivua alemmaksi, löysin kohdan _Billing Alert_. Katsoin, että halvimman virtuaalipalvelimen saa $4 kuukaudessa, joten laitoin maksurajaksi $3. Tällöin maksuraja ylittyy jokaisena kuukautena, joten muistan tarvittaessa perua tilauksen myöhemmin. Tätä voi myös tarvittaessa muuttaa, jos koenkin, että sähköposteja tulee liian paljon. Klikkasin _Confirm_.
 
-... KUVA 03 ...
+![set billing alert](images/h4-kuva03.jpg)
 
 - 16.33 Aloitin virtuaalipalvelimen luomisen. Vasemmalla olevassa valikossa näkyi _Droplet_-nappi, jota klikkasin. Näin heti paikan, josta voi alkaa luomaan virtuaalipalvelinta, joten klikkasin _Create Droplet_.
 
-... KUVA 04 ...
+![uuden virtuaalipalvelimen luonti](images/h4-kuva04.jpg)
 
 - 16.37 Valitsin virtuaalipalvelimen sijainniksi Frankfurtin, toinen vaihtoehto olisi ollut Amsterdam, jotka molemmat sijaitsevat Euroopassa. Sen lisäksi kannattaa ottaa palvelin mahdollisimman läheltä, jotta latenssi on mahdollisimman pieni.
 
-... KUVA 05 ... 
+![region frankfurt](images/h4-kuva05.jpg)
 
 - 16.41 Valitsin käyttöjärjestelmäksi _Debian version 12 x64_. Debianille ei ollut muita vaihtoehtoja. 
 
-... KUVA 06 ... 
+![os debian](images/h4-kuva06.jpg)
 
 - 16.45 Valitsin prosessoriksi _Shared CPU Basic_ ja _CPU options_ -kohdasta _Regular, 512 MB / 1 CPU, 10 GB SSD Disk, 500 GB transfer_. Paketin hinta oli tällöin $4/kk ja $0.006/tunti. Tämän pitäisi riittää tälle kurssille hyvin. Aina on mahdollista pienemmästi isompaan, kun taas isommasta pienempään siirtyminen voi olla haastavampaa.  
 
-... KUVA 07 ...
+![virtuaalipalvelimen type](images/h4-kuva07.jpg)
 
 - 16.51 _Additional Storage_- ja _Backups_-kohdat jätin tyhjäksi.
 
-... KUVA 08 ... 
+![storage ja backups](images/h4-kuva08.jpg)
 
 - 16.53 Valitsin autentikointitavaksi (_Authentication Method_) salasanan, koska en ole koskaan ennen käyttänyt SSH-salasanoja, vaikka näitä kannattaakin yleensä käyttää. Tein vahvan salasanan, koska aina käytetään vahvoja salasanoja. 
 
-... KUVA 09 ...
+![autentikointitapa](images/h4-kuva09.jpg)
 
 - 16.59 En ottanut mitään ylimääräisiä palveluja kohdasta _We recommend these options_.
-
 - 17.05 Määränä on yksi _Droplet_ ja tagit jätin tyhjäksi. Muokkasin _Hostanme_-kohdassa palvelimen nimeksi _debian_, jolloin se on itselleni helppo löytää. _Project_-kohdassa oli _first-project_, jota ei pystynyt muuttamaan, mutta se ei haittaa, koska minulla on vain yksi projekti. Lopuksi painoin sinistä _Create droplet_ -nappia.
 
-- ... KUVA 10 ...
+![lopputiedot](images/h4-kuva10.jpg)
 
 - 17.11 Hetken odottelun jälkeen virtuaalipalvelimeni oli valmis ja sain sille IP-osoitteen.
 
-- ... KUVA 11 ...
+![virtuaalipalvelin luotu](images/h4-kuva11.jpg)
 
 
 ## b) Alkutoimet virtuaalipalvelimella: tulimuuri päälle, root-tunnus kiinni ja ohjelmien päivitys
@@ -144,6 +143,8 @@ Tein harjoitukset ... ... Helsingissä kotona. Tein ... (kohdat ...). Koneena ka
 - 19.15 Menin Firefoxilla osoitteeseen ```64.226.102.160```, jossa näkyi lisäämäni teksti, kuten myös kännykällä mentäessä. Vasemmalla kuvassa sivusto selaimessa ja oikealla kännykässä.
 
 - ... KUVA 24a - b ...
+
+- 19.39 Suljin yhteyden virtuaalipalvelimeen komennolla ```exit```, jonka jälkeen suljin terminaalin ja virtuaalikoneen.
 
 ## Lähteet
 
