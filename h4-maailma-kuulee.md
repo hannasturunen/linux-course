@@ -144,7 +144,7 @@ Tein harjoitukset maanantaina 15.9.2025 Helsingissä kotona. Koneena kaikissa te
 
 ![sivuston korvaus](images/h4-kuva23.jpg)
 
-- 19.15 Menin Firefoxilla osoitteeseen ```64.226.102.160```, jossa näkyi lisäämäni teksti, kuten myös kännykällä mentäessä. Vasemmalla kuvassa sivusto selaimessa ja oikealla kännykässä.
+- 19.15 Menin Firefoxilla osoitteeseen ```64.226.102.160```, jossa näkyi lisäämäni teksti, kuten myös kännykällä mentäessä. Ylemmässä kuvassa sivusto selaimessa ja alemmassa kännykässä.
 
 ![tulokset](images/h4-kuva24.jpg)
 
