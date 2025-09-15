@@ -110,7 +110,18 @@ Tein harjoitukset ... ... Helsingissä kotona. Tein ... (kohdat ...). Koneena ka
 
 - ... KUVA 16 ...
 
-- 17.44 
+- 17.47 Koska kaikki on kunnossa, aloitin juuren lukitsemisen. Menin takaisin toiseen terminaaliin, jossa olin root-käyttäjänä ja annoin komennon ```sudo usermod -–lock root```, jolla lukitsin root-salasanan. Tämän lisäksi estin root-käyttäjän kirjautumisen palvelimelle SSH:n kautta. Menin komennolla ```sudoedit /etc/ssh/sshd_config``` muokkaamaan tietoja. Etsin kohdan ```PermitRootLogin yes``` ja vaihdoin tämän ```PermitRootLogin no```. Tallensin muutokset tiedostoon ctrl+s ja poistuin editorista ctrl+x. Nyt root on lukittuna.
+
+- ... KUVA 17 ...
+
+- 18.03 Ajoin vielä komennon ```sudo service ssh restart```, jotta tekemäni muutokset astuvat voimaan.
+- 18.11 Menin takaisin termiinaaliin, jossa minulla oli SSH-yhteys virtuaalipalvelimeeni. Päivitin ohjelmat komennoilla ```sudo apt-get update```, ```sudo apt-get upgrade``` ja ```sudo apt-get dist-upgrade```. Päivityksen aikana tuli kysymys konfigurointitiedoista ja valitsin _Keep the local version currently installed_, koska tämä oli automaattisesti valittuna. 
+
+- ... KUVA 18 ...
+
+- 18.21 Suljin molemmat terminaalit. 
+
+
 
 
 
