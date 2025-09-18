@@ -32,15 +32,15 @@ Tein harjoitukset torstaina 18.9.2025 ... ... Helsingissä kotona. Koneena kaiki
 - 15.28 Kuten aikaisemminkin, laitoin täpän _GitHub Pages_ -kohtaan, kirjoitin Haaga-Helian sähköpostiosoitteen ja klikkasin _Finish Up_. Jes, tällä kertaa meni läpi! Klikkasin _Register_-nappia ja täytin vaadittavat tiedot. Kun olin valmis, klikkasin _Create_.  
 - 15.39 Tarkistin vielä tilauksen tiedot ja klikkasin _Confirm Order_.
 
-- ... KUVA 07 ...
+![tilauksen vahvistus](images/h5-kuva06.jpg)
 
 - 15.41 Lopuksi yhdistin vielä GitHubin käyttäjätilin NameCheapiin, joten klikkasin _Setup your GitHub account_. Tämä onnistui, joten nyt minulla on domaintili luotuna.
 
-- ... KUVA 08 ...
+![tilaus valmis](images/h5-kuva07.jpg)
 
 - 15.44 Menin NameCheapin etusivulle (_namecheap.com_) ja kirjauduin sisään. Sähköpostiini lähetettiin verification code, jonka annoin NameCheapin sivuilla, jonka jälkeen pääsin sisään. Tarkistin vielä, että _Domain Privacy_:n _Auto-renew_ oli poissa päältä ja se oli.
 
-- ... KUVA 09 ...
+![domainin etusivu](images/h5-kuva08.jpg)
 
 - 15.49 Nyt kun olen hankkinut domainnimen, se pitää saada osoittamaan omaan virtuaalipalvelimeen, jonka hankin viime kerralla. Klikkasin vasemmalla olevan palkin _Domain List_, josta pääsin domainnimien listanäkymään. Klikkasin hattara.me -kohdalla olevaa _Manage_-nappia, jolla sain näkyviin domainin tiedot. Menin _Advanced DNS_-kohtaan. Kohdassa _Host Records_ oli turhia A-tietueita (_A Record_) ja yksi turha _CNAME Record_, jotka poistin. Näitä oli yhteensä viisi kappaletta. Sen jälkeen klikkasin alla olevaa _Add New Record_ ja annoin alla olevat tiedot. Tallensin molemmat uudet A-tietuet klikkaamalla oikealla olevaa vihreää tick-merkkiä.
   - tyyppi (_type_) = A-tietue (_A Record_)
@@ -48,7 +48,7 @@ Tein harjoitukset torstaina 18.9.2025 ... ... Helsingissä kotona. Koneena kaiki
   - arvo (_value_) = virtuaalipalvelimeni IP-osoite
   - TTL (Time to Live) = 5 minuuttia
 
-- ... KUVA 10 ...
+![domainin DNS-tiedot](images/h5-kuva09.jpg)
 
 - 16.27 Nyt olen ohjannut hattara.me-sivu ohjautuu virtuaalipalvelimeni IP-osoitteeseen 64.226.102.160. Eli nyt kun kirjoitan osoitepalkkiin hattara.me tai www.hattara.me, ne ohjautuvat virtuaalipalvelilleni, jonka IP-osoite on 64.226.102.160.
 
@@ -61,11 +61,11 @@ Tein harjoitukset torstaina 18.9.2025 ... ... Helsingissä kotona. Koneena kaiki
 - klo 17.19 Tein kaksi alidomainia (_subdomain_) hattara.me-domainille. Klikkasin _Add New Record_ -nappia, jolla sain lisättyä ensin yhden uuden A-tietuen (_blog.hattara.me_) ja toisen uuden CNAME-tietuen (_shop.hattara.me_) (https://www.namecheap.com/support/knowledgebase/article.aspx/9776/2237/how-to-create-a-subdomain-for-my-domain/.) A-tietue osoittaa suoraan IP-osoitteeseen, mutta CNAME osoittaa domainiin, joka taas osoittaa IP-osoitteeseen. Siksi tässä piti laittaa IP-osoitteen sijaan domainnimi. 
 - https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/ ja https://www.cloudflare.com/learning/dns/dns-records/dns-cname-record/
 
-- ... KUVA 11 ...
+![alidomainit tehty](images/h5-kuva10.jpg)
 
-- 17.40 Nyt olen tehnyt hattara.me-domainille kaksi alidomainia (blog ja shop) ja ne näyttävät saman sivun kuin päädomainin sivu.
+- 17.40 Nyt olen tehnyt hattara.me-domainille kaksi alidomainia (blog ja shop). Kävin katsomassa jokaisen Firefox-selaimella ja ne näyttävät molemmat saman sivun kuin päädomainin sivu.
 
--  ... KUVA 12 ...
+![alidomainit firefoxissa](images/h5-kuva11.jpg)
 
 
 
