@@ -4,7 +4,9 @@ Tein harjoitukset torstaina 18.9.2025 ... ... Helsingissä kotona. Koneena kaiki
 
 ... Tiivistelmä ...
 
-## Nimi. Laita julkinen nimi osoittamaan omaan koneeseesi.
+## a) Nimi. Laita julkinen nimi osoittamaan omaan koneeseesi.
+
+... tieto domainnimi ... 
 
 - klo 14.33 Päätin ottaa domainnimen Namecheapista. Tällä tavalla saisin käytettyä GitHub Educationiin sisältyvää tarjousta ilmaisesta domain-nimestä vuodeksi. Etsin hakukoneella _Namecheap github education_, jolla pääsin _Namecheap for Education_ -sivustolle. Tässä saa käyttöönsä .me-loppuisen domainin. Karvisen mukaan parhain pääte sivustolle on .com, mutta hyvinä myös maakohtaiset tunnisteet, kuten Suomen .fi ja Ison-Britannian .co.uk. Koska tämä on testisivuni, ajattelin, että pärjään aluksi tällä .me-loppuisella. Kirjoitin kenttään haluamin domainin nimen ja klikkasin _Find_.
 
@@ -52,3 +54,18 @@ Tein harjoitukset torstaina 18.9.2025 ... ... Helsingissä kotona. Koneena kaiki
 - ... KUVA 10 ...
 
 - 16.27 Nyt olen ohjannut hattara.me-sivu ohjautuu virtuaalipalvelimeni IP-osoitteeseen 64.226.102.160. Eli nyt kun kirjoitan osoitepalkkiin hattara.me tai www.hattara.me, ne ohjautuvat virtuaalipalvelilleni, jonka IP-osoite on 64.226.102.160.
+
+- ... tietoa A-tietue, DNS, host, arvo, TTL ... 
+
+## b) Alidomain. Tee kaksi uutta alidomainia, jotka osoittava omaan koneeseesi.
+
+... tieto alidomain ...  https://www.namecheap.com/blog/what-is-a-subdomain-dp/
+
+- klo 17.19 Tein kaksi alidomainia (_subdomain_) hattara.me-domainille. Klikkasin _Add New Record_ -nappia, jolla sain lisättyä ensin yhden uuden A-tietuen (_blog.hattara.me_) ja toisen uuden CNAME-tietuen (_shop.hattara.me_) (https://www.namecheap.com/support/knowledgebase/article.aspx/9776/2237/how-to-create-a-subdomain-for-my-domain/.) A-tietue osoittaa suoraan IP-osoitteeseen, mutta CNAME osoittaa domainiin, joka taas osoittaa IP-osoitteeseen. Siksi tässä piti laittaa IP-osoitteen sijaan domainnimi. 
+- https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/ ja https://www.cloudflare.com/learning/dns/dns-records/dns-cname-record/
+
+- ... KUVA 11 ...
+
+- 17.40 Nyt olen tehnyt hattara.me-domainille kaksi alidomainia (blog ja shop) ja ne näyttävät saman sivun kuin päädomainin sivu.
+
+-  
