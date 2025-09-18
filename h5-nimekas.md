@@ -39,8 +39,16 @@ Tein harjoitukset torstaina 18.9.2025 ... ... Helsingissä kotona. Koneena kaiki
 
 - ... KUVA 08 ...
 
-- 15.44 Menin NameCheapin etusivulle (_namecheap.com_) ja kirjauduin sisään. Sähköpostiini lähetettiin verification code, jonka annoin NameCheapin sivuilla, jonka jälkeen pääsin sisään.
+- 15.44 Menin NameCheapin etusivulle (_namecheap.com_) ja kirjauduin sisään. Sähköpostiini lähetettiin verification code, jonka annoin NameCheapin sivuilla, jonka jälkeen pääsin sisään. Tarkistin vielä, että _Domain Privacy_:n _Auto-renew_ oli poissa päältä ja se oli.
 
 - ... KUVA 09 ...
 
-- 15.49 
+- 15.49 Nyt kun olen hankkinut domainnimen, se pitää saada osoittamaan omaan virtuaalipalvelimeen, jonka hankin viime kerralla. Klikkasin vasemmalla olevan palkin _Domain List_, josta pääsin domainnimien listanäkymään. Klikkasin hattara.me -kohdalla olevaa _Manage_-nappia, jolla sain näkyviin domainin tiedot. Menin _Advanced DNS_-kohtaan. Kohdassa _Host Records_ oli turhia A-tietueita (_A Record_) ja yksi turha _CNAME Record_, jotka poistin. Näitä oli yhteensä viisi kappaletta. Sen jälkeen klikkasin alla olevaa _Add New Record_ ja annoin alla olevat tiedot. Tallensin molemmat uudet A-tietuet klikkaamalla oikealla olevaa vihreää tick-merkkiä.
+  - tyyppi (_type_) = A-tietue (_A Record_)
+  - host = toiseen _www_ ja toiseen _@_
+  - arvo (_value_) = virtuaalipalvelimeni IP-osoite
+  - TTL (Time to Live) = 5 minuuttia
+
+- ... KUVA 10 ...
+
+- 16.27 Nyt olen ohjannut hattara.me-sivu ohjautuu virtuaalipalvelimeni IP-osoitteeseen 64.226.102.160. Eli nyt kun kirjoitan osoitepalkkiin hattara.me tai www.hattara.me, ne ohjautuvat virtuaalipalvelilleni, jonka IP-osoite on 64.226.102.160.
