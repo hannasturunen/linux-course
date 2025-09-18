@@ -83,6 +83,14 @@ Tein harjoitukset torstaina 18.9.2025, ... ... Helsingissä kotona. Tein torstai
 
 ## c) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia.  ... KESKEN ...
 
+- klo 19.10 Etsin ensin komennolla ```apt-cache search host``` kaikki tiedostot, joissa esiintyy sana host. Näitä tuli hyvin paljon, joten rajasin komentoa ```apt-cache search host | grep ^host```. Tässä tuli enää neljä vaihtoehtoa, mutta mikään ei näyttänyt oikealta. Selvittelin asiaa ja löysin oikean paketin nimen, joka on _bind9-host_ -paketti (https://www.debian.org/doc/manuals/debian-handbook/sect.domain-name-servers.en.html#sect.dns-config). Hain tämän komennolla ```apt-cache search host | grep bind9```. Tästä tuli tulokseksi oikea paketti. Latasin tämän komennolla ```sudo apt-get install bind9-host```.
+
+![host komennon etsintä ja asennus](images/h5-kuva12.jpg)
+
+
+https://wiki.debian.org/BIND9
+https://ioflood.com/blog/install-dig-command-linux/
+
 - Katso man-sivulta, miten komennot toimivat - esimerkiksi miten 'dig' näyttää kaikki kentät. Analysoi tulokset, keskity nimipalvelimelta tulleisiin kenttiin (dig näyttää paljon muutakin tietoa).
 - Etsi tarvittaessa uusia lähteitä haastaviin kohtiin. Sähköpostin todentamiseen liittyvät SPF ja DMARC -tietojen yksityiskohdat on jätetty vapaaehtoiseksi lisätehtäväksi. Tutkittavat nimet:
   - Oma domain-nimesi. Vertaa tuloksia nimen vuokraajan (namecheap.com, name.com...) weppiliittymässä näkyviin asetuksiin.
