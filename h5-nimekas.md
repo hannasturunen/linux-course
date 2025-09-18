@@ -1,12 +1,12 @@
 # H5 Nimekäs
 
-Tein harjoitukset torstaina 18.9.2025 ... ... Helsingissä kotona. Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
+Tein harjoitukset torstaina 18.9.2025, ... ... Helsingissä kotona. Tein torstaina harjoitukset ... ... (kohdat ... ...), ... ... . Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
 
 ... Tiivistelmä ...
 
 ## a) Nimi. Laita julkinen nimi osoittamaan omaan koneeseesi.
 
-... tieto domainnimi ... 
+... domainnimi ... 
 
 - klo 14.33 Päätin ottaa domainnimen Namecheapista. Tällä tavalla saisin käytettyä GitHub Educationiin sisältyvää tarjousta ilmaisesta domain-nimestä vuodeksi. Etsin hakukoneella _Namecheap github education_, jolla pääsin _Namecheap for Education_ -sivustolle. Tässä saa käyttöönsä .me-loppuisen domainin. Karvisen mukaan parhain pääte sivustolle on .com, mutta hyvinä myös maakohtaiset tunnisteet, kuten Suomen .fi ja Ison-Britannian .co.uk. Koska tämä on testisivuni, ajattelin, että pärjään aluksi tällä .me-loppuisella. Kirjoitin kenttään haluamin domainin nimen ja klikkasin _Find_.
 
@@ -52,14 +52,25 @@ Tein harjoitukset torstaina 18.9.2025 ... ... Helsingissä kotona. Koneena kaiki
 
 - 16.27 Nyt olen ohjannut hattara.me-sivu ohjautuu virtuaalipalvelimeni IP-osoitteeseen 64.226.102.160. Eli nyt kun kirjoitan osoitepalkkiin hattara.me tai www.hattara.me, ne ohjautuvat virtuaalipalvelilleni, jonka IP-osoite on 64.226.102.160.
 
-- ... tietoa A-tietue, DNS, host, arvo, TTL ... 
+
+
+... A-tietue, DNS, host, arvo, TTL ... 
+
+
 
 ## b) Alidomain. Tee kaksi uutta alidomainia, jotka osoittava omaan koneeseesi.
 
-... tieto alidomain ...  https://www.namecheap.com/blog/what-is-a-subdomain-dp/
 
-- klo 17.19 Tein kaksi alidomainia (_subdomain_) hattara.me-domainille. Klikkasin _Add New Record_ -nappia, jolla sain lisättyä ensin yhden uuden A-tietuen (_blog.hattara.me_) ja toisen uuden CNAME-tietuen (_shop.hattara.me_) (https://www.namecheap.com/support/knowledgebase/article.aspx/9776/2237/how-to-create-a-subdomain-for-my-domain/.) A-tietue osoittaa suoraan IP-osoitteeseen, mutta CNAME osoittaa domainiin, joka taas osoittaa IP-osoitteeseen. Siksi tässä piti laittaa IP-osoitteen sijaan domainnimi. 
+
+... alidomain ...  https://www.namecheap.com/blog/what-is-a-subdomain-dp/
+
+
+
+- klo 17.19 Tein kaksi alidomainia (_subdomain_) hattara.me-domainille. Klikkasin _Add New Record_ -nappia, jolla sain lisättyä ensin yhden uuden A-tietuen (_blog.hattara.me_) ja toisen uuden CNAME-tietuen (_shop.hattara.me_). A-tietue osoittaa suoraan IP-osoitteeseen, mutta CNAME osoittaa domainiin, joka taas osoittaa IP-osoitteeseen. Siksi tässä piti laittaa IP-osoitteen sijaan domainnimi. 
+- https://www.namecheap.com/support/knowledgebase/article.aspx/9776/2237/how-to-create-a-subdomain-for-my-domain/
 - https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/ ja https://www.cloudflare.com/learning/dns/dns-records/dns-cname-record/
+
+
 
 ![alidomainit tehty](images/h5-kuva10.jpg)
 
