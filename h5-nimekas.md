@@ -68,4 +68,20 @@ Tein harjoitukset torstaina 18.9.2025 ... ... Helsingissä kotona. Koneena kaiki
 
 - 17.40 Nyt olen tehnyt hattara.me-domainille kaksi alidomainia (blog ja shop) ja ne näyttävät saman sivun kuin päädomainin sivu.
 
--  
+-  ... KUVA 12 ...
+
+
+
+
+## c) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia.  ... KESKEN ...
+
+- Katso man-sivulta, miten komennot toimivat - esimerkiksi miten 'dig' näyttää kaikki kentät. Analysoi tulokset, keskity nimipalvelimelta tulleisiin kenttiin (dig näyttää paljon muutakin tietoa).
+- Etsi tarvittaessa uusia lähteitä haastaviin kohtiin. Sähköpostin todentamiseen liittyvät SPF ja DMARC -tietojen yksityiskohdat on jätetty vapaaehtoiseksi lisätehtäväksi. Tutkittavat nimet:
+  - Oma domain-nimesi. Vertaa tuloksia nimen vuokraajan (namecheap.com, name.com...) weppiliittymässä näkyviin asetuksiin.
+  - Jonkin pikkuyrityksen, kerhon tai yksittäisen henkilön weppisivut. (Ei kuitenkaan kurssikaverin tällä viikolla vuokrattua nimeä).
+  - Jonkin suuren ja kaikkien tunteman palvelun tiedot.
+
+
+
+
+## Lähteet
