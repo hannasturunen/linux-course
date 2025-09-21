@@ -91,12 +91,22 @@ Tein harjoitukset torstaina 18.9.2025, ... ... Helsingissä kotona. Tein torstai
 
 - ... KUVA 13 ...
 
-- 18.49 Testasin komentoa ```man host```, jolla pääsin BIND9-manuaaliin. Host-komennolla tehdään DNS-kyselyjä (DNS = Domain Name System), jossa domainnimi muutetaan IP-osoitteeksi tai IP-osoite nimeksi. Listasta löytyi paljon erilaisia lisäkomentoja, joita käyttää host-komennon kanssa. Huomasin myös, että CNAME-haut pitää tehdä ```-t``` -komennolla. Suljin manuaalin `q`-komennolla
+- 18.49 Testasin komentoa `man host`, jolla pääsin BIND9-manuaaliin. Host-komennolla tehdään DNS-kyselyjä (DNS = Domain Name System), jossa domainnimi muutetaan IP-osoitteeksi tai IP-osoite nimeksi. Listasta löytyi paljon erilaisia lisäkomentoja, joita käyttää host-komennon kanssa. Huomasin myös, että CNAME-haut pitää tehdä `-t` -komennolla. Suljin manuaalin `q`-komennolla.
 
 - ... KUVA 14 ...
 
-  19.0
+- 19.04 Hain dig-manuaalin komennolla `man dig`. Täältäkin löytyi paljon erilaisia komentoja. Kuten `host`-komento, myös `dig`-komento hyvä työkalu DNS-kyselyihin.Se suorittaa DNS-kyselyjä ja näyttää nimipalvelinten antamat vastaukset. Tätä komentoa käytetään paljon DNS-ongelmien selvityksessä. Komento suoritetaan `dig @ server name type`, jossa _server_ on IP-osoite, _name_ on tietuen nimi (eli esimerkiksi .com) ja _type_ kertoo minkä tyyppinen kysely vaaditaan (jos tätä ei ole määritetty, käytetään A-tietuetta). Jos loppuun kirjoittaa komennon `NS`, saadaan tietää mitkä nimipalvelimet vastaavat kyselyyn. Sen lisäksi löysin kätevän komennon, `+short`, jolla voi näyttää vain halutun tiedon. Suljin manuaalin `q`-komennolla.
 
+- ... KUVA 15 ...
+
+### hattara.me ja namcheap.com
+- 19.48 Hain komennot `host hattara.me` ja `host namecheap.com`. Omalla domain-nimelläni haettaessa tuli viisi tulosta ja namecheapillä kaksi. Sen lisäksi tuli molempien IP-osoitteet, koska host-komento kertoo domainnimeä vastaavan IP-osoitteen. Cloudfaren sivustolla (... ... ) kerrotaan, että DNS-palvelimen MX-tietue (mail exchange) ohjaa sähköpostin sähköpostipalvelimelle. Domainnien edessä olevat numerot ovat prioriteettinumeroita ja kertovat sen, mitä suositaan. Mitä alempi, sen korkeammalla se on prioriteettilistalla. Katselin prioriteettinumeroita ja niiden osoitteita ja ne osoitteet, joissa oli pienin numero osoitteessa (esimerkiksi eforward1.registrar-servers.com), niillä oli myös pienin prioriteettinumero (esimerkkiosoitteella 10). (... https://www.cloudflare.com/learning/dns/dns-records/dns-mx-record/ ...). Huomasin myös, että oma sivustoni ja NameCheap käyttävät eri MX-tietueita, koska minulla on eforward ja NameCheapillä jellyfish. 
+
+- ... KUVA 16 ...
+
+- 20.18 Hain myös samat IP-osoitteilla ja käytin komentoja `host 64.226.102.160` ja `host 198.54.117.250`. Jostain syystä oman sivustoni haku ei onnistunut, mutta NameCheap onnistui ... ... 
+
+- ... KUVA 17 ...
 
 
 - Katso man-sivulta, miten komennot toimivat - esimerkiksi miten 'dig' näyttää kaikki kentät. Analysoi tulokset, keskity nimipalvelimelta tulleisiin kenttiin (dig näyttää paljon muutakin tietoa).
