@@ -104,16 +104,39 @@ Tein harjoitukset torstaina 18.9.2025, ... ... Helsingissä kotona. Tein torstai
 
 - ... KUVA 16 ...
 
-- 20.18 Hain myös samat IP-osoitteilla ja käytin komentoja `host 64.226.102.160` ja `host 198.54.117.250`. Jostain syystä oman sivustoni haku ei onnistunut, mutta NameCheap onnistui ... ... 
+- 20.18 Hain myös samat IP-osoitteilla ja käytin komentoja `host 64.226.102.160` ja `host 198.54.117.250`. Molemmissa näkyi `in-addr.arpa`, joka tulee, kun haetaan reverse DNS-haulla. Tämä tarkoittaa sitä, että ei haeta domainnimeä vastaava IP-osoite, vaan IP-osoitetta vastaava domainnimi. in-addr.arpa vastaa käänteisten kyselyiden suorittamisesta. https://learn.microsoft.com/en-us/windows-server/networking/dns/reverse-lookup. Huomasin, että oman sivustoni haku ei onnistunut, mutta NameCheapin onnistui. Yritin tutkia asiaa ja se minkä ymmärsin, oli, että en saanut omalle IP-osoitteelleni domainnimeä, koska se on eri verkossa kuin itse olen ( https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances?tabs=redhat ). 
 
 - ... KUVA 17 ...
 
+- 22.9.2025 klo 15.15 Hain molemmista dig-tiedot komennoilla `dig hattara.me`. Tulkinnassa käytetty apuna https://www.howtogeek.com/663056/how-to-use-the-dig-command-on-linux/ 
+  - _Opcode: QUERY_: mitä pyydetiin eli tässä tapauksessa kyselyä. Jos testataan DNS:n tilaa, lukisi _status_
+  - _Status: Noerror_: ei ollut virheitä eli pyyntö käsiteltiin oikein
+  - _Authority: 0_: vastaukset, jotka tulevat _Authoritative Name Server_:ltä (tässä tapauksessa 0 kpl), vastaus palautettiin DNS:n välimuistista (_cache_)
+  - _QUESTION SECTION_ ja _ANSWER SECTION_:
+    - _hattara.me_: domain, jonka tietoja haettiin
+    - _IN_: internet class -kyselyn tekeminen
+    - _A_: dig käyttää A-tietuetta (_A record_) DNS-serveriltä, ellei muuta ilmoiteta
+    - _300_: Time to Live (TTL) eli aikaväli, jonka tietue saa olla tallennettuna välimuistiin. Kun se on vanhentunut, tieto on haettava uudestaan DNS-palvelimelta. Ilmoitetaan sekunteina
+  - _Query time: 840 msec_: kuinka kauan kesti saada vastaus, tässä 840 millisekuntia
+  - _SERVER: 192.168.1.1#53(192.168.1.1.) (UDP)_: vastanneen DNS-palvelimen IP-osoite ja porttinumero
+  - _WHEN_: milloin pyyntö on tehty
+  - _MSG SIZE rcvd: 55_: DNS-serveriltä saadun viestin koko
 
-- Katso man-sivulta, miten komennot toimivat - esimerkiksi miten 'dig' näyttää kaikki kentät. Analysoi tulokset, keskity nimipalvelimelta tulleisiin kenttiin (dig näyttää paljon muutakin tietoa).
-- Etsi tarvittaessa uusia lähteitä haastaviin kohtiin. Sähköpostin todentamiseen liittyvät SPF ja DMARC -tietojen yksityiskohdat on jätetty vapaaehtoiseksi lisätehtäväksi. Tutkittavat nimet:
-  - Oma domain-nimesi. Vertaa tuloksia nimen vuokraajan (namecheap.com, name.com...) weppiliittymässä näkyviin asetuksiin.
-  - Jonkin pikkuyrityksen, kerhon tai yksittäisen henkilön weppisivut. (Ei kuitenkaan kurssikaverin tällä viikolla vuokrattua nimeä).
-  - Jonkin suuren ja kaikkien tunteman palvelun tiedot.
+- ... KUVA 18 ...
+
+- 15.49 Hain vielä komennolla `dig hattara.me NS` nimipalvelun. Tässä tapauksessa niitä on kaksi ja ne ovat _dns1.registrar-servers.com_ ja _dns2.registrar-servers.com_.
+
+- ... KUVA 19 ...
+
+- 15.51 Hain myös NameCheapille dig-tiedot komennolla `dig namecheap.com NS`. NameCheapillä on paljon enemmän nimipalveluja kuin hattara.me:llä. Myös TTL-arvo on korkeampi, kun hattaralla se oli 1800 ja tässä 3600 sekuntia. TTL nopeuttaa verkon toimintaa, koska sivua ei aina tarvitse hakea uudestaan, mutta toisaalta jos arvo on kovin suuri, käyttäjälle voi näkyä vanha tieto.
+
+- ... KUVA 20 ...
+
+### Pikkyritys, kerho tai yksittäisen henkilön sivut
+
+
+### Suuri, kaikkien tuntema palvelu
+
 
 
 
