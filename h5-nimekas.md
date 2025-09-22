@@ -124,21 +124,33 @@ Tein harjoitukset torstaina 18.9.2025, ... ... Helsingissä kotona. Tein torstai
 
 - ... KUVA 18 ...
 
-- 15.49 Hain vielä komennolla `dig hattara.me NS` nimipalvelun. Tässä tapauksessa niitä on kaksi ja ne ovat _dns1.registrar-servers.com_ ja _dns2.registrar-servers.com_.
+- 15.49 Hain vielä komennolla `dig hattara.me NS` nimipalvelun. Tässä tapauksessa niitä on kaksi ja ne ovat _dns1.registrar-servers.com_ ja _dns2.registrar-servers.com_. Nyt A-tietuen tilalla on NS eli nameserver, joka on DNS-serverin tyyppi.
+- https://www.cloudflare.com/learning/dns/dns-records/dns-ns-record/
 
 - ... KUVA 19 ...
 
-- 15.51 Hain myös NameCheapille dig-tiedot komennolla `dig namecheap.com NS`. NameCheapillä on paljon enemmän nimipalveluja kuin hattara.me:llä. Myös TTL-arvo on korkeampi, kun hattaralla se oli 1800 ja tässä 3600 sekuntia. TTL nopeuttaa verkon toimintaa, koska sivua ei aina tarvitse hakea uudestaan, mutta toisaalta jos arvo on kovin suuri, käyttäjälle voi näkyä vanha tieto.
+- 15.51 Hain myös NameCheapille dig-tiedot komennolla `dig namecheap.com` ja `dig namecheap.com NS`. NameCheapillä on paljon enemmän nimipalveluja kuin hattara.me:llä. Myös TTL-arvo on korkeampi, kun hattaralla se oli 1800 ja tässä 3600 sekuntia. TTL nopeuttaa verkon toimintaa, koska sivua ei aina tarvitse hakea uudestaan, mutta toisaalta jos arvo on kovin suuri, käyttäjälle voi näkyä vanha tieto.
 
-- ... KUVA 20 ...
+- ... KUVA 20 a + b ...
 
 ### Pikkyritys, kerho tai yksittäisen henkilön sivut
 
+- 16.00 Valitsin Kaisa Jaakkolan -verkkosivut, jotka ovat yksittäisen henkilön. Tein komennon `host kaisajaakkola.com`, josta näin IP-osoitteen (_31.217.192.93_) ja sähköpostia hallitsevan palvelimen nimen (_mailwp06.hostingpalvelu.fi_). Käytin saatua IP-osoitetta hyväksi ja ajoin komennon `host 31.217.192.93`.
+
+- ... KUVA 21 ...
+
+- 16.10 Hain Kaisa Jaakkolan dig-tiedot komenoilla `dig kaisajaakkola.com` ja `dig kaisajaakkola.com NS`. Tiedot näyttävät aika samoilta, mutta tietoa ei haeta A-tietueesta vaan NS-tietueesta. TTL on myös aika iso, vasemalla olevassa kuvassa 13862 ja oikealla 28800 sekuntia. Toisaalta käyttäjälle ei ole haittaa, jos hän näkee hieman pidemmän aikaa vanhat tiedot, varsinkin kun sivua ei päivitetä niin usein.
+
+- ... KUVA 22 a + b ...
 
 ### Suuri, kaikkien tuntema palvelu
 
+- Valitsin palveluksi Instagramin. host instagram.com ja host IP
 
+- KUVA 23
 
+- dig instagram.com ja dig instagram.com NS
+- - KUVA 24 a ja b
 
 
 ## Lähteet
