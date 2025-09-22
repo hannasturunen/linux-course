@@ -1,12 +1,17 @@
 # H5 Nimekäs
 
-Tein harjoitukset torstaina 18.9.2025, sunnuntaina 21.9.2025 ja maanantaina 22.9.2025 Helsingissä kotona. Tein torstaina harjoitukset ... ... (kohdat ... ...), ... ... . Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
+Tein harjoitukset torstaina 18.9.2025, sunnuntaina 21.9.2025 ja maanantaina 22.9.2025 Helsingissä kotona. Tein torstaina harjoituksista kokonaan kohdat a) ja b) ja osittain kohdan c), sunnuntaina ja maanantaina tein loppuun kohdan c). Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
 
-... Tiivistelmä ...
+Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtuaalikoneeseeni. Tein kaksi alidomainia, toisen A-tietueella ja toisen CNAME-tietueella. Lopuksi tutkin neljän eri sivuston DNS-tietoja `host` ja `dig` -komennoilla.
 
 ## a) Nimi. Laita julkinen nimi osoittamaan omaan koneeseesi.
 
-... domainnimi ... 
+- Tutustuin aluksi domainnimeen, englanniksi _domain name_. Se on yksilöllinen osoite, jota käytetään mentäessä verkkosivustoille, esimerkiksi google.com. Tämä on tehty helpottamaan käyttäjien liikkumista verkossa. Nimittäin verkkosivuston varsinainen osoite on monimutkainen ja hankalasti muistettava numerosarja eli IP-osoite, esimerkiksi 192.0.2.2. Käyttäjät muodostavat yhteyden haluamalleen verkkosivustolle DNS-palvelimen avulla. Domainnimiä hallinnoivat domainrekisterit, joiden kautta voi rekisteröidä domainnimiä itselleen.
+- Domainnimi koostuu kahdesta tai kolmesta osasta, jotka erotetaan toisistaan pisteellä. Oikealta vasemmalle luettaessa tunnisteet etenevät yleisimmäsä tarkimpaan. Esimerkiksi _google.co.uk_-osoitteessa:
+  - _.uk_ on ylätason verkkotunnus (_TLD, top-level domain_), johon kuuluu myös esimerkiksi _.com, net_ ja maakohtaiset tunnukset, kuten _.fi_
+  - _.co_ on toisen tason tunnus (_2LD, second-level domain_)
+  - _google_ on kolmannen tason tunnus (_3LD, three-level domain_)
+- Jos olisi google.com, tällöin siinä on vain kaksi tasoa, ensimmäinen _.com_ ja toinen _google_.
 
 - klo 14.33 Päätin ottaa domainnimen Namecheapista. Tällä tavalla saisin käytettyä GitHub Educationiin sisältyvää tarjousta ilmaisesta domain-nimestä vuodeksi. Etsin hakukoneella _Namecheap github education_, jolla pääsin _Namecheap for Education_ -sivustolle. Tässä saa käyttöönsä .me-loppuisen domainin. Karvisen mukaan parhain pääte sivustolle on .com, mutta hyvinä myös maakohtaiset tunnisteet, kuten Suomen .fi ja Ison-Britannian .co.uk. Koska tämä on testisivuni, ajattelin, että pärjään aluksi tällä .me-loppuisella. Kirjoitin kenttään haluamin domainin nimen ja klikkasin _Find_.
 
@@ -155,3 +160,5 @@ Tein harjoitukset torstaina 18.9.2025, sunnuntaina 21.9.2025 ja maanantaina 22.9
 
 
 ## Lähteet
+
+- Cloudflare, 2025. What is a domain name? | Domain name vs. URL. Luettavissa: https://www.cloudflare.com/learning/dns/glossary/what-is-a-domain-name/. Luettu: 18.9.2025.
