@@ -130,21 +130,21 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
 
 - 16.00 Valitsin Kaisa Jaakkolan -verkkosivut, jotka ovat yksittäisen henkilön. Tein komennon `host kaisajaakkola.com`, josta näin IP-osoitteen (_31.217.192.93_) ja sähköpostia hallitsevan palvelimen nimen (_mailwp06.hostingpalvelu.fi_). Käytin saatua IP-osoitetta hyväksi ja ajoin komennon `host 31.217.192.93`.
 
-- ... KUVA 21 ...
+![host kaisa jaakkola](images/h5-kuva21.jpg)
 
 - 16.10 Hain Kaisa Jaakkolan dig-tiedot komenoilla `dig kaisajaakkola.com` ja `dig kaisajaakkola.com NS`. Tiedot näyttävät aika samoilta, mutta tietoa ei haeta A-tietueesta vaan NS-tietueesta. TTL on myös aika iso, vasemalla olevassa kuvassa 13862 ja oikealla 28800 sekuntia. Toisaalta käyttäjälle ei ole haittaa, jos hän näkee hieman pidemmän aikaa vanhat tiedot, varsinkin kun sivua ei päivitetä niin usein.
 
-- ... KUVA 22 a + b ...
+![dig kaisa jaakkola ja ns](images/h5-kuva22.jpg)
 
 ### Suuri, kaikkien tuntema palvelu
 
 - 18.42 Valitsin Instagramin suureksi palveluksi. Ajoin komennon `host instagram.com`. Instagramilla on sekä IPv4-osoite että IPv6-osoite. Sähköpostipalvelimia oli kaksi, toinen _mxa_ ja toinen _mxb_. sen lisäksi listassa oli _HTTP service bindings_, joka on uudenlainen tietuetyyppi, joka esimerkiksi kertoo käytetäänkö HTTP/2 vai HTTP/3:sta ensisijaisesti (Cloudflare, 30.9.2020). Tein myös haun IP-osoitteella, `host 157.240.205.174`. Domain pointer osoittaa Instagramin johonkin omaan osoitteeseen.
 
-- ... KUVA 23 ...
+![host instagram](images/h5-kuva23.jpg)
 
 - 18.57 Sen jälkeen annoin komennot `dig instagram.com` ja `dig instagram.com NS`. Toisella komennolla (oikealla) tuli enemmän tietoa kuin ensimmäisellä (vasemmalla). TTL-aika oli hyvin lyhyt, vain 35 sekuntia. Tämän takia palvelin joutuu kovemmalle rasitukselle, mutta toisaalta käyttäjät saavat uudet tiedot nopeasti. Uskoisin tämän lyhyen TTL-ajan olevan sen takia, koska Instagram on tehty palveluksi, jossa on koko ajan uutta ja sitä tulee nopealla tahdilla katsottavaksi. Instagramilla on käytössä enemmän nimipalveluja ja jokaisen niiden TTL-arvo on matala, 1952. Sen lisäksi nähdään _Additional Section_:ssa nimipalveluiden A- ja AAAA-tietuet eli IPv4- ja IPv6-osoitteet.
 
-- ... KUVA 24 a ja b ...
+![dig instagram ja ns](images/h5-kuva204.jpg)
 
 
 ## Lähteet
