@@ -1,6 +1,6 @@
 # H5 Nimekäs
 
-Tein harjoitukset torstaina 18.9.2025, ... ... Helsingissä kotona. Tein torstaina harjoitukset ... ... (kohdat ... ...), ... ... . Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
+Tein harjoitukset torstaina 18.9.2025, sunnuntaina 21.9.2025 ja maanantaina 22.9.2025 Helsingissä kotona. Tein torstaina harjoitukset ... ... (kohdat ... ...), ... ... . Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
 
 ... Tiivistelmä ...
 
@@ -145,12 +145,13 @@ Tein harjoitukset torstaina 18.9.2025, ... ... Helsingissä kotona. Tein torstai
 
 ### Suuri, kaikkien tuntema palvelu
 
-- Valitsin palveluksi Instagramin. host instagram.com ja host IP
+- 18.42 Valitsin Instagramin suureksi palveluksi. Ajoin komennon `host instagram.com`. Instagramilla on sekä IPv4-osoite että IPv6-osoite. Sähköpostipalvelimia oli kaksi, toinen _mxa_ ja toinen _mxb_. sen lisäksi listassa oli _HTTP service bindings_, joka on uudenlainen tietuetyyppi, joka esimerkiksi kertoo käytetäänkö HTTP/2 vai HTTP/3:sta ensisijaisesti. https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/. Tein myös haun IP-osoitteella, `host 157.240.205.174`. Domain pointer osoittaa Instagramin johonkin omaan osoitteeseen.
 
-- KUVA 23
+- ... KUVA 23 ...
 
-- dig instagram.com ja dig instagram.com NS
-- - KUVA 24 a ja b
+- 18.57 Sen jälkeen annoin komennot `dig instagram.com` ja `dig instagram.com NS`. Toisella komennolla (oikealla) tuli enemmän tietoa kuin ensimmäisellä (vasemmalla). TTL-aika oli hyvin lyhyt, vain 35 sekuntia. Tämän takia palvelin joutuu kovemmalle rasitukselle, mutta toisaalta käyttäjät saavat uudet tiedot nopeasti. Uskoisin tämän lyhyen TTL-ajan olevan sen takia, koska Instagram on tehty palveluksi, jossa on koko ajan uutta ja sitä tulee nopealla tahdilla katsottavaksi. Instagramilla on käytössä enemmän nimipalveluja ja jokaisen niiden TTL-arvo on matala, 1952. Sen lisäksi nähdään _Additional Section_:ssa nimipalveluiden A- ja AAAA-tietuet eli IPv4- ja IPv6-osoitteet.
+
+- ... KUVA 24 a ja b ...
 
 
 ## Lähteet
