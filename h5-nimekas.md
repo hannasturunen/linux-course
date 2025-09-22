@@ -144,7 +144,7 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
 
 - 18.57 Sen jälkeen annoin komennot `dig instagram.com` ja `dig instagram.com NS`. Toisella komennolla (oikealla) tuli enemmän tietoa kuin ensimmäisellä (vasemmalla). TTL-aika oli hyvin lyhyt, vain 35 sekuntia. Tämän takia palvelin joutuu kovemmalle rasitukselle, mutta toisaalta käyttäjät saavat uudet tiedot nopeasti. Uskoisin tämän lyhyen TTL-ajan olevan sen takia, koska Instagram on tehty palveluksi, jossa on koko ajan uutta ja sitä tulee nopealla tahdilla katsottavaksi. Instagramilla on käytössä enemmän nimipalveluja ja jokaisen niiden TTL-arvo on matala, 1952. Sen lisäksi nähdään _Additional Section_:ssa nimipalveluiden A- ja AAAA-tietuet eli IPv4- ja IPv6-osoitteet.
 
-![dig instagram ja ns](images/h5-kuva204.jpg)
+![dig instagram ja ns](images/h5-kuva24.jpg)
 
 
 ## Lähteet
