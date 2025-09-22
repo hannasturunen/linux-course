@@ -82,24 +82,24 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
 
 - 21.9.2025 klo 18.44 Selvittelin asiaa lisää ja löysin sivun, jolla kerrotiin, että nämä molemmat komennot (dig ja host) voisi saada yhdessä ja samassa paketissa. Paketin nimi oli dnsutils ja latasin tämän komennolla ```sudo apt-get install dnsutils```. (nixCraft, 19.3.2024.) Lataus onnistui.
 
-- ... KUVA 13 ...
+![dnsutils asennus](images/h5-kuva13.jpg)
 
 - 18.49 Testasin komentoa `man host`, jolla pääsin BIND9-manuaaliin. Host-komennolla tehdään DNS-kyselyjä (DNS = Domain Name System), jossa domainnimi muutetaan IP-osoitteeksi tai IP-osoite nimeksi. Listasta löytyi paljon erilaisia lisäkomentoja, joita käyttää host-komennon kanssa. Huomasin myös, että CNAME-haut pitää tehdä `-t` -komennolla. Suljin manuaalin `q`-komennolla.
 
-- ... KUVA 14 ...
+![host manual](images/h5-kuva14.jpg)
 
 - 19.04 Hain dig-manuaalin komennolla `man dig`. Täältäkin löytyi paljon erilaisia komentoja. Kuten `host`-komento, myös `dig`-komento hyvä työkalu DNS-kyselyihin.Se suorittaa DNS-kyselyjä ja näyttää nimipalvelinten antamat vastaukset. Tätä komentoa käytetään paljon DNS-ongelmien selvityksessä. Komento suoritetaan `dig @ server name type`, jossa _server_ on IP-osoite, _name_ on tietuen nimi (eli esimerkiksi .com) ja _type_ kertoo minkä tyyppinen kysely vaaditaan (jos tätä ei ole määritetty, käytetään A-tietuetta). Jos loppuun kirjoittaa komennon `NS`, saadaan tietää mitkä nimipalvelimet vastaavat kyselyyn. Sen lisäksi löysin kätevän komennon, `+short`, jolla voi näyttää vain halutun tiedon. Suljin manuaalin `q`-komennolla.
 
-- ... KUVA 15 ...
+![dig manual](images/h5-kuva15.jpg)
 
 ### hattara.me ja namcheap.com
 - 19.48 Hain komennot `host hattara.me` ja `host namecheap.com`. Omalla domain-nimelläni haettaessa tuli viisi tulosta ja namecheapillä kaksi. Sen lisäksi tuli molempien IP-osoitteet, koska host-komento kertoo domainnimeä vastaavan IP-osoitteen. Cloudfaren sivustolla kerrotaan, että DNS-palvelimen MX-tietue (mail exchange) ohjaa sähköpostin sähköpostipalvelimelle. Domainnimien edessä olevat numerot ovat prioriteettinumeroita ja kertovat sen, mitä suositaan. Mitä alempi, sen korkeammalla se on prioriteettilistalla. Katselin prioriteettinumeroita ja niiden osoitteita ja ne osoitteet, joissa oli pienin numero osoitteessa (esimerkiksi eforward1.registrar-servers.com), niillä oli myös pienin prioriteettinumero (esimerkkiosoitteella 10). Huomasin myös, että oma sivustoni ja NameCheap käyttävät eri MX-tietueita, koska minulla on eforward ja NameCheapillä jellyfish. (Cloudflare DNS MX, 2025.)
 
-- ... KUVA 16 ...
+![host hattara ja namecheap](images/h5-kuva16.jpg)
 
 - 20.18 Hain myös samat IP-osoitteilla ja käytin komentoja `host 64.226.102.160` ja `host 198.54.117.250`. Molemmissa näkyi `in-addr.arpa`, joka tulee, kun haetaan reverse DNS-haulla. Tämä tarkoittaa sitä, että ei haeta domainnimeä vastaava IP-osoite, vaan IP-osoitetta vastaava domainnimi. in-addr.arpa vastaa käänteisten kyselyiden suorittamisesta. (Windows Server Learn, 24.3.2025.) Huomasin, että oman sivustoni haku ei onnistunut, mutta NameCheapin onnistui.
 
-- ... KUVA 17 ...
+![host IP-osoitteilla](images/h5-kuva17.jpg)
 
 - 22.9.2025 klo 15.15 Hain molemmista dig-tiedot komennoilla `dig hattara.me`. 
   - _Opcode: QUERY_: mitä pyydetiin eli tässä tapauksessa kyselyä. Jos testataan DNS:n tilaa, lukisi _status_
@@ -116,15 +116,15 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
   - _MSG SIZE rcvd: 55_: DNS-serveriltä saadun viestin koko
 (How-to-Geek, 5.2.2024.)
 
-- ... KUVA 18 ...
+![dig hattara.me komento](images/h5-kuva18.jpg)
 
 - 15.49 Hain vielä komennolla `dig hattara.me NS` nimipalvelun. Tässä tapauksessa niitä on kaksi ja ne ovat _dns1.registrar-servers.com_ ja _dns2.registrar-servers.com_. Nyt A-tietuen tilalla on NS eli nameserver, joka on DNS-serverin tyyppi.
 
-- ... KUVA 19 ...
+![dig hattara.me komento ns](images/h5-kuva19.jpg)
 
 - 15.51 Hain myös NameCheapille dig-tiedot komennolla `dig namecheap.com` ja `dig namecheap.com NS`. NameCheapillä on paljon enemmän nimipalveluja kuin hattara.me:llä. Myös TTL-arvo on korkeampi, kun hattaralla se oli 1800 ja tässä 3600 sekuntia. TTL nopeuttaa verkon toimintaa, koska sivua ei aina tarvitse hakea uudestaan, mutta toisaalta jos arvo on kovin suuri, käyttäjälle voi näkyä vanha tieto.
 
-- ... KUVA 20 a + b ...
+![dig namecheap komento ja ns](images/h5-kuva20.jpg)
 
 ### Pikkyritys, kerho tai yksittäisen henkilön sivut
 
