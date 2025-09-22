@@ -76,11 +76,11 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
 
 ## c) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia.
 
-- klo 19.10 Etsin ensin komennolla ```apt-cache search host``` kaikki tiedostot, joissa esiintyy sana host. Näitä tuli hyvin paljon, joten rajasin komentoa ```apt-cache search host | grep ^host```. Tässä tuli enää neljä vaihtoehtoa, mutta mikään ei näyttänyt oikealta. Selvittelin asiaa ja löysin oikean paketin nimen, joka on _bind9-host_ -paketti (https://www.debian.org/doc/manuals/debian-handbook/sect.domain-name-servers.en.html#sect.dns-config). Hain tämän komennolla ```apt-cache search host | grep bind9```. Tästä tuli tulokseksi oikea paketti. Latasin tämän komennolla ```sudo apt-get install bind9-host```.
+- klo 19.10 Etsin ensin komennolla ```apt-cache search host``` kaikki tiedostot, joissa esiintyy sana host. Näitä tuli hyvin paljon, joten rajasin komentoa ```apt-cache search host | grep ^host```. Tässä tuli enää neljä vaihtoehtoa, mutta mikään ei näyttänyt oikealta. Selvittelin asiaa ja löysin oikean paketin nimen, joka on _bind9-host_ -paketti (The Debian Administrator's Handbook). Hain tämän komennolla ```apt-cache search host | grep bind9```. Tästä tuli tulokseksi oikea paketti. Latasin tämän komennolla ```sudo apt-get install bind9-host```.
 
 ![host komennon etsintä ja asennus](images/h5-kuva12.jpg)
 
-- 21.9.2025 klo 18.44 Selvittelin asiaa lisää ja löysin sivun, jolla kerrotiin, että nämä molemmat komennot (dig ja host) voisi saada yhdessä ja samassa paketissa. Paketin nimi oli dnsutils ja latasin tämän komennolla ```sudo apt-get install dnsutils```. Lataus onnistui. https://www.cyberciti.biz/faq/debian-9-dig-command-not-found-how-to-install-dig-on-debian/ 
+- 21.9.2025 klo 18.44 Selvittelin asiaa lisää ja löysin sivun, jolla kerrotiin, että nämä molemmat komennot (dig ja host) voisi saada yhdessä ja samassa paketissa. Paketin nimi oli dnsutils ja latasin tämän komennolla ```sudo apt-get install dnsutils```. (nixCraft, 19.3.2024.) Lataus onnistui.
 
 - ... KUVA 13 ...
 
@@ -93,15 +93,15 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
 - ... KUVA 15 ...
 
 ### hattara.me ja namcheap.com
-- 19.48 Hain komennot `host hattara.me` ja `host namecheap.com`. Omalla domain-nimelläni haettaessa tuli viisi tulosta ja namecheapillä kaksi. Sen lisäksi tuli molempien IP-osoitteet, koska host-komento kertoo domainnimeä vastaavan IP-osoitteen. Cloudfaren sivustolla (... ... ) kerrotaan, että DNS-palvelimen MX-tietue (mail exchange) ohjaa sähköpostin sähköpostipalvelimelle. Domainnien edessä olevat numerot ovat prioriteettinumeroita ja kertovat sen, mitä suositaan. Mitä alempi, sen korkeammalla se on prioriteettilistalla. Katselin prioriteettinumeroita ja niiden osoitteita ja ne osoitteet, joissa oli pienin numero osoitteessa (esimerkiksi eforward1.registrar-servers.com), niillä oli myös pienin prioriteettinumero (esimerkkiosoitteella 10). (... https://www.cloudflare.com/learning/dns/dns-records/dns-mx-record/ ...). Huomasin myös, että oma sivustoni ja NameCheap käyttävät eri MX-tietueita, koska minulla on eforward ja NameCheapillä jellyfish. 
+- 19.48 Hain komennot `host hattara.me` ja `host namecheap.com`. Omalla domain-nimelläni haettaessa tuli viisi tulosta ja namecheapillä kaksi. Sen lisäksi tuli molempien IP-osoitteet, koska host-komento kertoo domainnimeä vastaavan IP-osoitteen. Cloudfaren sivustolla kerrotaan, että DNS-palvelimen MX-tietue (mail exchange) ohjaa sähköpostin sähköpostipalvelimelle. Domainnimien edessä olevat numerot ovat prioriteettinumeroita ja kertovat sen, mitä suositaan. Mitä alempi, sen korkeammalla se on prioriteettilistalla. Katselin prioriteettinumeroita ja niiden osoitteita ja ne osoitteet, joissa oli pienin numero osoitteessa (esimerkiksi eforward1.registrar-servers.com), niillä oli myös pienin prioriteettinumero (esimerkkiosoitteella 10). Huomasin myös, että oma sivustoni ja NameCheap käyttävät eri MX-tietueita, koska minulla on eforward ja NameCheapillä jellyfish. (Cloudflare DNS MX, 2025.)
 
 - ... KUVA 16 ...
 
-- 20.18 Hain myös samat IP-osoitteilla ja käytin komentoja `host 64.226.102.160` ja `host 198.54.117.250`. Molemmissa näkyi `in-addr.arpa`, joka tulee, kun haetaan reverse DNS-haulla. Tämä tarkoittaa sitä, että ei haeta domainnimeä vastaava IP-osoite, vaan IP-osoitetta vastaava domainnimi. in-addr.arpa vastaa käänteisten kyselyiden suorittamisesta. https://learn.microsoft.com/en-us/windows-server/networking/dns/reverse-lookup. Huomasin, että oman sivustoni haku ei onnistunut, mutta NameCheapin onnistui. Yritin tutkia asiaa ja se minkä ymmärsin, oli, että en saanut omalle IP-osoitteelleni domainnimeä, koska se on eri verkossa kuin itse olen ( https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances?tabs=redhat ). 
+- 20.18 Hain myös samat IP-osoitteilla ja käytin komentoja `host 64.226.102.160` ja `host 198.54.117.250`. Molemmissa näkyi `in-addr.arpa`, joka tulee, kun haetaan reverse DNS-haulla. Tämä tarkoittaa sitä, että ei haeta domainnimeä vastaava IP-osoite, vaan IP-osoitetta vastaava domainnimi. in-addr.arpa vastaa käänteisten kyselyiden suorittamisesta. (Windows Server Learn, 24.3.2025.) Huomasin, että oman sivustoni haku ei onnistunut, mutta NameCheapin onnistui.
 
 - ... KUVA 17 ...
 
-- 22.9.2025 klo 15.15 Hain molemmista dig-tiedot komennoilla `dig hattara.me`. Tulkinnassa käytetty apuna https://www.howtogeek.com/663056/how-to-use-the-dig-command-on-linux/ 
+- 22.9.2025 klo 15.15 Hain molemmista dig-tiedot komennoilla `dig hattara.me`. 
   - _Opcode: QUERY_: mitä pyydetiin eli tässä tapauksessa kyselyä. Jos testataan DNS:n tilaa, lukisi _status_
   - _Status: Noerror_: ei ollut virheitä eli pyyntö käsiteltiin oikein
   - _Authority: 0_: vastaukset, jotka tulevat _Authoritative Name Server_:ltä (tässä tapauksessa 0 kpl), vastaus palautettiin DNS:n välimuistista (_cache_)
@@ -114,11 +114,11 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
   - _SERVER: 192.168.1.1#53(192.168.1.1.) (UDP)_: vastanneen DNS-palvelimen IP-osoite ja porttinumero
   - _WHEN_: milloin pyyntö on tehty
   - _MSG SIZE rcvd: 55_: DNS-serveriltä saadun viestin koko
+(How-to-Geek, 5.2.2024.)
 
 - ... KUVA 18 ...
 
 - 15.49 Hain vielä komennolla `dig hattara.me NS` nimipalvelun. Tässä tapauksessa niitä on kaksi ja ne ovat _dns1.registrar-servers.com_ ja _dns2.registrar-servers.com_. Nyt A-tietuen tilalla on NS eli nameserver, joka on DNS-serverin tyyppi.
-- https://www.cloudflare.com/learning/dns/dns-records/dns-ns-record/
 
 - ... KUVA 19 ...
 
@@ -138,7 +138,7 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
 
 ### Suuri, kaikkien tuntema palvelu
 
-- 18.42 Valitsin Instagramin suureksi palveluksi. Ajoin komennon `host instagram.com`. Instagramilla on sekä IPv4-osoite että IPv6-osoite. Sähköpostipalvelimia oli kaksi, toinen _mxa_ ja toinen _mxb_. sen lisäksi listassa oli _HTTP service bindings_, joka on uudenlainen tietuetyyppi, joka esimerkiksi kertoo käytetäänkö HTTP/2 vai HTTP/3:sta ensisijaisesti. https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/. Tein myös haun IP-osoitteella, `host 157.240.205.174`. Domain pointer osoittaa Instagramin johonkin omaan osoitteeseen.
+- 18.42 Valitsin Instagramin suureksi palveluksi. Ajoin komennon `host instagram.com`. Instagramilla on sekä IPv4-osoite että IPv6-osoite. Sähköpostipalvelimia oli kaksi, toinen _mxa_ ja toinen _mxb_. sen lisäksi listassa oli _HTTP service bindings_, joka on uudenlainen tietuetyyppi, joka esimerkiksi kertoo käytetäänkö HTTP/2 vai HTTP/3:sta ensisijaisesti (Cloudflare, 30.9.2020). Tein myös haun IP-osoitteella, `host 157.240.205.174`. Domain pointer osoittaa Instagramin johonkin omaan osoitteeseen.
 
 - ... KUVA 23 ...
 
@@ -149,12 +149,16 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
 
 ## Lähteet
 
-- Cloudflare, 2025. What is a domain name? | Domain name vs. URL. Luettavissa: https://www.cloudflare.com/learning/dns/glossary/what-is-a-domain-name/. Luettu: 18.9.2025.
+- Cloudflare, 30.9.2020. Speeding up HTTPS and HTTP/3 negotiation with... DNS. Luettavissa: https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/. Luettu: 22.9.2025.
 - Cloudflare, 2025. DNS A record. Luettavissa: https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/. Luettu: 18.9.2025.
+- Cloudflare, 2025. What is a DNS MX record? Luettavissa: https://www.cloudflare.com/learning/dns/dns-records/dns-mx-record/. Luettu: 21.9.2025.
+- Cloudflare, 2025. What is a domain name? | Domain name vs. URL. Luettavissa: https://www.cloudflare.com/learning/dns/glossary/what-is-a-domain-name/. Luettu: 18.9.2025.
 - Cloudflare, 2025. What is DNS? | How DNS works. Luettavissa: https://www.cloudflare.com/learning/dns/what-is-dns/. Luettu: 18.9.2025.
 - Cloudflare, 2025. What is time-to-live (TTL)? | TTL definition. Luettavissa: https://www.cloudflare.com/learning/cdn/glossary/time-to-live-ttl/. Luettu: 18.9.2025.
+- How-to-Geek, 5.2.2024. How to Use the dig Command on Linux. Luettavissa: https://www.howtogeek.com/663056/how-to-use-the-dig-command-on-linux/. Luettu: 22.9.2025.
 - NameCheap, 24.8.2020. What is a Subdomain? Definition & Examples. NameCheap Blog. Luettavissa: https://www.namecheap.com/blog/what-is-a-subdomain-dp/. Luettu: 18.9.2025.
 - NameCheap, 24.10.2024. How to Create a Subdomain for my Domain. https://www.namecheap.com/support/knowledgebase/article.aspx/9776/2237/how-to-create-a-subdomain-for-my-domain/
+- nixCraft, 19.3.2024. How to install dig on Debian Linux 12/11/10. Luettavissa: https://www.cyberciti.biz/faq/debian-9-dig-command-not-found-how-to-install-dig-on-debian/. Luettu: 21.9.2025.
+- The Debian Administrator's Handbook. Luettavissa: https://www.debian.org/doc/manuals/debian-handbook/sect.domain-name-servers.en.html#sect.dns-config. Luettu: 18.9.2025.
+- Windows Server Learn, 24.3.2025. Reverse lookup. Luettavissa: https://learn.microsoft.com/en-us/windows-server/networking/dns/reverse-lookup. Luettu: 21.9.2025.
 - Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet. Luettu: 22.9.2025.
-
-
