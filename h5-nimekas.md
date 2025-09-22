@@ -11,7 +11,7 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
   - _.uk_ on ylätason verkkotunnus (_TLD, top-level domain_), johon kuuluu myös esimerkiksi _.com, net_ ja maakohtaiset tunnukset, kuten _.fi_
   - _.co_ on toisen tason tunnus (_2LD, second-level domain_)
   - _google_ on kolmannen tason tunnus (_3LD, three-level domain_)
-- Jos olisi google.com, tällöin siinä on vain kaksi tasoa, ensimmäinen _.com_ ja toinen _google_.
+- Jos olisi google.com, tällöin siinä on vain kaksi tasoa, ensimmäinen _.com_ ja toinen _google_. (Cloudflare domain, 2025.)
 
 - klo 14.33 Päätin ottaa domainnimen Namecheapista. Tällä tavalla saisin käytettyä GitHub Educationiin sisältyvää tarjousta ilmaisesta domain-nimestä vuodeksi. Etsin hakukoneella _Namecheap github education_, jolla pääsin _Namecheap for Education_ -sivustolle. Tässä saa käyttöönsä .me-loppuisen domainin. Karvisen mukaan parhain pääte sivustolle on .com, mutta hyvinä myös maakohtaiset tunnisteet, kuten Suomen .fi ja Ison-Britannian .co.uk. Koska tämä on testisivuni, ajattelin, että pärjään aluksi tällä .me-loppuisella. Kirjoitin kenttään haluamin domainin nimen ja klikkasin _Find_.
 
@@ -57,25 +57,16 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
 
 - 16.27 Nyt olen ohjannut hattara.me-sivu ohjautuu virtuaalipalvelimeni IP-osoitteeseen 64.226.102.160. Eli nyt kun kirjoitan osoitepalkkiin hattara.me tai www.hattara.me, ne ohjautuvat virtuaalipalvelilleni, jonka IP-osoite on 64.226.102.160.
 
-
-
-... A-tietue, DNS, host, arvo, TTL ... 
-
-
+- Tutustuin esille tulleisiin termeihin:
+  - _A-tietue_ on yksi DNS-palvelimen tietueista, jossa A tarkoittaa osoitetta (_address_). Se kertoo tietyn domainnimen IP-osoitteen. Esimerkiksi jos haetaan cloudflare.com-sivuston DNS-tietueet, A-tietue antaa IP-osoitteen 104.17.210.9. A-tietuet sisältävät vain IPv4-osoitteita, sama toiminto IPv6-osoitteille on AAAA-tietue. Monilla verkkosivuilla on vain yksi A-tietue, mutta niitä voi olla useitakin. (Cloudflare A Record, 2025.)
+  - _DNS_ on lyhenne sanoista _Domain Name System_ eli nimipalvelujärjestelmä. Sitä kutsutaan internetin puhelinluetteloksi. Koska ihmisten on vaikea muistaa tietokoneiden käyttämiä IP-osoitteita, he käyttävät domainnimiä niiden sijaan. Tarvitaan kuitenkin järjestelmä, joka muuttaa domainnimet IP-osoitteiksi ja toisin päin. Tämän tekee DNS-palvelin. (Cloudflare DNS, 2025.)
+  - _TTL_ on lyhenne sanoista _Time To Live_. Se kertoo ajan, jonka välimuistissa oleva DNS-vastaus pysyy voimassa. Kun tämä aika umpeutuu, tieto pitää tarkistaa uudestaan. (Cloudflare TTL, 2025.)
 
 ## b) Alidomain. Tee kaksi uutta alidomainia, jotka osoittava omaan koneeseesi.
 
+- Tutustuin ensin alidomainiin, joka on englanniksi _subdomain_. Niitä käytetään verkkosivuston eri osioihin, esimerkiksi kahvimukikaupalla voisi olla alidomainit blogille ja kaupalle. Niiden avulla voidaan esimerkiksi testata uutta verkkosivua ja tehdä mobiiliversion sivuille. (NameCheap, 24.8.2020.)
 
-
-... alidomain ...  https://www.namecheap.com/blog/what-is-a-subdomain-dp/
-
-
-
-- klo 17.19 Tein kaksi alidomainia (_subdomain_) hattara.me-domainille. Klikkasin _Add New Record_ -nappia, jolla sain lisättyä ensin yhden uuden A-tietuen (_blog.hattara.me_) ja toisen uuden CNAME-tietuen (_shop.hattara.me_). A-tietue osoittaa suoraan IP-osoitteeseen, mutta CNAME osoittaa domainiin, joka taas osoittaa IP-osoitteeseen. Siksi tässä piti laittaa IP-osoitteen sijaan domainnimi. 
-- https://www.namecheap.com/support/knowledgebase/article.aspx/9776/2237/how-to-create-a-subdomain-for-my-domain/
-- https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/ ja https://www.cloudflare.com/learning/dns/dns-records/dns-cname-record/
-
-
+- klo 17.19 Tein kaksi alidomainia (_subdomain_) hattara.me-domainille. Klikkasin _Add New Record_ -nappia, jolla sain lisättyä ensin yhden uuden A-tietuen (_blog.hattara.me_) ja toisen uuden CNAME-tietuen (_shop.hattara.me_). A-tietue osoittaa suoraan IP-osoitteeseen, mutta CNAME osoittaa domainiin, joka taas osoittaa IP-osoitteeseen. Siksi tässä piti laittaa IP-osoitteen sijaan domainnimi. (NameCheap, 24.10.2024.)
 
 ![alidomainit tehty](images/h5-kuva10.jpg)
 
@@ -83,10 +74,7 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
 
 ![alidomainit firefoxissa](images/h5-kuva11.jpg)
 
-
-
-
-## c) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia.  ... KESKEN ...
+## c) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia.
 
 - klo 19.10 Etsin ensin komennolla ```apt-cache search host``` kaikki tiedostot, joissa esiintyy sana host. Näitä tuli hyvin paljon, joten rajasin komentoa ```apt-cache search host | grep ^host```. Tässä tuli enää neljä vaihtoehtoa, mutta mikään ei näyttänyt oikealta. Selvittelin asiaa ja löysin oikean paketin nimen, joka on _bind9-host_ -paketti (https://www.debian.org/doc/manuals/debian-handbook/sect.domain-name-servers.en.html#sect.dns-config). Hain tämän komennolla ```apt-cache search host | grep bind9```. Tästä tuli tulokseksi oikea paketti. Latasin tämän komennolla ```sudo apt-get install bind9-host```.
 
@@ -162,3 +150,11 @@ Hankin ensin julkisen nimen, jonka jälkeen laitoin sen osoittamaan omaan virtua
 ## Lähteet
 
 - Cloudflare, 2025. What is a domain name? | Domain name vs. URL. Luettavissa: https://www.cloudflare.com/learning/dns/glossary/what-is-a-domain-name/. Luettu: 18.9.2025.
+- Cloudflare, 2025. DNS A record. Luettavissa: https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/. Luettu: 18.9.2025.
+- Cloudflare, 2025. What is DNS? | How DNS works. Luettavissa: https://www.cloudflare.com/learning/dns/what-is-dns/. Luettu: 18.9.2025.
+- Cloudflare, 2025. What is time-to-live (TTL)? | TTL definition. Luettavissa: https://www.cloudflare.com/learning/cdn/glossary/time-to-live-ttl/. Luettu: 18.9.2025.
+- NameCheap, 24.8.2020. What is a Subdomain? Definition & Examples. NameCheap Blog. Luettavissa: https://www.namecheap.com/blog/what-is-a-subdomain-dp/. Luettu: 18.9.2025.
+- NameCheap, 24.10.2024. How to Create a Subdomain for my Domain. https://www.namecheap.com/support/knowledgebase/article.aspx/9776/2237/how-to-create-a-subdomain-for-my-domain/
+- Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet. Luettu: 22.9.2025.
+
+
