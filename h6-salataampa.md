@@ -27,13 +27,15 @@
 
 - Yksinkertainen esimerkki konfiguraatiosta: 
 ```
+LoadModule ssl_module modules/mod_ssl.so
+
 Listen 443
-  <VirtualHost *:443>
-      ServerName www.example.com
-      SSLEngine on
-      SSLCertificateFile "/path/to/www.example.com.cert"
-      SSLCertificateKeyFile "/path/to/www.example.com.key"
-  </VirtualHost>
+<VirtualHost *:443>
+    ServerName www.example.com
+    SSLEngine on
+    SSLCertificateFile "/path/to/www.example.com.cert"
+    SSLCertificateKeyFile "/path/to/www.example.com.key"
+</VirtualHost>
 ```
 - SSL-konfiguraation pitää sisältää vähintään nämä tiedot.
 
