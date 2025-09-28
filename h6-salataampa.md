@@ -26,7 +26,8 @@
 ### The Apache Software Foundation 2025: Apache HTTP Server Version 2.4
 
 - Yksinkertainen esimerkki konfiguraatiosta: 
-```Listen 443
+```
+Listen 443
   <VirtualHost *:443>
       ServerName www.example.com
       SSLEngine on
