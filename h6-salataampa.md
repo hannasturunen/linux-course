@@ -98,7 +98,7 @@ Tein ensin sivustolleni Name Based Virtual Hostin ja tämän jälkeen hankin dom
 
 ![sivusto päivitetty](images/h6-kuva10.jpg)
 
-- 20.36 Jätän tehtävien tekemisen tähän ja jatkan huomenna. Suljin yhteyden virtuaalipalvelimeen komennolla `exit`, jonka jälkeen suljin terminaalin ja virtuaalikoneen.
+- 20.36 Jätän tehtävien tekemisen tähän ja jatkan seuraavana päivänä. Suljin yhteyden virtuaalipalvelimeen komennolla `exit`, jonka jälkeen suljin terminaalin ja virtuaalikoneen.
 - 29.9. klo 15.18 Yritin uudestaan hankkia sertifikaatit. Minulla oli jo avattuna portit 80 ja 443 sekä certbot asennettuna. Tarkistin vielä, että web-sivuni toimii virtuaalikoneen Firefoxilla ja kännykän Safari-selaimella. Molemmilla toimi.
 - 15.22 Kirjauduin terminaalissa virtuaalipalvelimelleni komennolla `ssh hannatu@hattara.me`. Annoin salasanani ja pääsin sisään.
 - 15.23 Yritin uudestaan hakea domainnimilleni sertifikaatin. Tein tämän komennolla `sudo certbot --apache --domains hattara.me,www.hattara.me`. Koska olin yrittänyt tätä jo aikaisemmin, kysyttiin haluanko uudelleenasentaa tämän olemassaolevan sertifikaatin vai yrittää saada uuden. Vastasin, että haluan uudelleenasentaa vanhan. Nyt sain onnistuneesti sertifikaatit molemmille domainnimille, kun aikaisemmin onnistui vain toinen (ilman www-alkua).
