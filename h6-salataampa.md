@@ -45,108 +45,105 @@ Listen 443
 
 ## Virtuaalikonetehtävät
 
-Tein harjoitukset sunnuntaina 28.9.2025 ... ... Helsingissä kotona. Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
+Tein harjoitukset sunnuntaina 28.9.2025 ja maanantaina 29.9.2025 Helsingissä kotona. Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
 
-... tähän tiivistelmää ...
+Tein ensin sivustolleni Name Based Virtual Hostin ja tämän jälkeen hankin domainille TLS-sertifikaatin Let's Encryptiltä. Tämän jälkeen testasin sivun SSLLabs-laadunvarmistustyökalulla. 
 
 ## a) Let's. Hanki ja asenna palvelimellesi ilmainen TLS-sertifikaatti Let's Encryptilta. Osoita, että se toimii.
 
 - 17.45 Avasin VirtualBoxin ja kirjauduin terminaalissa virtuaalipalvelimelleni komennolla `ssh hannatu@hattara.me`. Annoin salasanani ja pääsin sisään.
-- 17.50 Varmistin, että sivuni toimii vielä. Avasin Firefoxin selaimen ja menin osoitteeseen hattara.me. Päivitin varmuuden vuoksi sivun ctrl+shift+r. Sivu näkyi yhä, joten kaikki vielä kunnossa.
+- 17.50 Varmistin, että sivuni toimii vielä. Avasin Firefoxin selaimen ja menin osoitteeseen hattara.me. Päivitin varmuuden vuoksi sivun _ctrl+shift+r_. Sivu näkyi yhä, joten kaikki vielä kunnossa.
 - 17.52 Tein varmuuden vuoksi virtuaalikoneelle päivitykset komennolla `sudo apt-get update`. Annoin salasanani ja teki päivitykset.
-- 18.00 Potkaisin vielä varmuuden vuoksi Apache2-demonia komennolla `sudo systemctl reload apache2`. Tämän jälkeen tarkistin vielä, että verkkosivu hattara.me toimii Firefoxilla (päivitin sivun ctrl+shift+r) ja kännykän Safari-selaimella. Molemmissa toimii hyvin,
+- 18.00 Potkaisin vielä varmuuden vuoksi Apache2-demonia komennolla `sudo systemctl reload apache2`. Tämän jälkeen tarkistin vielä, että verkkosivu hattara.me toimii Firefoxilla (päivitin sivun ctrl+shift+r) ja kännykän Safari-selaimella. Molemmissa toimii hyvin.
 
-- ... KUVA 01 a + b ...
+![hattaran etusivu](images/h6-kuva01.jpg)
   
 - 18.05 Kun alkuvalmistelut on tehty, siirrytään salaamiseen. Avasin tulimuurista portit 80 ja 443 eli HTTP:n ja HTTPS:n portit. Annoin komennot `sudo ufw allow 80/tcp` ja `sudo ufw allow 443/tcp`. HTTP:n portti 80 olikin jo auki. Tarkistin vielä, että portit ovat auki komennolla `sudo ufw status verbose`. Portit 80 ja 443 ovat auki sekä IPv4:lle että IPv6:lle.
 
-- ... KUVA 02 ...
+![porttien lisääminen](images/h6-kuva02.jpg)
 
 - 18.12 Asensin certbotin komennolla `sudo apt-get install certbot python3-certbot-apache`, joka latasi ohjelman. Certbot on Let's encryptin työkalu, jonka avulla saadaan HTTPS käyttöön.  
 
-- ... KUVA 03 ...
+![certbotin asennus](images/h6-kuva03.jpg)
 
-- 18.20 Hain domainnimilleni varmenteen. Tämä tapahtui komennolla `sudo certbot --apache --domains hattara.me,www.hattara.me`. Jouduin laittamaan sähköpostiosoitteeni, koska ei päästänyt eteenpäin ilman sitä. Sen lisäksi ei löytänyt www.hattara.me. Tajusin tämän johtuvan siitä, että tuolla sivulla ei ole vielä tehty AliasNamea _Name Based Virtual Hostina_.
+- 18.20 Hain domainnimilleni varmenteen. Tämä tapahtui komennolla `sudo certbot --apache --domains hattara.me,www.hattara.me`. Jouduin laittamaan sähköpostiosoitteeni, koska ei päästänyt eteenpäin ilman sitä. Sen lisäksi ei löytänyt www.hattara.me. Tajusin tämän johtuvan siitä, että tuolla sivulla ei ole vielä tehty AliasNamea Name Based Virtual Hostina.
 - 18.34 Asensin micro-editorin komennolla `sudo apt-get install micro`. Tein konfiguraatiotiedoston komennolla `sudoedit /etc/apache2/sites-available/hattara.me.conf`. 
 
-- ... KUVA 04 ...
+![hattaran konftiedosto](images/h6-kuva04.jpg)
 
 - 18.48 Tein kansion `mkdir -p /home/hannatu/public-sites/hattara`.
-- 19.13 Otetaan verkkosivustolle Apache2 käyttöön komennolla `sudo a2ensite hattara.me`. Tämän jälkeen käynnistettiin Apache2 uudestaan komennolla `sudo systemctl restart apache2`. Komennolla `curl localhost` antaa vielä sen minkä pitää, mutta Firefoxilla antaa _Forbidden_. Joku on siis vielä pielessä.
+- 19.13 Otin verkkosivustolle Apache2:n käyttöön komennolla `sudo a2ensite hattara.me`. Tämän jälkeen käynnistin Apache2 uudestaan komennolla `sudo systemctl restart apache2`. Tein komennon `curl localhost`, joka toimi vielä, mutta Firefoxilla tuli _Forbidden_. Joku oli siis vielä pielessä.
 
-- ... KUVA 05 ...
+![forbidden](images/h6-kuva05.jpg)
 
-- 19.49 Testasin korvata testisivun komennolla `echo "It's me, hi!" | sudo tee /var/www/html/index.html`. Yhä toimii `curl localhost`-komennolla, mutta ei Firefoxxissa.
-- 19.55 Tajusin, etten ollut tehnyt vielä index.html-sivua. Menin hattara-kansioon komennolla `cd /home/hannatu/public-sites/hattara/` ja loin sinne index.html-tiedoston komennolla `micro index.html`. Kopioin koodin Karvisen sivuilta ... ... . Tallensin tekemäni muutokset _ctrl+s_ ja suljin micro-editorin _ctrl+q_.
+- 19.49 Testasin korvata testisivun komennolla `echo "It's me, hi!" | sudo tee /var/www/html/index.html`. Yhä toimii `curl localhost`-komennolla, mutta ei Firefoxissa.
+- 19.55 Tajusin, etten ollut tehnyt vielä _index.html_-sivua. Menin hattara-kansioon komennolla `cd /home/hannatu/public-sites/hattara/` ja loin sinne index.html-tiedoston komennolla `micro index.html`. Kopioin koodin Karvisen sivuilta (Karvinen 12.2.2012). Tallensin tekemäni muutokset _ctrl+s_ ja suljin micro-editorin _ctrl+q_.
 
-- ... KUVA 06 ...
+![index.html tiedot](images/h6-kuva06.jpg)
 
-- 20.07 Potkaisin taas Apache2:n käyntiin komennolla `sudo systemctl restart apache2`. Firefox antaa yhä ... ... väärää.
+- 20.07 Potkaisin taas Apache2:n käyntiin komennolla `sudo systemctl restart apache2`. Firefox antaa sivustolle yhä _Forbidden_.
+- 20.19 Tarkastin kansioiden oikeudet komennolla `ls -la /home/hannatu/public-sites/hattara`, `ls -la ~ grep public-sites` ja `ls -la /home/`. Viimeisen komennon alimmalla rivillä (hannatu) ei ollut suoritusoikeutta (execute) muille.
 
-- 20.19 Tarkastin oikeudet -> puuttuu kuva 06:n alimmasta. ... ...
+![oikeuksien tarkistus](images/h6-kuva07.jpg)
 
-- KUVA 07.
+- 20.21 Lisättiin oikeudet komennolla `chmod o+x /home/hannatu` ja tarkistettiin, että meni läpi. Oikeus oli tullut, joten tarkistettiin vielä viimeiset oikeudet komennolla `ls -la / | grep home`. Päivitin vielä Apachen komennolla `sudo systemctl reload apache2`. 
 
-- 20.21 Lisätään oikeudet ja tarkistetaan vikat. `sudo systemctl reload apache2` ... ...
+![oikeuksien tarkistusta](images/h6-kuva08.jpg)
 
-- KUVA 08.
+- 20.27 Firefox näyttää sivulla tekstin, jonka sen pitäisikin näyttää, mutta `curl localhost`-komento ei. Ajoin komennon `curl -H 'Host: hattara.me' localhost`, jolla sain näkyviin saman tekstin, joka Firefoxissa näkyy.
 
-- 20.27 Nyt Firefox antaa oikeaa, mutta curl localhost ei. Ajoin komennon `curl -H 'Host: hattara.me' localhost`, josta alla oleva. ... ...
+![curl localhost](images/h6-kuva09.jpg)
 
-- KUVA 09.
+- 20.33 Tämä ei kuitenkaan auttanut, koska komento `curl localhost` antaa yhä vanhan tekstin. Otin Apachen default-sivun pois käytöstä komennolla `sudo a2dissite 000-default` ja sen jälkeen päivitin sen `sudo systemctl reload apache2`. Testasin `curl localhost`-komentoa ja nyt toimii. Jee! Nyt näyttää molemmissa paikoissa (curl localhost ja Firefox) sen minkä pitääkin.
 
-- 20.33 ei auttanut, komento `sudo a2dissite 000-default` ja `sudo systemctl reload apache2`. Komento `curl localhost`. Toimii!!! ... ...
+![sivusto päivitetty](images/h6-kuva10.jpg)
 
-- KUVA 10.
-
-- 20.36 Jatkan huomenna, Suljin yhteyden virtuaalipalvelimeen komennolla exit, jonka jälkeen suljin terminaalin ja virtuaalikoneen.
-- 29.9. klo 15.18 Yritin uudestaan hankkia sertifikaatit. Minulla oli jo avattuna portit 80 ja 443 ja certbot asennettuna. Tarkistin vielä, että web-sivuni toimii virtuaalikoneen Firefoxilla ja kännykän Safari-selaimella. Molemmilla toimi.
+- 20.36 Jätän tehtävien tekemisen tähän ja jatkan huomenna. Suljin yhteyden virtuaalipalvelimeen komennolla `exit`, jonka jälkeen suljin terminaalin ja virtuaalikoneen.
+- 29.9. klo 15.18 Yritin uudestaan hankkia sertifikaatit. Minulla oli jo avattuna portit 80 ja 443 sekä certbot asennettuna. Tarkistin vielä, että web-sivuni toimii virtuaalikoneen Firefoxilla ja kännykän Safari-selaimella. Molemmilla toimi.
 - 15.22 Kirjauduin terminaalissa virtuaalipalvelimelleni komennolla `ssh hannatu@hattara.me`. Annoin salasanani ja pääsin sisään.
-- 15.23 Yritin uudestaan hakea domainnimilleni varmenteen. Tein tämän komennolla `sudo certbot --apache --domains hattara.me,www.hattara.me`. Koska olin yrittänyt tätä jo aikaisemmin, kysyttiin, että haluanko uudelleenasentaa tämän olemassaolevan sertifikaatin vai yrittää saada uuden sellaisen. Vastasin, että haluan uudelleenasentaa vanhan. Nyt onnistui saada sertifikaatit molemmille domainnimille.
+- 15.23 Yritin uudestaan hakea domainnimilleni sertifikaatin. Tein tämän komennolla `sudo certbot --apache --domains hattara.me,www.hattara.me`. Koska olin yrittänyt tätä jo aikaisemmin, kysyttiin haluanko uudelleenasentaa tämän olemassaolevan sertifikaatin vai yrittää saada uuden. Vastasin, että haluan uudelleenasentaa vanhan. Nyt sain onnistuneesti sertifikaatit molemmille domainnimille, kun aikaisemmin onnistui vain toinen (ilman www-alkua).
 
-- KUVA 11.
+![sertifikaatin hankinta](images/h6-kuva11.jpg)
 
-- 15.32 HTTP-sivu ei kuitenkaan ohjaudu vielä HTTPS-sivulle automaattisesti, joten tämä täytyi vielä muuttaa. Menin komennolla `cd /etc/apache2/sites-available/` sivustojen konfiguraatiotiedostoihin ja katsoin komennolla `ls` mitä tiedostoja ja kansioita siellä on.
+- 15.32 HTTP-sivu ei kuitenkaan ohjaudu vielä HTTPS-sivulle automaattisesti, joten ehkä tämä täytyi vielä muuttaa. Menin komennolla `cd /etc/apache2/sites-available/` sivustojen konfiguraatiotiedostoihin ja katsoin komennolla `ls` mitä tiedostoja ja kansioita siellä on.
 
-- KUVA 12.
+![apachen sivut ja kansiot](images/h6-kuva12.jpg)
 
 - 15.39 Kansiosta löytyi _hattara.me.conf_, jonka avasin muokattavaksi komennolla `sudoedit hattara.me.conf`. Tämä näytti kuitenkin hyvältä. Suljin editorin _ctrl+x_.
 
-- KUVA 13.
+![hattara-conf](images/h6-kuva13.jpg)
 
 - 15.47 Avasin toisen konfiguraation komennolla `sudoedit hattara.me-le-ssl.conf`. Tämä näytti kanssa hyvältä, joten suljin editorin _ctrl+x_
 
-- KUVA 14.
+![hattara-ssl-conf](images/h6-kuva14.jpg)
 
-- 16.08 Testasin mennä Firefoxilla hattara.me-osoitteeseen ja se vei minut suoraan https-sivustolle. Testasin myös mennä http://hattara.me ja tämä kanssa vei suoraan https-sivustolle. Myös molemmat hattara.me ja www.hattara.me vievät suojatulle https-sivulle. Testasin myös kännykän Safarilla ja toimi sielläkin.
+- 16.08 Testasin mennä Firefoxilla hattara.me-osoitteeseen ja se vei minut suoraan HTTPS-sivustolle. Testasin myös mennä http://hattara.me ja tämä myös vei suoraan HTTPS-sivustolle. Myös molemmat hattara.me ja www.hattara.me veivät suojatulle HTTPS-sivulle. Testasin myös kännykän Safarilla ja toimi sielläkin.
 
-- KUVA 15.
+![https toimii](images/h6-kuva15.jpg)
 
-- 16.11 URL-osoitteen vieressä oleva lukko oli myös "vapautunut" eikä se ollut enää yliviivattuna. Aikaisemmin oli suojaamaton yhteys ja nyt on suojattu.
+- 16.11 URL-osoitteen vieressä oleva lukko ei ollut enää yliviivattuna, koska nyt käytössä on suojattu yhteys aikaisemman suojaamattoman yhteyden sijaan.
 
-- KUVA 16.
+![lukon kuva](images/h6-kuva16.jpg)
 
-- 16.14 Testasin tunnilla olevan komennon config-testistä, eli tein komennon `sudo apache2ctl configtest`. Lopussa luki _Syntax OK_. Latasin Apache2:n asetukset vielä varmuuden vuoksi uudelleen komennolla `sudo systemctl restart apache2`.
+- 16.14 Testasin tunnilla ollutta config-testiä komennolla `sudo apache2ctl configtest`. Alussa valitti, mutta tärkeimpänä oli se, että lopussa luki _Syntax OK_. Latasin Apache2:n asetukset vielä varmuuden vuoksi uudelleen komennolla `sudo systemctl restart apache2`.
 
-- KUVA 17.
+![apachen configtest](images/h6-kuva17.jpg)
 
-- 16.20 Suljin SSH-yhteyden komennolla `exit` ja suljin virtuaalikoneen. Jatkan myöhemmin.
-
-
+- 16.20 Suljin SSH-yhteyden komennolla `exit` ja suljin virtuaalikoneen.
 
 ## b) A-rating. Testaa oma sivusi TLS jollain yleisellä laadunvarmistustyökalulla, esim. SSLLabs (Käytä vain tavanomaisia tarkistustyökaluja, ei tunkeutumistestausta eikä siihen liittyviä työkaluja)
 
 - 18.13 Menin [SSLLabs](https://www.ssllabs.com/ssltest/)-sivustolle, jossa pääsin testaamaan oman sivustoni salausta. Kirjoitin _Hostname_-hakukentään hattara.me ja klikkasin _Submit_. 
 
-- KUVA 18.
+![hattaran testaaminen](images/h6-kuva18.jpg)
 
-- 18.15 Kesti hetken, kun sivusto teki testinsä. Kokonaisarvioksi tuli A. Sertifikaatti ja protokollatuki olivat molemmat 100%, kun avaimenvaihto ja salauksen vahvuud olivat 90%. 
+- 18.15 Kesti hetken, kun sivusto teki testinsä. Kokonaisarvioksi tuli A. Sertifikaatti ja protokollatuki olivat molemmat 100%, kun avaimenvaihto ja salauksen vahvuus olivat 90%. 
 
-- KUVA 19.
-- 
+![ssl tulokset](images/h6-kuva19.jpg)
 
 
 ## Lähteet
 
 - Let's Encrypt 2.8.2025. How It Works. Luettavissa: https://letsencrypt.org/how-it-works/. Luettu: 28.9.2025.
 - The Apache Software Foundation 2025: Apache HTTP Server Version 2.4 [Official] Documentation: SSL/TLS Strong Encryption: How-To: Basic Configuration Example. Luettavissa: https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html#configexample. Luettu: 28.9.2025.
+- Karvinen, T 12.2.2012. Short HTML5 page. Luettavissa: https://terokarvinen.com/2017/starting-with-javascript-arrays-for-of-f12-console/2012/short-html5-page. Luettu: 28.9.2025.
