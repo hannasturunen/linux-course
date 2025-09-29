@@ -136,9 +136,14 @@ Tein harjoitukset sunnuntaina 28.9.2025 ... ... Helsingissä kotona. Koneena kai
 
 ## b) A-rating. Testaa oma sivusi TLS jollain yleisellä laadunvarmistustyökalulla, esim. SSLLabs (Käytä vain tavanomaisia tarkistustyökaluja, ei tunkeutumistestausta eikä siihen liittyviä työkaluja)
 
+- 18.13 Menin [SSLLabs](https://www.ssllabs.com/ssltest/)-sivustolle, jossa pääsin testaamaan oman sivustoni salausta. Kirjoitin _Hostname_-hakukentään hattara.me ja klikkasin _Submit_. 
 
+- KUVA 18.
 
+- 18.15 Kesti hetken, kun sivusto teki testinsä. Kokonaisarvioksi tuli A. Sertifikaatti ja protokollatuki olivat molemmat 100%, kun avaimenvaihto ja salauksen vahvuud olivat 90%. 
 
+- KUVA 19.
+- 
 
 
 ## Lähteet
