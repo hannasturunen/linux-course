@@ -51,7 +51,7 @@ Tein harjoitukset sunnuntaina 28.9.2025 ... ... Helsingissä kotona. Koneena kai
 
 ## a) Let's. Hanki ja asenna palvelimellesi ilmainen TLS-sertifikaatti Let's Encryptilta. Osoita, että se toimii.
 
-- 17.45 Avasin VirtualBoxin ja kirjauduin terminaalissa virtuaalipalvelimelleni komennolla ssh `hannatu@hattara.me`. Annoin salasanani ja pääsin sisään.
+- 17.45 Avasin VirtualBoxin ja kirjauduin terminaalissa virtuaalipalvelimelleni komennolla `ssh hannatu@hattara.me`. Annoin salasanani ja pääsin sisään.
 - 17.50 Varmistin, että sivuni toimii vielä. Avasin Firefoxin selaimen ja menin osoitteeseen hattara.me. Päivitin varmuuden vuoksi sivun ctrl+shift+r. Sivu näkyi yhä, joten kaikki vielä kunnossa.
 - 17.52 Tein varmuuden vuoksi virtuaalikoneelle päivitykset komennolla `sudo apt-get update`. Annoin salasanani ja teki päivitykset.
 - 18.00 Potkaisin vielä varmuuden vuoksi Apache2-demonia komennolla `sudo systemctl reload apache2`. Tämän jälkeen tarkistin vielä, että verkkosivu hattara.me toimii Firefoxilla (päivitin sivun ctrl+shift+r) ja kännykän Safari-selaimella. Molemmissa toimii hyvin,
@@ -83,23 +83,55 @@ Tein harjoitukset sunnuntaina 28.9.2025 ... ... Helsingissä kotona. Koneena kai
 
 - 20.07 Potkaisin taas Apache2:n käyntiin komennolla `sudo systemctl restart apache2`. Firefox antaa yhä ... ... väärää.
 
-- 20.19 Tarkastin oikeudet -> puuttuu kuva 06:n alimmasta.
+- 20.19 Tarkastin oikeudet -> puuttuu kuva 06:n alimmasta. ... ...
 
 - KUVA 07.
 
-- 20.21 Lisätään oikeudet ja tarkistetaan vikat. `sudo systemctl reload apache2`
+- 20.21 Lisätään oikeudet ja tarkistetaan vikat. `sudo systemctl reload apache2` ... ...
 
 - KUVA 08.
 
-- 20.27 Nyt Firefox antaa oikeaa, mutta curl localhost ei. Ajoin komennon `curl -H 'Host: hattara.me' localhost`, josta alla oleva.
+- 20.27 Nyt Firefox antaa oikeaa, mutta curl localhost ei. Ajoin komennon `curl -H 'Host: hattara.me' localhost`, josta alla oleva. ... ...
 
 - KUVA 09.
 
-- 20.33 ei auttanut, komento `sudo a2dissite 000-default` ja `sudo systemctl reload apache2`. Komento `curl localhost`. Toimii!!!
+- 20.33 ei auttanut, komento `sudo a2dissite 000-default` ja `sudo systemctl reload apache2`. Komento `curl localhost`. Toimii!!! ... ...
 
 - KUVA 10.
 
 - 20.36 Jatkan huomenna, Suljin yhteyden virtuaalipalvelimeen komennolla exit, jonka jälkeen suljin terminaalin ja virtuaalikoneen.
+- 29.9. klo 15.18 Yritin uudestaan hankkia sertifikaatit. Minulla oli jo avattuna portit 80 ja 443 ja certbot asennettuna. Tarkistin vielä, että web-sivuni toimii virtuaalikoneen Firefoxilla ja kännykän Safari-selaimella. Molemmilla toimi.
+- 15.22 Kirjauduin terminaalissa virtuaalipalvelimelleni komennolla `ssh hannatu@hattara.me`. Annoin salasanani ja pääsin sisään.
+- 15.23 Yritin uudestaan hakea domainnimilleni varmenteen. Tein tämän komennolla `sudo certbot --apache --domains hattara.me,www.hattara.me`. Koska olin yrittänyt tätä jo aikaisemmin, kysyttiin, että haluanko uudelleenasentaa tämän olemassaolevan sertifikaatin vai yrittää saada uuden sellaisen. Vastasin, että haluan uudelleenasentaa vanhan. Nyt onnistui saada sertifikaatit molemmille domainnimille.
+
+- KUVA 11.
+
+- 15.32 HTTP-sivu ei kuitenkaan ohjaudu vielä HTTPS-sivulle automaattisesti, joten tämä täytyi vielä muuttaa. Menin komennolla `cd /etc/apache2/sites-available/` sivustojen konfiguraatiotiedostoihin ja katsoin komennolla `ls` mitä tiedostoja ja kansioita siellä on.
+
+- KUVA 12.
+
+- 15.39 Kansiosta löytyi _hattara.me.conf_, jonka avasin muokattavaksi komennolla `sudoedit hattara.me.conf`. Tämä näytti kuitenkin hyvältä. Suljin editorin _ctrl+x_.
+
+- KUVA 13.
+
+- 15.47 Avasin toisen konfiguraation komennolla `sudoedit hattara.me-le-ssl.conf`. Tämä näytti kanssa hyvältä, joten suljin editorin _ctrl+x_
+
+- KUVA 14.
+
+- 16.08 Testasin mennä Firefoxilla hattara.me-osoitteeseen ja se vei minut suoraan https-sivustolle. Testasin myös mennä http://hattara.me ja tämä kanssa vei suoraan https-sivustolle. Myös molemmat hattara.me ja www.hattara.me vievät suojatulle https-sivulle. Testasin myös kännykän Safarilla ja toimi sielläkin.
+
+- KUVA 15.
+
+- 16.11 URL-osoitteen vieressä oleva lukko oli myös "vapautunut" eikä se ollut enää yliviivattuna. Aikaisemmin oli suojaamaton yhteys ja nyt on suojattu.
+
+- KUVA 16.
+
+- 16.14 Testasin tunnilla olevan komennon config-testistä, eli tein komennon `sudo apache2ctl configtest`. Lopussa luki _Syntax OK_. Latasin Apache2:n asetukset vielä varmuuden vuoksi uudelleen komennolla `sudo systemctl restart apache2`.
+
+- KUVA 17.
+
+- 16.20 Suljin SSH-yhteyden komennolla `exit` ja suljin virtuaalikoneen. Jatkan myöhemmin.
+
 
 
 ## b) A-rating. Testaa oma sivusi TLS jollain yleisellä laadunvarmistustyökalulla, esim. SSLLabs (Käytä vain tavanomaisia tarkistustyökaluja, ei tunkeutumistestausta eikä siihen liittyviä työkaluja)
