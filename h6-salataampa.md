@@ -141,7 +141,7 @@ Tein ensin sivustolleni Name Based Virtual Hostin ja tämän jälkeen hankin dom
 
 ![ssl tulokset](images/h6-kuva19.jpg)
 
-- Tulkintoja tuloksista:
+- Muutamia tulkintoja tuloksista:
   - Sertifikaatin läpinäkyvyys oli hyvä. 
   - CRL on lyhenne sanoista _certificate revocation list_ ja se listaa kaikki CA:n mitätöimät sertifikaatit. En tiedä miksi tuo ei mennyt läpi.
   - CAA (Certification Authority Authorization) on DNS-tietue, joka kertoo CA:lle (Certificate Authority), ketkä saavat myöntää sertifikaatin tälle domainille. Minulla ei varmaankaan ole tätä CAA-tietuetta käytössä, joten siksi antaa siitä keltaisen.
