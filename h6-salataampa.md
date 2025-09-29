@@ -113,7 +113,7 @@ Tein ensin sivustolleni Name Based Virtual Hostin ja tämän jälkeen hankin dom
 
 ![hattara-conf](images/h6-kuva13.jpg)
 
-- 15.47 Avasin toisen konfiguraation komennolla `sudoedit hattara.me-le-ssl.conf`. Tämä näytti kanssa hyvältä, joten suljin editorin _ctrl+x_
+- 15.47 Avasin toisen konfiguraation komennolla `sudoedit hattara.me-le-ssl.conf`. Tämä näytti kanssa hyvältä, joten suljin editorin _ctrl+x_.
 
 ![hattara-ssl-conf](images/h6-kuva14.jpg)
 
@@ -141,9 +141,22 @@ Tein ensin sivustolleni Name Based Virtual Hostin ja tämän jälkeen hankin dom
 
 ![ssl tulokset](images/h6-kuva19.jpg)
 
+- Tulkintoja tuloksista:
+  - Sertifikaatin läpinäkyvyys oli hyvä. 
+  - CRL on lyhenne sanoista _certificate revocation list_ ja se listaa kaikki CA:n mitätöimät sertifikaatit. En tiedä miksi tuo ei mennyt läpi.
+  - CAA (Certification Authority Authorization) on DNS-tietue, joka kertoo CA:lle (Certificate Authority), ketkä saavat myöntää sertifikaatin tälle domainille. Minulla ei varmaankaan ole tätä CAA-tietuetta käytössä, joten siksi antaa siitä keltaisen.
+
+![ssl tuloksia](images/h6-kuva20.jpg)
+
+- _Handshake Simulation_ -kohdassa tuli muutamia _Server sent fatal alert: handshake_failure_. Näitä tuli esimerkiksi _Chrome 49 / XP SP3_:lle ja useille Safareille. Nämä ovat kuitenkin vanhempia versioita, joten TLS ei varmaankaan enää tue näitä.
+
+![handshake](images/h6-kuva21.jpg)
 
 ## Lähteet
 
-- Let's Encrypt 2.8.2025. How It Works. Luettavissa: https://letsencrypt.org/how-it-works/. Luettu: 28.9.2025.
-- The Apache Software Foundation 2025: Apache HTTP Server Version 2.4 [Official] Documentation: SSL/TLS Strong Encryption: How-To: Basic Configuration Example. Luettavissa: https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html#configexample. Luettu: 28.9.2025.
 - Karvinen, T 12.2.2012. Short HTML5 page. Luettavissa: https://terokarvinen.com/2017/starting-with-javascript-arrays-for-of-f12-console/2012/short-html5-page. Luettu: 28.9.2025.
+- Let's Encrypt 16.8.2023. Certificate Authority Authorization (CAA). Luettavissa: https://letsencrypt.org/fi/docs/caa/. Luettu: 29.9.2025.
+- Let's Encrypt 2.8.2025. How It Works. Luettavissa: https://letsencrypt.org/how-it-works/. Luettu: 28.9.2025.
+- TechTarget 31.1.2025. What is a certificate revocation list (CRL) and how is it used? Luettavissa: https://www.techtarget.com/searchsecurity/definition/Certificate-Revocation-List. Luettu: 29.9.2025.
+- The Apache Software Foundation 2025: Apache HTTP Server Version 2.4 [Official] Documentation: SSL/TLS Strong Encryption: How-To: Basic Configuration Example. Luettavissa: https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html#configexample. Luettu: 28.9.2025.
+- Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet. Luettu: 28.9.2025.
