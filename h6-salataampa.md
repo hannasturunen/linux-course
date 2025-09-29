@@ -86,11 +86,11 @@ Tein ensin sivustolleni Name Based Virtual Hostin ja tämän jälkeen hankin dom
 
 ![oikeuksien tarkistus](images/h6-kuva07.jpg)
 
-- 20.21 Lisättiin oikeudet komennolla `chmod o+x /home/hannatu` ja tarkistettiin, että meni läpi. Oikeus oli tullut, joten tarkistettiin vielä viimeiset oikeudet komennolla `ls -la / | grep home`. Päivitin vielä Apachen komennolla `sudo systemctl reload apache2`. 
+- 20.21 Lisäsin oikeudet komennolla `chmod o+x /home/hannatu` ja tarkistin, että meni läpi. Oikeus oli tullut, joten tarkistin vielä viimeiset oikeudet komennolla `ls -la / | grep home`. Päivitin vielä Apachen komennolla `sudo systemctl reload apache2`. 
 
 ![oikeuksien tarkistusta](images/h6-kuva08.jpg)
 
-- 20.27 Firefox näyttää sivulla tekstin, jonka sen pitäisikin näyttää, mutta `curl localhost`-komento ei. Ajoin komennon `curl -H 'Host: hattara.me' localhost`, jolla sain näkyviin saman tekstin, joka Firefoxissa näkyy.
+- 20.27 Firefox näytti sivulla tekstin, jonka sen pitäisikin näyttää, mutta `curl localhost`-komento ei. Ajoin komennon `curl -H 'Host: hattara.me' localhost`, jolla sain näkyviin saman tekstin, joka Firefoxissa näkyy.
 
 ![curl localhost](images/h6-kuva09.jpg)
 
