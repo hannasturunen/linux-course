@@ -2,9 +2,9 @@
 
 ## Yleistä tehtävistä
 
-Tein harjoitukset torstaina 02.10.2025 ... ... Helsingissä kotona. Tein torstaina harjoituksista kohdan a) ... ... . Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
+Tein torstaina 02.10.2025 harjoituksista kohdat a) ja b), ... ... . Tehtävien b)-kohdassa tarkistin raporttien viittaukset, joten sitä ei ole esitetty tässä raportissa. Tein kaikki tehtävät Helsingissä kotona. Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
 
-## a) Kirjoita ja aja "Hei maailma" kolmella kielellä.
+## a) Kirjoita ja aja "Hei maailma" kolmella kielellä
 
 - Ensin tutustuin Karvisen sivuilla erilaisiin kieliin, joilla voi kirjoittaa koodia Linuxissa (Karvinen, 27.9.2018). Valitsin tehtävään Python 3:n, Javan ja C:n. Ajattelin, että näitä voisin eniten tarvita, joten päätin harjoitella niiden kanssa.
 - klo 18.25 Avasin VirtualBoxin, oman virtuaalikoneeni ja terminaalin. Koska tiesin, että tulen asentamaaan uusia ohjelmia, päivitin paketit komennolla `sudo apt-get update`.
@@ -55,9 +55,10 @@ Tein harjoitukset torstaina 02.10.2025 ... ... Helsingissä kotona. Tein torstai
 
 ![c tuloste](images/h7-kuva10.jpg)
 
+## c) Laita Linuxiin uusi, itse tekemäsi komento niin, että kaikki käyttäjät voivat ajaa sitä.
 
-
-
+- 
+ 
 
 
 
