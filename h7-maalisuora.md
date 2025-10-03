@@ -74,17 +74,26 @@ Tein torstaina 02.10.2025 harjoituksista kohdat a) ja b), perjantaina 03.10.2025
 
 - 3.10. klo 19.15 Hain Karvisen sivuilta laboratorioharjoituksia hakusanalla _laboratorio_. Valitsin _Final Lab for Linux Palvelimet 2024 Spring_ -harjoitukset. Jätän laboratorioharjoituksen alussa olevat kohdat a)-c) tekemättä, koska koskevat toisenlaisen raportin tekemistä.
 
-### d) 'howdy'.
+### d) 'howdy'
 Tehtävässä:
 - Tee kaikkien käyttäjien käyttöön komento 'howdy'.
-- Tulosta haluamaasi ajankohtaista tietoa, esim päivämäärä, koneen osoite tms.
-- Pelkkä "hei maailma" ei riitä.
+  - Tulosta haluamaasi ajankohtaista tietoa, esim päivämäärä, koneen osoite tms.
+  - Pelkkä "hei maailma" ei riitä.
 - Komennon tulee toimia kaikilla käyttäjillä työhakemistosta riippumatta
 
-- 19.20 
+- 19.20 Tein howdy.sh-tiedoston komennolla `micro howdy.sh`. Kirjoitin sinne alkuun `#!/bin/bash` ja perään `whoami`, `pwd`, `ls`, `date` ja `hostname -I`. Tallensin tiedoston _ctrl+s_ ja suljin editorin _ctrl+q_.
 
+-  ... KUVA 14 ...
 
+- 19.29 Annoin kaikille oikeudet komennolla `chmod a+x howdy.sh`. Ajoin komennon `./howdy.sh`. Tulostui juuri ne tiedot, jotka pitikin. Jotta komento toimii kaikilla käyttäjillä, kopioin sen vielä _/usr/local/bin/_-kansioon komennolla `sudo cp howdy.sh /usr/local/bin/`. Lopuksi testasin vielä ajaa tämän komennolla `howdy.sh`, joka toimi.
 
+-  ... KUVA 15 ...
+
+### e) Etusivu uusiksi
+- Asenna Apache-weppipalvelin
+- Tee yrityksellemme "AI Kakone" kotisivu
+- Kotisivu tulee näkyä koneesi IP-osoitteella suoraan etusivulla
+- Sivua pitää päästä muokkaamaan normaalin käyttäjän oikeuksin (ilman sudoa). Liitä raporttiisi listaus tarvittavien tiedostojen ja kansioiden oikeuksista.
 
 
 
