@@ -2,7 +2,7 @@
 
 ## Yleistä tehtävistä
 
-Tein torstaina 02.10.2025 harjoituksista kohdat a) ja b), perjantaina 03.10.2025 ... ... . Tehtävien b)-kohdassa tarkistin raporttien viittaukset, joten sitä ei ole esitetty tässä raportissa. Tein kaikki tehtävät Helsingissä kotona. Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
+Tein torstaina 02.10.2025 harjoituksista kohdat a) ja b), perjantaina 03.10.2025 c)-kohdan ja aloitin d)-kohtaa, ... ... . Tehtävien b)-kohdassa tarkistin raporttien viittaukset, joten sitä ei ole esitetty tässä raportissa. Tein kaikki tehtävät Helsingissä kotona. Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
 
 ## a) Kirjoita ja aja "Hei maailma" kolmella kielellä
 
@@ -60,40 +60,47 @@ Tein torstaina 02.10.2025 harjoituksista kohdat a) ja b), perjantaina 03.10.2025
 - 3.10. klo 18.35 Tutustuin Karvisen sivuilla olevaan ohjeeseen aiheesta (Karvinen, 4.12.2007). Päätin tehdä ohjelman, josta saa selville kuka on kyseessä (_whoami_), sijainnin (_pwd_) ja ajan (_date_). Avasin VirtualBoxin, virtuaalikoneeni ja terminaalin.
 -  18.41 Annoin komennon `micro kaikille.sh`, joka avasi micro-editorin. Kirjoitin alkuun `#!/bin/bash` ja perään `whoami`, `pwd` ja `date`. Tallensin tämän _ctrl+s_ ja suljin editorin _ctrl+q_.
 
--  ... KUVA 11 ...
+![micro kaikille](images/h7-kuva11.jpg)
  
 - 18.47 Katsoin oikeudet juuri tehdylle tiedostolle `kaikille.sh` komennolla `ls -l kaikille.sh`. Kenelläkään ei ollut execute-oikeuksia, joten lisäsin ne komennolla `chmod a+x kaikille.sh`. Tarkistin vielä, että olihan execute-oikeudet tulleet kaikille ajamalla komennon `ls -l kaikille.sh` uudestaan. Olivat tulleet.
 
--  ... KUVA 12 ...
+![kaikille komennot](images/h7-kuva12.jpg)
 
 - 18.55 Ajoin komennon `./kaikille.sh` ja se toimi kuten pitikin. Tämän jälkeen kopioin tiedoston, jotta kaikki käyttäjät voivat ajaa sen. Tein tämän komennolla `sudo cp kaikille.sh /usr/local/bin/`. Nyt tämän pitäisi toimia kaikille. Testasin vielä ajaa tiedoston komennolla `kaikille.sh`. Tämä tuotti saman tuloksen kuin aikaisemmin ja ilman alussa olevaa `./` (_piste ja kauttaviiva_). Tämä johtuu siitä, että aikaisemmin kerrottiin shellille, että sen pitää ajaa ohjelma tästä tietystä hakemistosta, mutta kun tiedosto kopioitiin PATH-hakemistoon, shell löytää sen sieltä automaattisesti.
 
--  ... KUVA 13 ...
+![kaikille toimii](images/h7-kuva13.jpg)
 
 ## d) Ratkaise vanha arvioitava laboratorioharjoitus soveltuvin osin
 
 - 3.10. klo 19.15 Hain Karvisen sivuilta laboratorioharjoituksia hakusanalla _laboratorio_. Valitsin _Final Lab for Linux Palvelimet 2024 Spring_ -harjoitukset. Jätän laboratorioharjoituksen alussa olevat kohdat a)-c) tekemättä, koska koskevat toisenlaisen raportin tekemistä.
 
 ### d) 'howdy'
-Tehtävässä:
+Tehtävä:
 - Tee kaikkien käyttäjien käyttöön komento 'howdy'.
   - Tulosta haluamaasi ajankohtaista tietoa, esim päivämäärä, koneen osoite tms.
   - Pelkkä "hei maailma" ei riitä.
 - Komennon tulee toimia kaikilla käyttäjillä työhakemistosta riippumatta
 
+Ratkaisu:
 - 19.20 Tein howdy.sh-tiedoston komennolla `micro howdy.sh`. Kirjoitin sinne alkuun `#!/bin/bash` ja perään `whoami`, `pwd`, `ls`, `date` ja `hostname -I`. Tallensin tiedoston _ctrl+s_ ja suljin editorin _ctrl+q_.
 
--  ... KUVA 14 ...
+![micro howdy](images/h7-kuva14.jpg)
 
 - 19.29 Annoin kaikille oikeudet komennolla `chmod a+x howdy.sh`. Ajoin komennon `./howdy.sh`. Tulostui juuri ne tiedot, jotka pitikin. Jotta komento toimii kaikilla käyttäjillä, kopioin sen vielä _/usr/local/bin/_-kansioon komennolla `sudo cp howdy.sh /usr/local/bin/`. Lopuksi testasin vielä ajaa tämän komennolla `howdy.sh`, joka toimi.
 
--  ... KUVA 15 ...
+![howdy toimii](images/h7-kuva15.jpg)
 
 ### e) Etusivu uusiksi
+Tehtävä:
 - Asenna Apache-weppipalvelin
 - Tee yrityksellemme "AI Kakone" kotisivu
 - Kotisivu tulee näkyä koneesi IP-osoitteella suoraan etusivulla
 - Sivua pitää päästä muokkaamaan normaalin käyttäjän oikeuksin (ilman sudoa). Liitä raporttiisi listaus tarvittavien tiedostojen ja kansioiden oikeuksista.
+
+Ratkaisu:
+- 19.43 Apache2-palvelin oli jo ladattuna, joten sen osion hyppään yli. 
+
+
 
 
 
