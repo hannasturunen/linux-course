@@ -2,7 +2,7 @@
 
 ## Yleistä tehtävistä
 
-Tein torstaina 02.10.2025 harjoituksista kohdat a) ja b), ... ... . Tehtävien b)-kohdassa tarkistin raporttien viittaukset, joten sitä ei ole esitetty tässä raportissa. Tein kaikki tehtävät Helsingissä kotona. Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
+Tein torstaina 02.10.2025 harjoituksista kohdat a) ja b), perjantaina 03.10.2025 ... ... . Tehtävien b)-kohdassa tarkistin raporttien viittaukset, joten sitä ei ole esitetty tässä raportissa. Tein kaikki tehtävät Helsingissä kotona. Koneena kaikissa tehtävissä oli HP Laptop 14-cf1006no, jossa käyttöjärjestelmänä on Windows 11 Home.
 
 ## a) Kirjoita ja aja "Hei maailma" kolmella kielellä
 
@@ -55,16 +55,44 @@ Tein torstaina 02.10.2025 harjoituksista kohdat a) ja b), ... ... . Tehtävien b
 
 ![c tuloste](images/h7-kuva10.jpg)
 
-## c) Laita Linuxiin uusi, itse tekemäsi komento niin, että kaikki käyttäjät voivat ajaa sitä.
+## c) Laita Linuxiin uusi, itse tekemäsi komento niin, että kaikki käyttäjät voivat ajaa sitä
 
-- 
+- 3.10. klo 18.35 Tutustuin Karvisen sivuilla olevaan ohjeeseen aiheesta (Karvinen, 4.12.2007). Päätin tehdä ohjelman, josta saa selville kuka on kyseessä (_whoami_), sijainnin (_pwd_) ja ajan (_date_). Avasin VirtualBoxin, virtuaalikoneeni ja terminaalin.
+-  18.41 Annoin komennon `micro kaikille.sh`, joka avasi micro-editorin. Kirjoitin alkuun `#!/bin/bash` ja perään `whoami`, `pwd` ja `date`. Tallensin tämän _ctrl+s_ ja suljin editorin _ctrl+q_.
+
+-  ... KUVA 11 ...
  
+- 18.47 Katsoin oikeudet juuri tehdylle tiedostolle `kaikille.sh` komennolla `ls -l kaikille.sh`. Kenelläkään ei ollut execute-oikeuksia, joten lisäsin ne komennolla `chmod a+x kaikille.sh`. Tarkistin vielä, että olihan execute-oikeudet tulleet kaikille ajamalla komennon `ls -l kaikille.sh` uudestaan. Olivat tulleet.
+
+-  ... KUVA 12 ...
+
+- 18.55 Ajoin komennon `./kaikille.sh` ja se toimi kuten pitikin. Tämän jälkeen kopioin tiedoston, jotta kaikki käyttäjät voivat ajaa sen. Tein tämän komennolla `sudo cp kaikille.sh /usr/local/bin/`. Nyt tämän pitäisi toimia kaikille. Testasin vielä ajaa tiedoston komennolla `kaikille.sh`. Tämä tuotti saman tuloksen kuin aikaisemmin ja ilman alussa olevaa `./` (_piste ja kauttaviiva_). Tämä johtuu siitä, että aikaisemmin kerrottiin shellille, että sen pitää ajaa ohjelma tästä tietystä hakemistosta, mutta kun tiedosto kopioitiin PATH-hakemistoon, shell löytää sen sieltä automaattisesti.
+
+-  ... KUVA 13 ...
+
+## d) Ratkaise vanha arvioitava laboratorioharjoitus soveltuvin osin
+
+- 3.10. klo 19.15 Hain Karvisen sivuilta laboratorioharjoituksia hakusanalla _laboratorio_. Valitsin _Final Lab for Linux Palvelimet 2024 Spring_ -harjoitukset. Jätän laboratorioharjoituksen alussa olevat kohdat a)-c) tekemättä, koska koskevat toisenlaisen raportin tekemistä.
+
+### d) 'howdy'.
+Tehtävässä:
+- Tee kaikkien käyttäjien käyttöön komento 'howdy'.
+- Tulosta haluamaasi ajankohtaista tietoa, esim päivämäärä, koneen osoite tms.
+- Pelkkä "hei maailma" ei riitä.
+- Komennon tulee toimia kaikilla käyttäjillä työhakemistosta riippumatta
+
+- 19.20 
+
+
+
 
 
 
 ## Lähteet
 
 - Karvinen, T. 27.9.2018. Hello World Python3, Bash, C, C++, Go, Lua, Ruby, Java – Programming Languages on Ubuntu 18.04. Luettavissa: https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/. Luettu: 2.10.2025.
+- Karvinen, T. 4.12.2007. Shell Scripting. Luettavissa: https://terokarvinen.com/2007/12/04/shell-scripting-4/. Luettu: 3.10.2025.
+- Karvinen, T. 12.3.2024. Final Lab for Linux Palvelimet 2024 Spring. Luettavissa: https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-linux-palvelimet/?fromSearch=laboratorio. Luettu: 3.10.2025.
 - Oracle 2025. The javac Command. Luettavissa: https://docs.oracle.com/en/java/javase/17/docs/specs/man/javac.html. Luettu: 2.10.2025.
 - Pohjana Johanna Heinonen 2025: Linux Shell Scripting Basics. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-01102025.md. Luettu: 2.10.2025.
 - Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet. Luettu: 2.10.2025.
