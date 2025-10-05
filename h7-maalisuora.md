@@ -103,27 +103,27 @@ Ratkaisu:
 - 5.10. klo 7.17 Avasin virtuaalikoneen. Apache2-palvelin oli jo asennettuna, mutta jos se olisi pitänyt asentaa, olisin tehnyt sen komennolla `sudo apt-get install apache2`. Tarkistin Apache2:n tilanteen komennolla `sudo systemctl status apache2`, jossa näkyi, että tila on aktiivinen (_active (running)_).
 - 7.31 Ajoin komennon `sudoedit /etc/apache2/sites-available/aikakone.example.com.conf`, jonne kopioin tekstin Karvisen sivuilta ja muokkasin sitä hieman. Tallensin tiedoston _ctrl+o_ ja painamalla enteriä. Suljin tiedoston _ctrl+x_. 
 
-- ... KUVA 16 ...
+![tiedot sivustolle](images/h7-kuva16.jpg)
 
 - 7.47 Otin sivuston käyttöön komennoilla `sudo a2ensite aikakone.example.com` ja `systemctl reload apache2`. Unohdin tästä jälkimmäisestä komennosta sudo-sanan alusta, joten pyysi salasanaa, jonka annoin. Tein kansion sivustolle komennolla `mkdir -p /home/hanna/public-sites/aikakone.example.com/`. Lisäsin aikakone-sanan sivuston index.html-sivulle `echo aikakone > /home/hanna/public-sites/aikakone.example.com/index.html`. Testasin sivuston toimintaa komennolla `curl -H 'Host: aikakone.example.com' localhost` ja `curl localhost`. Ensimmäisellä komennolla tuli oikea tuloste _aikakone_, mutta toisella komennolla tuli vielä vanhan sivuston tiedot.
 
-- ... KUVA 17 ...
+![sivuston tekemistä](images/h7-kuva17.jpg)
 
 - 8.04 Muokkasin IP-osoitteiden osoitteita komennolla `sudoedit /etc/hosts`, jonne vaihdoin yrityksen sivut. 
 
-- ... KUVA 18 ...
+![IP-osoitteet](images/h7-kuva18.jpg)
 
 - 8.15 Muokkasin sivustoa hieman kivemman näköiseksi. Avasin micro-editorin komennolla `micro /home/hanna/public-sites/aikakone.example.com/index.html`. Kopioin sinne Karvisen sivuilta HTML-koodin ja muokkasin sitä. Tallensin sen _ctrl+s_ ja suljin sen _ctrl+q_. 
 
-- ... KUVA 19 ...
+![HTML-koodi sivustolle](images/h7-kuva19.jpg)
 
 - 8.28 Kävin katsomassa Firefoxissa toimiiko sivusto. Menin osoitteeseen 127.0.0.1 ja sivusto oli jo päivittynyt.
 
-- ... KUVA 20 ...
+![sivusto toimii](images/h7-kuva20.jpg)
 
 - 8.31 Kävin vielä tarkistamassa oikeudet ja kaikki näyttää hyviltä.
 
-- ... KUVA 21 ...
+![sivuston oikeudet](images/h7-kuva21.jpg)
 
 ### g) Salattua hallintaa
 Tehtävä: 
@@ -135,39 +135,39 @@ Ratkaisu:
 - Tässä tehtävässä on käytetty apuna opiskelijan (vaurasan, 2024) raporttia ja Karvisen sivua SSH-avainten käytöstä (Karvinen, 10.3.2008).
 - 9.01 Asensin SSH-palvelimen koneelleni komennolla `sudo apt-get install ssh`. Lisäsin uuden käyttäjän komennolla `sudo adduser hannate01` ja loin vahvan salasanan. Mielestäni minulle tuli enemmän tekstiä viimeksi tehdessäni käyttäjän. Tarkistin vielä, että uusi käyttäjä näkyi kansiossa komennolla `ls /home` ja näkyi.
 
-- ... KUVA 22 ...
+![sivuston oikeudet](images/h7-kuva22.jpg)
 
 - 9.48 GitHub hävitti jostain syystä osan kirjoituksistani, joten teen nämä uudestaan. Annoin hannate01-käyttäjälle sudo-oikeudet. Hämmentää hieman, koska en saanut tästäkään mitään kommenttia, että käyttäjä olisi lisätty sudo-ryhmään.
 
-- ... KUVA 23 ...
+![käyttäjän lisääminen](images/h7-kuva23.jpg)
 
 - 9.52 Avasin toisen terminaalin ja kirjauduin sisään `ssh hannate01@127.0.0.1`, annoin salasanani ja laitoin `yes`.
 
-- ... KUVA 24 ...
+![sudo-oikeudet käyttäjälle](images/h7-kuva24.jpg)
 
 - 9.54 Loin SSH-avaimet komennolla `ssh key-gen`.
 
-- ... KUVA 25 ...
+![shh-avainten luonti](images/h7-kuva25.jpg)
 
 - 9.56 Menin _.ssh_-kansioon komennolla `cd .ssh` ja katsoin mitä kansio sisältää komennolla `ls`. Kirjoitin komennon `sftp hannate01@127.0.0.1` ja annoin salasanani. _sftp>_-kohtaan kirjoitin `put id_ed25519.pub` ja painoin enteriä. Lopuksi kirjoitin `exit`.
 
-- ... KUVA 26 ...
+![shh-avaimet sftp](images/h7-kuva26.jpg)
 
 - 10.01 Kirjoitin komennon `ssh hannate01@127.0.0.1`, koska jouduin antamaan salasanani, ei toiminut. Teen nämä uudestaan, nyt yritän tehdä Karvisen ohjeiden mukaan. Kirjauduin ssh-yhteydestä ulos `exit`-komennolla. Tein uuden ssh-keypairin komennolla `ssh-keygen -t dsa`, mutta tämähän ei toiminut. Antaa tulosteen _unknown key type dsa_. Tein siis uuden ssh-keyparin komennolla `ssh-keygen` ja korvasin vanhan avaimen. 
 
-- ... KUVA 27 ...
+![ssh-avainten luonti](images/h7-kuva27.jpg)
 
 - 10.20 Menin komennolla `cd .ssh` ssh-kansioon ja katsoin mitä kansio sisältää komennolla `ls`. Minulle ei tule Karvisen ohjeissa olevaa _id_dsa.pub_-tiedostoa. Testaan siis omalla _id_ed25519.pub_-tiedostolla (kuten aikaisemminkin). Kirjoitin komennon `sftp hannate01@127.0.0.1` ja annoin salasanani. _sftp>_-kohtaan kirjoitin `put id_ed25519.pub` ja painoin enteriä. Lopuksi kirjoitin `exit`.
 
-- ... KUVA 28 ...
+![ssh-avaimet](images/h7-kuva28.jpg)
 
 - 10.26 Kirjoitin komennon `ssh hannate01@127.0.0.1` ja jouduin vielä antamaan salasanan, joten tämä ei toimi vieläkään. Ajoin komennon `cat id_ed25519.pub >>.ssh/authorized_keys` ja muokkasin muiden oikeuksia komennolla `chmod og-rxw .ssh .ssh/authorized_keys` (muutamia virheitä komennoissa).
 
-- ... KUVA 29 ...
+![ssh-avainten uudelleenohjaus](images/h7-kuva29.jpg)
 
 - 10.38 Testasin toimiiko. Kirjauduin ulos komennolla `exit`. Kirjauduin sisään komennolla `hannate01@127.0.0.1` ja meni sisään ilman salasanaa. Jee! Eli piti vielä uudelleenohjata tuo tieto authorized_keys-kansioon ennen kuin lähti toimimaan. 
 
-- ... KUVA 30 ...
+![ssh-yhteys toimii](images/h7-kuva30.jpg)
 
 
 ## Lähteet
