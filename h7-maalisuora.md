@@ -169,17 +169,20 @@ Ratkaisu:
 
 ![ssh-yhteys toimii](images/h7-kuva30.jpg)
 
+- 11.15 Olin jo kirjautunut koneelta ulos, kun tajusin, että unohdin sulkea root-tunnukset. Palasin siis koneelle ja kirjoitin terminaaliin `ssh hannate01@127.0.0.1`. Jouduin kirjoittamaan taas salasanan, joten ehkä tuo edellinen tehtävä ei onnistunutkaan? No, nyt en kyllä enää jaksa pohdiskella sitä, koska olen tehnyt sen kanssa töitä nyt liiankin pitkään. Kirjoitin komennon `sudo usermod --lock root` ja taas annoin salasanani. Sen lisäksi annoin komennon `sudo mv -nv /root/.ssh /root/DISABLED-ssh/`. En kyllä ole varma menikö tämä nyt ihan oikein, mutta annan olla noin.
+
+![root-yhteydet kiinni](images/h7-kuva31.jpg)
 
 ## Lähteet
 
-- Karvinen, T. 27.9.2018. Hello World Python3, Bash, C, C++, Go, Lua, Ruby, Java – Programming Languages on Ubuntu 18.04. Luettavissa: https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/. Luettu: 2.10.2025.
 - Karvinen, T. 4.12.2007. Shell Scripting. Luettavissa: https://terokarvinen.com/2007/12/04/shell-scripting-4/. Luettu: 3.10.2025.
-- Karvinen, T. 12.3.2024. Final Lab for Linux Palvelimet 2024 Spring. Luettavissa: https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-linux-palvelimet/?fromSearch=laboratorio. Luettu: 3.10.2025.
+- Karvinen, T. 10.3.2008. Ssh public key authentication. Luettavissa: https://terokarvinen.com/2008/03/10/ssh-public-key-authentication-2/?fromSearch=ssh. Luettu: 5.10.2025.
 - Karvinen, T. 12.2.2012. Short HTML5 page. Luettavissa: https://terokarvinen.com/2012/short-html5-page/. Luettu: 5.10.2025.
 - Karvinen, T. 10.4.2018. Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address. Luettavissa: https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/. Luettu: 5.10.2025.
-- Oracle 2025. The javac Command. Luettavissa: https://docs.oracle.com/en/java/javase/17/docs/specs/man/javac.html. Luettu: 2.10.2025.
-- Karvinen, T. 10.3.2008. Ssh public key authentication. Luettavissa: https://terokarvinen.com/2008/03/10/ssh-public-key-authentication-2/?fromSearch=ssh. Luettu: 5.10.2025.
+- Karvinen, T. 27.9.2018. Hello World Python3, Bash, C, C++, Go, Lua, Ruby, Java – Programming Languages on Ubuntu 18.04. Luettavissa: https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/. Luettu: 2.10.2025.
+- Karvinen, T. 12.3.2024. Final Lab for Linux Palvelimet 2024 Spring. Luettavissa: https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-linux-palvelimet/?fromSearch=laboratorio. Luettu: 3.10.2025.
 - Opiskelijan (vaurasan) raportti, 2024. h7 Maalisuora. Luettavissa: https://github.com/vaurasan/Linux-palvelimet-HH/blob/main/h7%20Maalisuora.md. Luettu: 5.10.2025.
+- Oracle 2025. The javac Command. Luettavissa: https://docs.oracle.com/en/java/javase/17/docs/specs/man/javac.html. Luettu: 2.10.2025.
 - Pohjana Johanna Heinonen 2025: Linux Shell Scripting Basics. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-01102025.md. Luettu: 2.10.2025.
 - Pohjana Johanna Heinonen 2025: Apache2. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md. Luettu: 5.10.2025.
 - Pohjana Tero Karvinen 2025: Linux palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet. Luettu: 2.10.2025.
